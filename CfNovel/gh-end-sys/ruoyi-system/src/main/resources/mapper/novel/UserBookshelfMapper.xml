@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.novel.mapper.UserBookshelfMapper">
+    
+    <resultMap type="UserBookshelf" id="UserBookshelfResult">
+        <result property="id"    column="id"    />
+        <result property="userId"    column="user_id"    />
+        <result property="bookId"    column="book_id"    />
+        <result property="preContentId"    column="pre_content_id"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectUserBookshelfVo">
+        select id, user_id, book_id, pre_content_id, create_time, update_time from user_bookshelf
+    </sql>
+
+    <select id="selectUserBookshelfList" parameterType="UserBookshelf" resultMap="UserBookshelfResult">
+        <include refid="selectUserBookshelfVo"/>
+        <where>  
+            <if test="userId != null "> and user_id = #{userId}</if>
+            <if test="bookId != null "> and book_id = #{bookId}</if>
+            <if test="preContentId != null "> and pre_content_id = #{preContentId}</if>
+        </where>
+    </select>
+    
+    <select id="selectUserBookshelfById" parameterType="Long" resultMap="UserBookshelfResult">
+        <include refid="selectUserBookshelfVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertUserBookshelf" parameterType="UserBookshelf" useGeneratedKeys="true" keyProperty="id">
+        insert into user_bookshelf
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">user_id,</if>
+            <if test="bookId != null">book_id,</if>
+            <if test="preContentId != null">pre_content_id,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">#{userId},</if>
+            <if test="bookId != null">#{bookId},</if>
+            <if test="preContentId != null">#{preContentId},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateUserBookshelf" parameterType="UserBookshelf">
+        update user_bookshelf
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="bookId != null">book_id = #{bookId},</if>
+            <if test="preContentId != null">pre_content_id = #{preContentId},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteUserBookshelfById" parameterType="Long">
+        delete from user_bookshelf where id = #{id}
+    </delete>
+
+    <delete id="deleteUserBookshelfByIds" parameterType="String">
+        delete from user_bookshelf where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

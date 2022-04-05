@@ -1,0 +1,3797 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+	<head>
+
+		<title>基于协同过滤的在线阅读网</title>
+
+		<meta name="description" content="不可能,不可能的世界,小说,小说阅读,免费小说,8站,轻小说,浪漫文学,精彩小说尽在不可能的世界,网络各界小说高手,每日更新小说连载,小说排行榜更是提供全网最收欢迎的小说下载,当下最好看的小说,找最好看的免费小说就来不可能的世界,如青春小说,幻想小说,竞技小说,游戏小说,科幻小说,轻小说,恐怖小说,悬疑小说,推理小说,烧脑小说,神州小说,不正常小说,精彩尽在不可能的世界" />
+		<meta name="keywords" content="不可能,不可能的世界,8站,小说,小说排行榜,免费小说下载,好看的小说,免费小说,轻小说" />
+
+		<meta name="robots" content="all" />
+		<meta name="googlebot" content="all" />
+		<meta name="baiduspider" content="all" />
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="shenma-site-verification" content="f52ac6c1aacbc0ed35e773636c0dc96d_1447400441">
+		<link rel="shortcut icon" href="https://s.8kana.com/img/legend.ico" type="image/x-icon" />
+		<meta property="qc:admins" content="12733602666031616375" />
+		<meta name="baidu-site-verification" content="GdCkrN8SJQ" />
+		<link rel="stylesheet" type="text/css" href="static/css/newkana.css" />
+		<script type="text/javascript" src="static/js/jquery.min2.1.3.js"></script>
+		<script type="text/javascript" src="static/js/newkana.js"></script>
+		<link rel="stylesheet" type="text/css" href="static/css/jquery-ui.min.css" />
+		<script type="text/javascript" src="static/js/jquery-ui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="static/css/newindex1.css">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cspan id='cnzz_stat_icon_1257580708'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/q_stat.php%3Fid%3D1257580708' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="static/css/jquery.mcustomscrollbar.css" />
+		<script type="text/javascript" src="static/js/jquery.mcustomscrollbar.concat.min.js"></script>
+
+		<script type="text/javascript" src="static/js/index.js"></script>
+		<style>
+			.navClass {
+				display: block;
+			}
+		</style>
+
+		<script src="static/js/vue.js"></script>
+	</head>
+
+	<body>
+
+		<style>
+			/*七夕头部更换*/
+			/*.topBar_name_Q span{
+        color:#fff;
+    }
+    .topMessage .IDphoto_a{
+        color:#ff7289;
+    }
+    .topBar_bookListText{
+        color:#ff7289;
+    }
+    .btn_submission a{
+        color:#ff7289;
+    }
+    .topBarR_login a:link,.topBarR_login a:visited,.topBarR_login_border{
+        color:#fff;
+    }
+    .topBarR_login a:hover,.topBarR_login a:active{
+        color:#ff7289;
+    }
+    .topBar_name{
+        color:#fff;
+    }*/
+		</style>
+
+		<script>
+			var MusicPanel = 1;
+			getHomeHeaderInfo();
+		</script>
+
+		<div class="topBar">
+			<!--    <div class="wrapper clearfix topBar_con">-->
+			<div class="wrapper clearfix topBar_In">
+				<!-- 移动端 -->
+<!--				<a href="https://www.8kana.com/active/index/download" target="_blank" class="clearfix left topBar_webmobile">-->
+<!--					<i class="left"></i>-->
+<!--					<span class="left">移动端</span>-->
+<!--				</a>-->
+				<a class="clearfix left topBar_name" href="xzindex.html">
+<!--					<i class="left topBar_name2"></i>-->
+					<span class="left">首页</span>
+				</a>
+				<a class="clearfix left topBar_name" href="javascript:href('/community/ysindex/index',4,1);">
+<!--					<i class="left topBar_name3"></i>-->
+					<span class="left">书库</span>
+				</a>
+				<a class="clearfix left topBar_name topBar_name_Hot" href="javascript:href('https://bw.8kana.com',5,1);">
+<!--					<i class="left topBar_name4"></i>-->
+					<span class="left">排行</span>
+				</a>
+				<a class="clearfix left topBar_name" href="http://user.">
+<!--					<i class="left topBar_name5"></i>-->
+					<span class="left">我的书架</span>
+				</a>
+<!--				<div class="left topBar_name_Q" title="正在施工中">-->
+<!--					<a href="javascript:;" class="clearfix left topBar_name">-->
+<!--						<i class="left topBar_name1"></i>-->
+<!--						<span class="left">正义骑士</span>-->
+<!--					</a>-->
+<!--				</div>-->
+
+<!--				<a class="clearfix left topBar_name" href="/www/sixrpg">-->
+<!--					<i class="left topBar_name6"></i>-->
+<!--					<span class="left">新的冒险</span>-->
+<!--				</a>-->
+				<div class="right" id="LoginInfo" onclick="click_num(7,1);" style="display: none">
+					<div class="right topUser">
+						<a rel="nofollow" class="IDphoto_a" href="/member/index/index" target="_blank"><img src="" id="UserAvatar" style="width: 100%; height: 100%;"></a>
+						<div class="topUserInfo">
+							<div class="topUserInfo_In">
+								<a rel="nofollow" href="/member/index/index" class="topBar_authorName" id="username">--</a>
+								<div class="clearfix topUserInfo_grade">
+									<a rel="nofollow" href="/member/index/index" class="left topUserInfo_gradeIn">
+										<div class="topUserInfo_gradeInText" id="LoginUser_Level">--</div>
+										<div class="topUserInfo_gradeInText" style="font-size: 12px; border-right: 1px solid #999;">等级</div>
+									</a>
+									<a rel="nofollow" href="/www/pay/index" class="left topUserInfo_gradeIn">
+										<div class="topUserInfo_gradeInText" id="UserCoin">0</div>
+										<div class="topUserInfo_gradeInText" style="font-size: 12px;">世界币</div>
+									</a>
+								</div>
+								<div class="topUserInfo_Btn" id="out" onclick="loginOut()">退出登录</div>
+							</div>
+						</div>
+					</div>
+					<div class="right IDphoto topMessage">
+						<a rel="nofollow" class="topMessage_Text" href="javascript:;" target="_blank">消息</a>
+						<span id="topMessage_Title" class="left"></span>
+						<div class="IDphoto_Title" style="display: none">
+							<div class="IDphoto_Title_In" onclick="click_num(11,0);">
+								<p id="myCommentTitle"><span class="IDphoto_member"></span><span id="commentNew"></span>条话题回复，<span class="IDphoto_look" onclick="openPage(1)"><a href="/member/message/index&func=reply">查看</a></span></p>
+								<p id="myMessageTitle"><span class="IDphoto_member"></span><span id="messageNew"></span>条私信消息，<span class="IDphoto_look" onclick="openPage(3)"><a href="/member/message/index">查看</a></span></p>
+								<p id="noticeTitle"><span class="IDphoto_member"></span><span id="noticeNew"></span>条公告，<span class="IDphoto_look" onclick="openPage(7)"><a href="/member/message/index&func=notice">查看</a></span></p>
+							</div>
+						</div>
+					</div>
+					<div class="right nav_R_recharge" onclick="click_num(34,33);">
+						<a class="clearfix" href="javascript:;" onclick="javascript:getPage(20)">充值</a>
+					</div>
+
+					<a rel="nofollow" id="bookshelf_hot" href="javascript:void(0);" class="right topBar_bookList" onclick="click_num(16,0);">
+						<div class="clearfix right topBar_bookListText"><span class="left" onclick="bookshelf_click();">书架</span><span id="bookshelf" class="left"></span></div>
+					</a>
+					<!--我要投稿-->
+
+					<!--我要投稿-->
+				</div>
+
+				<script>
+					$(".IDphoto_Title_X").click(function() {
+						$(".IDphoto_Title").css('display', 'none');
+					})
+
+					function openPage(item) {
+						var userId = GPT.getCookieValue('UserId');
+						$.ajax({
+							type: 'post',
+							data: 'userId=' + userId + '&item=' + item,
+							url: '/www/ajax/ajaxUpdateTime',
+							dataType: 'json',
+							success: function(data) {}
+						});
+					}
+
+					function edittype(Type) {
+						$('#searchtype').val(Type)
+						if(Type == 3) {
+							$('.searchbox').html('输入你感兴趣书单');
+						} else {
+							$('.searchbox').html('输入你感兴趣的角色,作品,作者');
+						}
+					}
+				</script>
+
+				<!--未登录状-->
+				<div id="LoginUrl" class="right topBarR_Index">
+					<div class="right topBarR_Index_login" onclick="click_num(7,1)">
+						<a href="javascript:user_href('/www/passport/login?returnUrl=',8,0);" class="left topBarR_Index_login_Lbtn">登录</a>
+						<span class="left topBarR_Index_login_border">|</span>
+						<a href="javascript:user_href('/www/passport/register?returnUrl=',9,0);" class="left topBarR_Index_login_Rbtn">注册</a>
+					</div>
+					<a class="right wxLogin2" href="javascript:;">
+						<i></i>
+					</a>
+					<a class="right qqLogin2" href="javascript:;">
+						<i></i>
+					</a>
+					<a class="right wbLogin2" href="javascript:;">
+						<i></i>
+					</a>
+				</div>
+
+				<!--未登录状态-->
+			</div>
+		</div>
+
+		<!--首页的时候, 高度设为246px-->
+		<div class="top">
+			<div class="wrapper top_mian">
+
+				<h1 onclick="click_num(2,1);" title="不可能的世界！！">
+            <a href="https://www.8kana.com"></a>
+            
+            
+        </h1>
+				<div class="top_Icon"></div>
+
+				<script>
+					//			$(document).ready(function(){
+					//				$.get('/www/index/ajaxGetCsrfToken', {}, function(response){
+					//					$("#hd_token").attr("name", response.csrf_token_key).val(response.csrf_token_value);
+					//					$("#hd_token2").attr("name", response.csrf_token_key).val(response.csrf_token_value);
+					//					$("#hd_token3").attr("name", response.csrf_token_key).val(response.csrf_token_value);
+					//				}, 'json');
+					//			});
+				</script>
+
+				<!-- 搜索框 -->
+				<form id="searchform" class="clearfix nav_searchBox" method="post" action="/www/search">
+					<input type='hidden' id="hd_token" name='' value='' />
+					<a class="right nav_btn" onclick="searchKey()" href="javascript:click_num(19,0);">
+						<span></span>
+					</a>
+					<div class="right search_Input">
+						<div class="search_text">
+							<label class="searchbox">输入你感兴趣的角色,作品,作者</label>
+						</div>
+						<input id="searchbox" class="nav_txt ui-autocomplete-input searchbox" type="text" name="keyword" autocomplete="off">
+						<input type="hidden" name="type" value="1" id="searchtype" />
+					</div>
+					<a href="javascript:;" class="right search_Class">
+						<span class="left">原创</span>
+						<i class="left"></i>
+						<div class="right search_Border"></div>
+					</a>
+					<div class="search_ClassMain">
+						<ul>
+							<li>
+								<a href="javascript:;" datat="1" onclick="edittype(1)">原创</a>
+							</li>
+							<li>
+								<a href="javascript:;" data="2" onclick="edittype(2)">短篇</a>
+							</li>
+							<li>
+								<a href="javascript:;" data="3" onclick="edittype(3)">书单</a>
+							</li>
+						</ul>
+					</div>
+				</form>
+				<!-- 搜索框 -->
+				<!-- banner里立即投稿按钮 -->
+				<a onclick="authorConfirm()" href="javascript:;" class="BannerBtn"></a>
+				<!-- banner里立即投稿按钮 -->
+			</div>
+		</div>
+
+		<div class="clearfix index_main index_main_Nav">
+
+			<!-- 头部 -->
+			<!--    头部导航，共用 不可控    -->
+
+			<div class="nav">
+				<div class="navTop  wrapper">
+					<ul class="left navTopL clearfix">
+						<li class="navTopL_list navTopL_current" onclick="click_num(21,20);">
+							<a href="index.html" class="navTop_type">首页</a>
+						</li>
+
+						<li class="navTopL_list navTopL_list_boy ">
+							<a href="nanpin.html" class="navTop_type navTop_type_Boy">男频</a>
+						</li>
+						<li class="navTopL_list ">
+							<a href="girl.html" class="navTop_type">女频</a>
+						</li>
+						<li class="navTopL_list ">
+							<a href="copyright.html" class="clearfix navTop_type">
+								<span class="left">优质版权</span>
+								<i class="left yzIcon"></i>
+							</a>
+						</li>
+						<li class="navTopL_list  ">
+							<a href="vip.html" class="navTop_type">VIP专区</a>
+						</li>
+						<li class="navTopL_list  ">
+							<a href="freezone.html" class="navTop_type">免费专区</a>
+						</li>
+						<li class="navTopL_list  ">
+							<a href="dppd.html" class="navTop_type">短篇</a>
+						</li>
+						<li class="navTopL_list " onclick="click_num(29,20);">
+							<a href="rank.html" class="navTop_type">排行榜</a>
+						</li>
+						<li class="navTopL_list " onclick="click_num(28,20);">
+							<a href="bookshelf.html" class="navTop_type">书库</a>
+						</li>
+						<li class="navTopL_list">
+							<a href="qczw.html" class="navTop_type" style="font-size:16px; color:#FF986F; font-weight:800">征文大赛</a>
+						</li>
+					</ul>
+					<div class="right nav_R_authorWelfare" onclick="click_num(35,33);">
+						<a class="clearfix" href="https://www.8kana.com/bbs/index/show/16941.html" target="_blank">网站福利</a>
+					</div>
+					<div id="btn_submission" class="right btn_submission right" onclick="click_num(7,1)">
+						<a onclick="authorConfirm()" href="javascript:click_num(14,0);">
+							<span class="left">
+                        <script>
+                            if(GPT.getCookieValue('IsAuthor')==1)
+                                document.write('作者中心');
+                            else
+                                document.write('我要投稿');
+                        </script>
+                    </span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="navClass">
+				<div class="clearfix navClassIn">
+					<a href="/www/bookclass/serial/3-302" class="navClassIn_Text">悬疑22</a>
+					<a href="/www/bookclass/serial/3-305" class="navClassIn_Text">灵异</a>
+					<a href="/www/bookclass/serial/3-303" class="navClassIn_Text">智斗</a>
+					<a href="/www/bookclass/serial/4-405" class="navClassIn_Text">轻小说</a>
+					<a href="/www/bookclass/serial/4-404" class="navClassIn_Text">同人</a>
+					<a href="/www/bookclass/serial/1-101" class="navClassIn_Text">超能</a>
+					<a href="/www/bookclass/serial/1-104" class="navClassIn_Text">现实</a>
+					<a href="/www/bookclass/serial/1-103" class="navClassIn_Text">游戏</a>
+					<a href="/www/bookclass/serial/2-201" class="navClassIn_Text">玄幻</a>
+					<a href="/www/bookclass/serial/2-202" class="navClassIn_Text">奇幻</a>
+					<a href="/www/bookclass/serial/2-203" class="navClassIn_Text">科幻</a>
+					<a href="/www/bookclass/serial/6-601" class="navClassIn_Text">新派武侠</a>
+					<a href="/www/bookclass/serial/6-602" class="navClassIn_Text">幻想神州</a>
+					<a href="/www/bookclass/serial/8-801" class="navClassIn_Text">青春</a>
+					<a href="/www/bookclass/serial/8-802" class="navClassIn_Text">民国</a>
+					<a href="/www/bookclass/serial/8-803" class="navClassIn_Text">都市</a>
+					<a href="/www/bookclass/serial/7-701" class="navClassIn_Text">脑洞</a>
+					<a href="/www/bookclass/serial/7-702" class="navClassIn_Text">二次元</a>
+					<a href="/www/bookclass/serial/2-202" class="navClassIn_Text">奇幻</a>
+
+					<a href="javascript:;" class="navClassIn_Text">仙侠</a>
+					<a href="javascript:;" class="navClassIn_Text">宅斗宫斗</a>
+					<a href="javascript:;" class="navClassIn_Text">架空</a>
+				</div>
+			</div>
+
+			<script>
+				$.get("/www/index/ajaxGetSubMenu", {}, function(response) {
+					var str = '';
+					for(var i in response.sub_classes) {
+						var subClass = response.sub_classes[i];
+						str += '<a href="/www/bookclass/serial/' + subClass.Parent + '-' + subClass.ClassId + '" class="navClassIn_Text">' + subClass.Name + '</a>';
+					}
+
+					$(".navClassIn").html(str);
+				}, 'json');
+
+				$(".navTopL_list").hover(function() {
+					$(this).find(".navTop_type_list").slideDown();
+				}, function() {
+					$(this).find(".navTop_type_list").slideUp(0);
+				});
+				var list = GPT.sendAjax('/www/ajax/ajaxGetBookClass');
+				var html = '';
+				var res = list.BookClass;
+				$('#IndexNavList').html(html);
+				var res2 = list.IndexRecommend;
+				if(res2 != false) {
+					$('#Index_Recommend_0005').html(res2[0].Title);
+					$('#Index_Recommend_0005').parent('a').attr('href', res2[0].Url);
+				}
+
+				$(document).ready(function() {
+					function split(val) {
+						return val.split(/,\s*/);
+					}
+
+					function extractLast(term) {
+						return split(term).pop();
+					}
+
+					setTimeout(function() {
+						$("#searchbox").autocomplete({
+							minLength: 1,
+							source: function(request, response) {
+								request.term = GPT.trim(request.term);
+								if(request.term == '') return false;
+								var searchType = $('#searchtype').val();
+								$.getJSON("/www/search/ajaxSearchList", {
+									keyword: extractLast(request.term),
+									searchType: searchType
+								}, response);
+							},
+							search: function() {
+								// 自定义最小长度
+								var term = extractLast(this.value);
+								if(term.length < 1) {
+									return false;
+								}
+							},
+
+							select: function(event, ui) {
+								var searchVal = $(".ui-menu-item").text();
+								if(searchVal == '换一个关键字再试试？') {
+									return false;
+								}
+								var autoType = ui.item.type;
+								var objId = ui.item.id;
+								var searchType = $('#searchtype').val();
+
+								if(searchType == 1) {
+									if(autoType == 1) {
+										location.href = "/book/" + objId + ".html";
+									} else if(autoType == 2) {
+										location.href = "/member/author/Portal/" + objId;
+									} else {
+										location.href = '/www/booklist/detail/' + objId;
+									}
+								} else if(searchType == 2) {
+									if(autoType == 1) {
+										location.href = "/short/book/" + objId + ".html";
+									} else if(autoType == 2) {
+										location.href = "/member/author/Portal/" + objId;
+									} else {
+										location.href = '/www/booklist/detail/' + objId;
+									}
+								}
+
+							}
+						});
+					}, 2000);
+
+					// 内容展示区最小高度设置
+					var headHeight = ($('.topBar').height()) + ($('.top').height()) + ($('.nav').height()) + 3;
+					var height = document.documentElement.clientHeight - (headHeight) - 351;
+					$('.main').css('min-height', height);
+					$('.searchbox').click(function() {
+						$('.search_text').css('display', 'none');
+						$("#searchbox").focus();
+					});
+					$('.searchbox').blur(function() {
+						var v = $(this).val();
+						if(v == '') {
+							$('.search_text').css('display', 'block');
+						}
+
+					});
+				});
+			</script>
+			<!-- 头部结束 -->
+
+			<!--  导航下部菜单/推荐位区域  -->
+
+			<div class="returnTop">
+				<div class="returnTop_Big">
+					<div class="returnTop_Img"></div>
+					<div class="returnTop_Img22"></div>
+					<div class="returnTop_Main">
+						<div class="returnTop_Box returnTop_Box1">
+							<div class="returnTop_In1 returnTop_In1_Hot">
+								<p>神作</p>
+								<p>推荐</p>
+							</div>
+							<div class="returnTop_In1">
+								<p>必看</p>
+								<p>新作</p>
+							</div>
+							<div class="returnTop_In1">
+								<p>完结</p>
+								<p>专区</p>
+							</div>
+							<div class="returnTop_In1">
+								<p>每日</p>
+								<p>更新</p>
+							</div>
+							<div class="returnTop_In1">
+								<p>神作</p>
+								<p>限免</p>
+							</div>
+							<div class="returnTop_In1">
+								<p>短篇</p>
+								<p>小说</p>
+							</div>
+							<div class="returnTop_In1">
+								<p>贤者</p>
+								<p>书评</p>
+							</div>
+							<div class="returnTop_In1">
+								<p>科学</p>
+								<p>艺术</p>
+							</div>
+						</div>
+						<div class="returnTop_Box returnTop_Box2">
+							<a href="https://www.8kana.com/active/index/download" target="_blank" class="returnTop_In2 returnTop_In2_APP">
+								APP下载
+								<div class="APPerweima">
+									<div class="APPerweima_Box">
+										<img src="static/picture/footer_erweimaapp.png" style="width: 100%; height: 100%;">
+									</div>
+								</div>
+							</a>
+							<div class="returnTop_In2" id="feedback_Btn">意见反馈</div>
+							<div class="returnTop_In2_Last">
+								<div class="returnTop_Btn_Icon"></div>
+								<div class="returnTop_In2_LastText">返回顶部</div>
+							</div>
+						</div>
+						<div class="clearfix returnTop_Border">
+							<div class="left returnTop_BorderIn"></div>
+							<div class="left returnTop_BorderIn"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--返回顶部-->
+
+			<!--顶部导航-->
+
+			<div class="fixedNav">
+				<div class="clearfix fixedNav_In">
+					<div class="left fixedNav_Main">
+						<ul>
+							<li class="fixedNav_Hot">
+								<a href="/" class="fixedNav_MainIn">首页</a>
+								<div class="fixedNav_list">
+									<a href="/community/xzindex/index" target="_blank" class="fixedNav_listIn">贤者之城</a>
+									<a href="/community/ysindex/index" target="_blank" class="fixedNav_listIn">艺术工坊</a>
+									<a href="/bbs" target="_blank" class="fixedNav_listIn">暴风酒馆</a>
+								</div>
+							</li>
+							<li>
+								<a href="/www/bookclass/serial/7" class="fixedNav_MainIn">少女幻想</a>
+							</li>
+							<li>
+								<a href="/www/bookclass/serial/3" class="fixedNav_MainIn">烧脑</a>
+							</li>
+							<li>
+								<a href="/www/bookclass/serial/4" class="fixedNav_MainIn">轻小说</a>
+							</li>
+							<li>
+								<a href="/www/bookclass/serial/6" class="fixedNav_MainIn">神州</a>
+							</li>
+							<li>
+								<a href="/www/copyright" class="fixedNav_MainIn">优质版权</a>
+							</li>
+							<li>
+								<a href="/www/rank" class="fixedNav_MainIn">排行榜</a>
+							</li>
+						</ul>
+					</div>
+					<div class="left fixedNav_search">
+						<form id="search" action="/www/search" method="post">
+							<input type='hidden' id="hd_token2" name='' value='' />
+							<a href="javascript:" class="right nav_btn">
+								<span></span>
+							</a>
+							<div class="right fixedNav_Input">
+								<input type="text" name="keyword" placeholder="搜索你感兴趣的作品或作者">
+							</div>
+						</form>
+
+						<script>
+							$("#search a").click(function() {
+								$("#search").submit();
+							});
+						</script>
+					</div>
+					<div class="right" id="LoginInfo1">
+						<div class="right IDphoto ">
+							<a rel="nofollow" class="IDphoto_a" href="/member/index/index" target="_blank"><img src="" id="UserAvatar1" style="width: 100%; height: 100%;"></a>
+						</div>
+						<a rel="nofollow" id="bookshelf_hot1" href="/member/bookshelf/index" class="right topBar_bookList" target="_blank">
+							<div class="clearfix right topBar_bookListText"><span class="left">书架</span><span id="bookshelf1" class="left"></span></div>
+						</a>
+					</div>
+					<!--未登录状-->
+					<div id="LoginUrl1" class="right topBarR_Index" style="display: none">
+						<div class="right topBarR_Index_login">
+							<script type="text/javascript">
+								var html = '';
+								html += '<a href="' + kana.getDomain('www') + '/www/passport/login?returnUrl=' + window.location.href + '" class="left topBarR_Index_login_Lbtn">登录</a>';
+								html += '<span class="left topBarR_Index_login_border">|</span>'
+								html += '<a href="' + kana.getDomain('www') + '/www/passport/register?returnUrl=' + window.location.href + '" class="left topBarR_Index_login_Rbtn">注册</a>';
+								document.write(html);
+							</script>
+						</div>
+					</div>
+					<!--未登录状态-->
+				</div>
+			</div>
+
+			<!--顶部导航-->
+
+		</div>
+
+		<!--   正文区域：content + MainRight ， 可任意组合 -->
+		<div class="clearfix wrapper mainBox_In">
+
+			<div class="clearfix index_main indexMainOne">
+				<!--<div class="Character">
+        <div class="CharacterImg"></div>
+        <a onclick="authorConfirm()" href="javascript:;" class="CharacterBtn"></a>
+    </div>-->
+				<div class="clearfix left indexMain_Left indexMainOne_Left">
+					<div class="left indexMainOne_Recommend indexMainOne_RecommendWidth1">
+						<a href="javascript:open_href('https://www.8kana.com/book/26978.html',37,36);" class="indexMainOne_Img">
+							<img src="static/picture/5dba5c432c225.jpg" style="width:100%; height:100%;" />
+							<div class="indexMainOne_ImgBox">
+								<div class="indexMainOne_ImgText"></div>
+							</div>
+						</a>
+					</div>
+					<div class="left indexMainOne_Recommend indexMainOne_RecommendWidth2">
+						<div class="indexMainOne_RecommendMinBook">
+							<a href="javascript:open_href('https://www.8kana.com/book/26492.html',37,36);" class="indexMainOne_Img">
+								<img src="static/picture/5db90ac34e7f4.jpg" style="width:100%; height:100%;" />
+								<div class="indexMainOne_ImgBox">
+									<div class="indexMainOne_ImgText"></div>
+								</div>
+							</a>
+						</div>
+						<div class="indexMainOne_RecommendMinBook">
+							<a href="javascript:open_href('https://www.8kana.com/book/26768.html',37,36);" class="indexMainOne_Img">
+								<img src="static/picture/5db7b94315529.jpg" style="width:100%; height:100%;" />
+								<div class="indexMainOne_ImgBox">
+									<div class="indexMainOne_ImgText"></div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="left indexMainOne_Recommend indexMainOne_RecommendWidth1">
+						<a href="javascript:open_href('https://www.8kana.com/book/25035.html',37,36);" class="indexMainOne_Img">
+							<img src="static/picture/5db667c399e49.jpg" style="width:100%; height:100%;" />
+							<div class="indexMainOne_ImgBox">
+								<div class="indexMainOne_ImgText">虽然我有超能力，但是我低调，我就是不说。</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="left indexMainOne_Recommend indexMainOne_RecommendWidth2">
+						<div class="indexMainOne_RecommendMinBook">
+							<a href="javascript:open_href('https://www.8kana.com/book/26946.html',37,36);" class="indexMainOne_Img">
+								<img src="static/picture/5db5164371623.jpg" style="width:100%; height:100%;" />
+								<div class="indexMainOne_ImgBox">
+									<div class="indexMainOne_ImgText"></div>
+								</div>
+							</a>
+						</div>
+						<div class="indexMainOne_RecommendMinBook">
+							<a href="javascript:open_href('https://www.8kana.com/book/27029.html',37,36);" class="indexMainOne_Img">
+								<img src="static/picture/5db3c4c332206.jpg" style="width:100%; height:100%;" />
+								<div class="indexMainOne_ImgBox">
+									<div class="indexMainOne_ImgText"></div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="right indexMain_Right indexMainOne_Right">
+					<div class="clearfix indexMain_Title indexMain_Title1">
+						<a href="/bbs" class="right indexMain_Title_more">更多></a>
+					</div>
+					<div class="bigNews_list_box">
+						<div class="indexMain_RightList">
+							<a href="https://www.8kana.com/active/gczg" target="_blank" class="clearfix indexMain_RightListIn">
+								<i class="left indexMain_RightList_Num numBgColor1">1</i>
+								<div class="indexMain_RightList_Html">歌唱祖国.全国网络文学优秀联展</div>
+							</a>
+							<a href="https://www.8kana.com/bbs/index/show/18221.html" target="_blank" class="clearfix indexMain_RightListIn">
+								<i class="left indexMain_RightList_Num numBgColor2">2</i>
+								<div class="indexMain_RightList_Html">第二届二次元网络文学大赛 重金求“字” 为“轻”“春”而战！！</div>
+							</a>
+							<a href="https://www.8kana.com/bbs/index/show/17300.html" target="_blank" class="clearfix indexMain_RightListIn">
+								<i class="left indexMain_RightList_Num numBgColor3">3</i>
+								<div class="indexMain_RightList_Html">不可能的世界2019约稿说明——稿费不封顶，你就是我们要找的梦想者！</div>
+							</a>
+							<a href="https://www.8kana.com/bbs/index/show/18116.html" target="_blank" class="clearfix indexMain_RightListIn" >
+								<i class="left indexMain_RightList_Num numBgColor4">4</i>
+								<div class="indexMain_RightList_Html">8站时尚圈IP：‘不能恋爱的秘密’ 获诸位大咖花式力挺 时尚芭莎开机屏推荐</div>
+							</a>
+							<a href="https://www.8kana.com/bbs/index/show/18118.html" target="_blank" class="clearfix indexMain_RightListIn">
+								<i class="left indexMain_RightList_Num numBgColor5">5</i>
+								<div class="indexMain_RightList_Html">大声宣布：授权作品享受到福利，即将重磅推出！</div>
+							</a>
+							<a href="https://www.8kana.com/bbs/index/show/18186.html" target="_blank" class="clearfix indexMain_RightListIn">
+								<i class="left indexMain_RightList_Num numBgColor6">6</i>
+								<div class="indexMain_RightList_Html">8站首部动态漫画《元芳来了》在芒果tv独家上线啦，每周四周五上午十点更新</div>
+							</a>
+							<a href="http://www.8kana.com/bbs/index/show/16274.html" target="_blank" class="clearfix indexMain_RightListIn">
+								<i class="left indexMain_RightList_Num numBgColor7">7</i>
+								<div class="indexMain_RightList_Html">什么情况？居然把这些词用在一个女孩子身上？？</div>
+							</a>
+						</div>
+						<div class="bigNews_listImg">
+							<a href="javascript:open_href('http://www.8kana.com/bbs/index/show/16941.html',56,55);">
+								<img src="static/picture/5c209fabc4602.jpg" alt="" />
+							</a>
+
+							<a href="javascript:open_href('https://active.8kana.com/ad/sngx',57,55);">
+								<img src="static/picture/5c8758bbb2713.jpg" alt="" />
+							</a>
+						</div>
+
+					</div>
+					<div class="clearfix worldBox_Text">
+						<a href="javascript:open_href('https://www.8kana.com/bbs/index/show/16941.html',58,55);" class="left worldBox_Text_In1">网站福利说明</a>
+						<a href="javascript:open_href('https://active.8kana.com/ad/bookComment/5',59,55);" class="left worldBox_Text_In2">影视改编专题</a>
+						<a href="javascript:open_href('https://active.8kana.com/music/show',60,55);" class="left worldBox_Text_In3">音乐获奖作品</a>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix index_main indexMainTwo" id="Floor1">
+
+				<div class="indexMain_Recommend">
+					<div class="clearfix indexMain_Box">
+						<div class="left indexMain_Left">
+							<div class="indexMain_Title indexMain_Title2"></div>
+							<div class="clearfix indexMain_BookBox">
+								<a href="javascript:open_href('/book/21201.html',49,48);" class="left indexMain_In">
+									<div class="indexMain_BookCover">
+										<div class="CoverIcon_0"></div>
+										<img original="static/picture/21201_af809_4846_m.jpg" src="https://c.8kana.com/201805/212/01/21201_af809_4846_m.jpg" alt="99%错穿梦境" style="width:100%; height:100%;" />
+
+										<div class="Black_update">
+											<div class="Black_update_In">
+												<div class="clearfix Black_update_T">
+													<div class="left Black_update_Head lazyload">
+														<img original="https://a.8kana.com/author/201610/zug/jzi/115420_cbc24_s.jpg" src="static/picture/fmjz.jpg" alt="" style="width:100%; height:100%;" />
+													</div>
+													<div class="left Black_update_Name">况月灵</div>
+												</div>
+												<div class="Black_update_C">
+													<P>封面作者：一笑 李铭期：糟糕，我又串梦了！ 梦主：？ 李铭期：这是你的梦，我就一个酱油，不用理我，该...
+													</P>
+												</div>
+												<div class="Black_update_B"><span>236.4万</span>热度</div>
+											</div>
+										</div>
+
+										<div class="indexMain_CoverIcon indexMain_CoverIcon1"></div>
+									</div>
+									<p class="updateCover_Name">99%错穿梦境</p>
+
+									<p class="updateCover_Inform">131.03万 | 重幻想</p>
+								</a>
+								<a href="javascript:open_href('/book/11438.html',50,48);" class="left indexMain_In">
+									<div class="indexMain_BookCover">
+										<div class="CoverIcon_2"></div>
+										<img original="static/picture/11438_6da31_1150_m.jpg" src="https://c.8kana.com/201512/114/38/11438_6da31_1150_m.jpg" alt="刀不语" style="width:100%; height:100%;" />
+
+										<div class="Black_update">
+											<div class="Black_update_In">
+												<div class="clearfix Black_update_T">
+													<div class="left Black_update_Head lazyload">
+														<img original="https://a.8kana.com/author/201902/uaz/sve/20209_2b4a4_s.jpg" src="static/picture/fmjz.jpg" alt="" style="width:100%; height:100%;" />
+													</div>
+													<div class="left Black_update_Name">Lazy</div>
+												</div>
+												<div class="Black_update_C">
+													<P> 有人问我，什么是江湖？ 我想了想，想到的是桌前的一壶浊酒，是残阳下远去的身影，是月下的一座坟...
+													</P>
+												</div>
+												<div class="Black_update_B"><span>4289.36万</span>热度</div>
+											</div>
+										</div>
+
+										<div class="indexMain_CoverIcon indexMain_CoverIcon1"></div>
+									</div>
+									<p class="updateCover_Name">刀不语</p>
+
+									<p class="updateCover_Inform">178.42万 | 神州</p>
+								</a>
+								<a href="javascript:open_href('/book/17913.html',51,48);" class="left indexMain_In">
+									<div class="indexMain_BookCover">
+										<div class="CoverIcon_0"></div>
+										<img original="static/picture/17913_228b3_4681_m.jpg" src="https://c.8kana.com/201803/179/13/17913_228b3_4681_m.jpg" alt="报报报告大王" style="width:100%; height:100%;" />
+
+										<div class="Black_update">
+											<div class="Black_update_In">
+												<div class="clearfix Black_update_T">
+													<div class="left Black_update_Head lazyload">
+														<img original="https://a.8kana.com/author/201803/uup/qqc/862020_4e73f_s.jpg" src="static/picture/fmjz.jpg" alt="" style="width:100%; height:100%;" />
+													</div>
+													<div class="left Black_update_Name">张袖</div>
+												</div>
+												<div class="Black_update_C">
+													<P> 【史上第一本书名自带鬼畜效果的小说！】 西天取经还没上路，唐僧就被大唐皇...
+													</P>
+												</div>
+												<div class="Black_update_B"><span>364.61万</span>热度</div>
+											</div>
+										</div>
+
+										<div class="indexMain_CoverIcon indexMain_CoverIcon1"></div>
+									</div>
+									<p class="updateCover_Name">报报报告大王</p>
+
+									<p class="updateCover_Inform">41.3万 | 神州</p>
+								</a>
+								<a href="javascript:open_href('/book/22655.html',52,48);" class="left indexMain_In">
+									<div class="indexMain_BookCover">
+										<div class="CoverIcon_2"></div>
+										<img original="static/picture/22655_a1e03_5038_m.jpg" src="https://c.8kana.com/201808/226/55/22655_a1e03_5038_m.jpg" alt="书灵记" style="width:100%; height:100%;" />
+
+										<div class="Black_update">
+											<div class="Black_update_In">
+												<div class="clearfix Black_update_T">
+													<div class="left Black_update_Head lazyload">
+														<img original="https://s.8kana.com/img/common/head/author_head.png" src="static/picture/fmjz.jpg" alt="" style="width:100%; height:100%;" />
+													</div>
+													<div class="left Black_update_Name">善水</div>
+												</div>
+												<div class="Black_update_C">
+													<P> 三万年前，名为南城图书馆的神物从天而降，瀛洲界从茹毛饮血走向诗书礼乐； 五千年前，每本书籍都诞生了...
+													</P>
+												</div>
+												<div class="Black_update_B"><span>1429.8万</span>热度</div>
+											</div>
+										</div>
+
+										<div class="indexMain_CoverIcon indexMain_CoverIcon1"></div>
+									</div>
+									<p class="updateCover_Name">书灵记</p>
+
+									<p class="updateCover_Inform">78.59万 | 神州</p>
+								</a>
+								<a href="javascript:open_href('/book/10080.html',53,48);" class="left indexMain_In">
+									<div class="indexMain_BookCover">
+										<div class="CoverIcon_2"></div>
+										<img original="static/picture/201812211412058.jpg" src="https://c.8kana.com/201812/201812211412058.jpg" alt="恐怖手机游戏" style="width:100%; height:100%;" />
+
+										<div class="Black_update">
+											<div class="Black_update_In">
+												<div class="clearfix Black_update_T">
+													<div class="left Black_update_Head lazyload">
+														<img original="https://a.8kana.com/author/201510/cyx/rge/10112_3c55a_s.jpg" src="static/picture/fmjz.jpg" alt="" style="width:100%; height:100%;" />
+													</div>
+													<div class="left Black_update_Name">悲伤网管</div>
+												</div>
+												<div class="Black_update_C">
+													<P> 当死神决定做一款世上最好玩的手游……本书QQ群：2042767...</P>
+												</div>
+												<div class="Black_update_B"><span>6986.05万</span>热度</div>
+											</div>
+										</div>
+
+										<div class="indexMain_CoverIcon indexMain_CoverIcon1"></div>
+									</div>
+									<p class="updateCover_Name">恐怖手机游戏</p>
+
+									<p class="updateCover_Inform">104.61万 | 烧脑</p>
+								</a>
+								<a href="javascript:open_href('/book/20796.html',54,48);" class="left indexMain_In">
+									<div class="indexMain_BookCover">
+										<div class="CoverIcon_1"></div>
+										<img original="static/picture/20796_0cc5a_4794_m.jpg" src="https://c.8kana.com/201805/207/96/20796_0cc5a_4794_m.jpg" alt="狼烟千里不独行" style="width:100%; height:100%;" />
+
+										<div class="Black_update">
+											<div class="Black_update_In">
+												<div class="clearfix Black_update_T">
+													<div class="left Black_update_Head lazyload">
+														<img original="https://a.8kana.com/author/201603/gab/hbv/14168_a0982_s.jpg" src="static/picture/fmjz.jpg" alt="" style="width:100%; height:100%;" />
+													</div>
+													<div class="left Black_update_Name">君王死社稷</div>
+												</div>
+												<div class="Black_update_C">
+													<P>书友群群号：555301739 新书《月夕美人图》开坑啦，收藏推荐了解一下~ 张狂莽夫，烈酒骏马走北...
+													</P>
+												</div>
+												<div class="Black_update_B"><span>498.41万</span>热度</div>
+											</div>
+										</div>
+
+										<div class="indexMain_CoverIcon indexMain_CoverIcon1"></div>
+									</div>
+									<p class="updateCover_Name">狼烟千里不独行</p>
+
+									<p class="updateCover_Inform">121.76万 | 神州</p>
+								</a>
+							</div>
+						</div>
+						<div class="right indexMain_Right">
+
+							<div class="windCloudList">
+								<div class="indexMain_RightNav">
+									<div class="indexMain_RightNavIn indexMain_RightNavInHot indexMain_RightNavIn1 indexMain_RightNav_Border1">
+										<img src="static/picture/indexrightnav1.png">
+									</div>
+								</div>
+								<div class="rankingList_R1_main1 importantRankingList">
+									<div class="classPage_b Hot_li_Box">
+										<div class="classPage_b_main" id="classPage_b_img" rel="1">
+											<a href="/book/26684.html" class="clearfix indexMain_RightListIn importantRankingList_Hot" target="_blank">
+												<div class="clearfix importantRankingList1">
+													<div class="left importantRankingList_Cover">
+														<img src="static/picture/26684_04b53_5670_m.jpg" style="width: 100%; height: 100%;">
+														<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon1">
+															<i>1</i>
+														</div>
+														<div class="CoverIcon_2"></div>
+													</div>
+													<div class="left importantRankingList_Info">
+														<div class="clearfix importantRankingList_BookName">
+															<div class="left importantRankingList_BookName_Text">废土就业指南</div>
+															<div class="right importantRankingList_BookName_Right">热度241.02万</div>
+														</div>
+														<div class="importantRankingList_BookClass">重幻想</div>
+														<div class="importantRankingList_BookSynopsis">僵尸是什么垃圾？干垃圾。因为猪都不吃！——某位不愿透露姓名的废品焚烧站站长。 读者群：495621002，欢迎前来玩耍！
+														</div>
+														<div class="importantRankingList_BookUpdate">更新至：102章</div>
+													</div>
+												</div>
+												<div class="clearfix importantRankingList2">
+													<i class="left indexMain_RightList_Num rankingList_one">1</i>
+													<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style=" width: 140px;">【重幻想】废土就业指南</div>
+													<div class="right importantRankingList_BookUpdate">更新至：102章</div>
+												</div>
+											</a>
+
+											<a href="/book/24982.html" class="clearfix indexMain_RightListIn" target="_blank">
+
+												<div class="clearfix importantRankingList1">
+													<div class="left importantRankingList_Cover">
+														<img src="static/picture/24982_1062c_5416_m.jpg" style="width: 100%; height: 100%;">
+														<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon2">
+															<i>2</i>
+														</div>
+														<div class="CoverIcon_2"></div>
+													</div>
+													<div class="left importantRankingList_Info">
+														<div class="clearfix importantRankingList_BookName">
+															<div class="left importantRankingList_BookName_Text">王妃不挂科</div>
+															<div class="right importantRankingList_BookName_Right">热度466.51万</div>
+														</div>
+														<div class="importantRankingList_BookClass">古风历史</div>
+														<div class="importantRankingList_BookSynopsis">鬼马精灵美少女桃小夭逃婚未遂，被未婚夫摄政王楚笙歌一脚踢进皇家书院“天子门”重新做妃，与蠢萌太子楚德纯、二货将种陈渥丹、花痴美眉白清浅组成为“学渣四人组”，怼公主、打国舅、戏夫子、救皇上、闹球场、捉内奸、造机器熊猫、乱点鸳鸯谱，还抽空与腹黑王爷楚笙歌、闷骚首相白清野谈了场三角恋，鸡飞狗跳，好戏连台。</div>
+														<div class="importantRankingList_BookUpdate">更新至：227章</div>
+													</div>
+												</div>
+												<div class="clearfix importantRankingList2">
+													<i class="left indexMain_RightList_Num rankingList_two">2</i>
+													<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【古风历史】王妃不挂科</div>
+													<div class="left importantRankingList_BookUpdate">更新至：227章</div>
+												</div>
+											</a>
+
+											<a href="/book/24955.html" class="clearfix indexMain_RightListIn" target="_blank">
+
+												<div class="clearfix importantRankingList1">
+													<div class="left importantRankingList_Cover">
+														<img src="static/picture/24955_9a4e6_5420_m.jpg" style="width: 100%; height: 100%;">
+														<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon3">
+															<i>3</i>
+														</div>
+														<div class="CoverIcon_2"></div>
+													</div>
+													<div class="left importantRankingList_Info">
+														<div class="clearfix importantRankingList_BookName">
+															<div class="left importantRankingList_BookName_Text">放开那位保安小哥</div>
+															<div class="right importantRankingList_BookName_Right">热度283.66万</div>
+														</div>
+														<div class="importantRankingList_BookClass">轻幻想</div>
+														<div class="importantRankingList_BookSynopsis">“在下自幼苦修少林外门七十二绝技已神功大成，各位江湖同道若是信得过在下就从楼上跳下来，我会用少林真传袈裟伏魔功接住各位！” “他们相信了？” “没有，所以我只能回来继续做保安啊……” 这是一个国外务工归来的高顺小哥在学校做保安赚钱娶师妹的青春励志故事 本书读者群215793627欢迎吐槽~
+														</div>
+														<div class="importantRankingList_BookUpdate">更新至：208章</div>
+													</div>
+												</div>
+												<div class="clearfix importantRankingList2">
+													<i class="left indexMain_RightList_Num rankingList_three">3</i>
+													<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【轻幻想】放开那位保安小哥</div>
+													<div class="left importantRankingList_BookUpdate">更新至：208章</div>
+												</div>
+											</a>
+
+											<a href="/book/25334.html" class="clearfix indexMain_RightListIn" target="_blank">
+
+												<div class="clearfix importantRankingList1">
+													<div class="left importantRankingList_Cover">
+														<img src="static/picture/25334_f0562_5478_m.jpg" style="width: 100%; height: 100%;">
+														<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+															<i>4</i>
+														</div>
+														<div class="CoverIcon_2"></div>
+													</div>
+													<div class="left importantRankingList_Info">
+														<div class="clearfix importantRankingList_BookName">
+															<div class="left importantRankingList_BookName_Text">罪今朝</div>
+															<div class="right importantRankingList_BookName_Right">热度108.3万</div>
+														</div>
+														<div class="importantRankingList_BookClass">烧脑</div>
+														<div class="importantRankingList_BookSynopsis">沈今朝得知心爱之人被迫离国，请求姐姐送去机场，万万想不到引发车祸，本该在机场见面的暮成雪在另一辆车内遭受重创，最后警方还在河提走道发现一名死者，由此引发一系列的悬疑纠葛。</div>
+														<div class="importantRankingList_BookUpdate">更新至：190章</div>
+													</div>
+												</div>
+												<div class="clearfix importantRankingList2">
+													<i class="left indexMain_RightList_Num ">4</i>
+													<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【烧脑】罪今朝</div>
+													<div class="left importantRankingList_BookUpdate">更新至：190章</div>
+												</div>
+											</a>
+
+											<a href="/book/22964.html" class="clearfix indexMain_RightListIn" target="_blank">
+
+												<div class="clearfix importantRankingList1">
+													<div class="left importantRankingList_Cover">
+														<img src="static/picture/22964_c3ccc_5144_m.jpg" style="width: 100%; height: 100%;">
+														<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+															<i>5</i>
+														</div>
+														<div class="CoverIcon_2"></div>
+													</div>
+													<div class="left importantRankingList_Info">
+														<div class="clearfix importantRankingList_BookName">
+															<div class="left importantRankingList_BookName_Text">我，魔尊，修仙</div>
+															<div class="right importantRankingList_BookName_Right">热度1070.49万</div>
+														</div>
+														<div class="importantRankingList_BookClass">重幻想</div>
+														<div class="importantRankingList_BookSynopsis">菩提城外，先代佛祖拈花而笑，持道论佛，他说女色皆红粉骷髅 青年微怔，男色呢？ 那一日，先代佛祖沉默许久，险些断了菩提树，砸了明镜台 …… 太白宗里，前代仙君执宗门大阵，将一闯宗青年围困，苦口婆心，言语好似天花乱坠 青年持剑沉默，听着前代仙君的道义公理，天纲伦常，然后提剑而起 你说的都有道理，但劳资特么的就是不服 …… 只是，故事主角即非佛祖无名，亦非仙君白帝，而是王小凡，他是魔尊，比那两人更贱些。
+														</div>
+														<div class="importantRankingList_BookUpdate">更新至：429章</div>
+													</div>
+												</div>
+												<div class="clearfix importantRankingList2">
+													<i class="left indexMain_RightList_Num ">5</i>
+													<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【重幻想】我，魔尊，修仙</div>
+													<div class="left importantRankingList_BookUpdate">更新至：429章</div>
+												</div>
+											</a>
+
+											<a href="/book/25402.html" class="clearfix indexMain_RightListIn" target="_blank">
+
+												<div class="clearfix importantRankingList1">
+													<div class="left importantRankingList_Cover">
+														<img src="static/picture/25402_b60bf_5514_m.jpg" style="width: 100%; height: 100%;">
+														<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+															<i>6</i>
+														</div>
+														<div class="CoverIcon_0"></div>
+													</div>
+													<div class="left importantRankingList_Info">
+														<div class="clearfix importantRankingList_BookName">
+															<div class="left importantRankingList_BookName_Text">隐士发明家</div>
+															<div class="right importantRankingList_BookName_Right">热度210.7万</div>
+														</div>
+														<div class="importantRankingList_BookClass">神州</div>
+														<div class="importantRankingList_BookSynopsis">苍梧山隐士“什么都会”逍遥先生门下七徒，大弟子学道，二弟子学文，三弟子学武，四弟子学医……最小的徒弟沈器，学的是“造物”以及——懒。 我叫沈器，是个发明家，我……好累啊！
+														</div>
+														<div class="importantRankingList_BookUpdate">更新至：219章</div>
+													</div>
+												</div>
+												<div class="clearfix importantRankingList2">
+													<i class="left indexMain_RightList_Num ">6</i>
+													<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【神州】隐士发明家</div>
+													<div class="left importantRankingList_BookUpdate">更新至：219章</div>
+												</div>
+											</a>
+
+											<a href="/book/26532.html" class="clearfix indexMain_RightListIn" target="_blank">
+
+												<div class="clearfix importantRankingList1">
+													<div class="left importantRankingList_Cover">
+														<img src="static/picture/26532_b603f_5726_m.jpg" style="width: 100%; height: 100%;">
+														<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+															<i>7</i>
+														</div>
+														<div class="CoverIcon_0"></div>
+													</div>
+													<div class="left importantRankingList_Info">
+														<div class="clearfix importantRankingList_BookName">
+															<div class="left importantRankingList_BookName_Text">江湖夜雨</div>
+															<div class="right importantRankingList_BookName_Right">热度88.58万</div>
+														</div>
+														<div class="importantRankingList_BookClass">神州</div>
+														<div class="importantRankingList_BookSynopsis">一代江湖是多久？二十年，三十年？ 青山掌门十年一任。 天机阁发布的江湖风云榜十年一换。 所以，江湖一代，是十年。 ———— “你是何人？” “何问！” “你去何处？” “江湖。”
+														</div>
+														<div class="importantRankingList_BookUpdate">更新至：80章</div>
+													</div>
+												</div>
+												<div class="clearfix importantRankingList2">
+													<i class="left indexMain_RightList_Num ">7</i>
+													<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【神州】江湖夜雨</div>
+													<div class="left importantRankingList_BookUpdate">更新至：80章</div>
+												</div>
+											</a>
+
+											<a href="/book/12484.html" class="clearfix indexMain_RightListIn" target="_blank">
+
+												<div class="clearfix importantRankingList1">
+													<div class="left importantRankingList_Cover">
+														<img src="static/picture/12484_3c650_2148_m.jpg" style="width: 100%; height: 100%;">
+														<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+															<i>8</i>
+														</div>
+														<div class="CoverIcon_0"></div>
+													</div>
+													<div class="left importantRankingList_Info">
+														<div class="clearfix importantRankingList_BookName">
+															<div class="left importantRankingList_BookName_Text">圣堂之城</div>
+															<div class="right importantRankingList_BookName_Right">热度7055.28万</div>
+														</div>
+														<div class="importantRankingList_BookClass">轻幻想</div>
+														<div class="importantRankingList_BookSynopsis"> 220年，一款最热最火爆的游戏席卷整个世界。 当有人发现居然是可以经由另一种方式出入游戏世界的时候，整个世界都开始随之沸腾。 不但如此，通过这种方式，人们甚至是可以将游戏中的所获得的物品，技能带出游戏…… 全世界哗然一片，世界开始变的混乱。 然而并没有那么简单，通过这种方式进入游戏，在游戏中的死亡意味就着真正的死亡。 221年，全球联邦通过法案，不允许以这种方式进入游戏，同时尽可能的封闭所有此类端口…… 读者群:598384918
+														</div>
+														<div class="importantRankingList_BookUpdate">更新至：1302章</div>
+													</div>
+												</div>
+												<div class="clearfix importantRankingList2">
+													<i class="left indexMain_RightList_Num ">8</i>
+													<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【轻幻想】圣堂之城</div>
+													<div class="left importantRankingList_BookUpdate">更新至：1302章</div>
+												</div>
+											</a>
+
+											<a href="/book/26397.html" class="clearfix indexMain_RightListIn" target="_blank">
+
+												<div class="clearfix importantRankingList1">
+													<div class="left importantRankingList_Cover">
+														<img src="static/picture/26397_8be7b_5600_m.jpg" style="width: 100%; height: 100%;">
+														<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+															<i>9</i>
+														</div>
+														<div class="CoverIcon_0"></div>
+													</div>
+													<div class="left importantRankingList_Info">
+														<div class="clearfix importantRankingList_BookName">
+															<div class="left importantRankingList_BookName_Text">我，黑暗支配者</div>
+															<div class="right importantRankingList_BookName_Right">热度101.91万</div>
+														</div>
+														<div class="importantRankingList_BookClass">重幻想</div>
+														<div class="importantRankingList_BookSynopsis">交流群开放：190766156。 你的光明，不值一提。
+														</div>
+														<div class="importantRankingList_BookUpdate">更新至：125章</div>
+													</div>
+												</div>
+												<div class="clearfix importantRankingList2">
+													<i class="left indexMain_RightList_Num ">9</i>
+													<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【重幻想】我，黑暗支配者</div>
+													<div class="left importantRankingList_BookUpdate">更新至：125章</div>
+												</div>
+											</a>
+
+											<a href="/book/26046.html" class="clearfix indexMain_RightListIn" target="_blank">
+
+												<div class="clearfix importantRankingList1">
+													<div class="left importantRankingList_Cover">
+														<img src="static/picture/26046_e4259_5735_m.jpg" style="width: 100%; height: 100%;">
+														<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+															<i>10</i>
+														</div>
+														<div class="CoverIcon_0"></div>
+													</div>
+													<div class="left importantRankingList_Info">
+														<div class="clearfix importantRankingList_BookName">
+															<div class="left importantRankingList_BookName_Text">仗剑行</div>
+															<div class="right importantRankingList_BookName_Right">热度74.35万</div>
+														</div>
+														<div class="importantRankingList_BookClass">神州</div>
+														<div class="importantRankingList_BookSynopsis">有一个剑客，背着木匣御剑七柄，自陵州起自悟剑道，老来回首却是负了心上人。 有一个老头，铸一座小城东临碣石以观沧海，名为无矩，无敌一个时代却常常烦恼不已。 有一个将军，呕心沥血半辈子，镇天下清君侧，却被扣上谋逆罪名，连自己的族人都丧了性命。 有一个庄主，执天下剑道牛耳，威风凛凛，却为自己的儿子愁白了发。 江湖，有太多的意气风发和不甘，你问江湖在哪里。 在率土之上，在亭台楼阁，在酒肆客栈，亦或是在这杯茶里....
+														</div>
+														<div class="importantRankingList_BookUpdate">更新至：98章</div>
+													</div>
+												</div>
+												<div class="clearfix importantRankingList2">
+													<i class="left indexMain_RightList_Num ">10</i>
+													<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【神州】仗剑行</div>
+													<div class="left importantRankingList_BookUpdate">更新至：98章</div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix index_main indexMainSeven" id="Floor2">
+				<div class="left indexMainSeven1">
+					<div class="indexMain_Title indexMain_Title3"></div>
+					<div class="indexMainSeven1_In">
+						<div class="indexMainSeven_NewWork" id="bannerImg">
+							<div class="indexMainSeven_NewWork_Banner">
+								<div class="indexMainSeven_NewWork_BannerIn" n="0">
+									<img src="static/picture/27246_2c3ef_5793_m.jpg" style="width: 100%; height: 100%;">
+									<div class="CoverIcon_0"></div>
+								</div>
+								<div class="indexMainSeven_NewWork_BannerIn" n="1">
+									<img src="static/picture/27237_21670_5802_m.jpg" style="width: 100%; height: 100%;">
+									<div class="CoverIcon_0"></div>
+								</div>
+								<div class="indexMainSeven_NewWork_BannerIn" n="2">
+									<img src="static/picture/27227_335da_5783_m.jpg" style="width: 100%; height: 100%;">
+									<div class="CoverIcon_0"></div>
+								</div>
+							</div>
+						</div>
+						<div class="indexMainSeven_NewWork_Info">
+							<div class="indexMainSeven_NewWork_InfoIn">
+								<div class="indexMainSeven_NewWork_BookName">
+									<span class="indexMainSeven_NewWork_BookName_Text">全境追击</span>
+									<span class="indexMainSeven_NewWork_BookClass">烧脑.悬疑</span>
+								</div>
+								<div class="clearfix indexMainSeven_NewWork_Author">
+									<div class="left indexMainSeven_NewWork_AuthorName">作者：希音心</div>
+									<div class="clearfix left indexMainSeven_NewWork_Hot">
+										<i class="left"></i>
+										<span class="left">6.59万热度</span>
+									</div>
+								</div>
+								<div class="indexMainSeven_NewWork_NewChapters">最新：章二十七 可逆之眼</div>
+								<div class="indexMainSeven_NewWork_Synopsis">
+									<div class="indexMainSeven_NewWork_SynopsisIn">冰与风的共舞，枪与火的怒放。 我颜风发誓，纵然你真的是死神，也要追捕你到天涯海角！
+									</div>
+								</div>
+								<a href="/book/27246.html" target="_blank" class="indexMainSeven_NewWork_Btn">点击阅读</a>
+							</div>
+							<div class="indexMainSeven_NewWork_InfoIn" style="display: none;">
+								<div class="indexMainSeven_NewWork_BookName">
+									<span class="indexMainSeven_NewWork_BookName_Text">狂战士无法成为贤者</span>
+									<span class="indexMainSeven_NewWork_BookClass">轻幻想.现实</span>
+								</div>
+								<div class="clearfix indexMainSeven_NewWork_Author">
+									<div class="left indexMainSeven_NewWork_AuthorName">作者：肥猫大爷</div>
+									<div class="clearfix left indexMainSeven_NewWork_Hot">
+										<i class="left"></i>
+										<span class="left">6306热度</span>
+									</div>
+								</div>
+								<div class="indexMainSeven_NewWork_NewChapters">最新：012.您班里全是这种天才？</div>
+								<div class="indexMainSeven_NewWork_Synopsis">
+									<div class="indexMainSeven_NewWork_SynopsisIn">当蔡晓波发现他可以修改自己的属性后，他的生活从此发生了天翻地覆的变化。 贤者模式，考试如喝水，同学们心目中的学神也不过如此！ 狂战模式，赛场无敌手，轻轻轻松打破校比赛记录！ 但是谁也不知道，蔡晓波看似风光，心里却天天都在发愁。 “妈哒，今天考试和比武撞一块了，我该怎么调属性啊……”
+									</div>
+								</div>
+								<a href="/book/27237.html" target="_blank" class="indexMainSeven_NewWork_Btn">点击阅读</a>
+							</div>
+							<div class="indexMainSeven_NewWork_InfoIn" style="display: none;">
+								<div class="indexMainSeven_NewWork_BookName">
+									<span class="indexMainSeven_NewWork_BookName_Text">我那跃动而明亮的人生</span>
+									<span class="indexMainSeven_NewWork_BookClass">浪漫现实.青春</span>
+								</div>
+								<div class="clearfix indexMainSeven_NewWork_Author">
+									<div class="left indexMainSeven_NewWork_AuthorName">作者：木童心&魔界轮回</div>
+									<div class="clearfix left indexMainSeven_NewWork_Hot">
+										<i class="left"></i>
+										<span class="left">441.4万热度</span>
+									</div>
+								</div>
+								<div class="indexMainSeven_NewWork_NewChapters">最新：第四十章：何止是热闹</div>
+								<div class="indexMainSeven_NewWork_Synopsis">
+									<div class="indexMainSeven_NewWork_SynopsisIn">那高低起伏的排球挥洒着他们的汗水，又仿佛他们躁动不安的青春。 那是他们彼此都难以割舍的过往。 大猪蹄子，接我一记扣杀！
+									</div>
+								</div>
+								<a href="/book/27227.html" target="_blank" class="indexMainSeven_NewWork_Btn">点击阅读</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right indexMainSeven2">
+					<div class="indexMain_Title indexMain_Title4"></div>
+					<div class="clearfix indexMainSeven_Handpick">
+						<div class="indexMainSeven_HandpickIn">
+							<div class="indexMainSeven_HandpickIn_Top indexMainSeven_HandpickIn_Top1">少女幻想</div>
+							<div class="clearfix indexMainSeven_HandpickMain">
+								<div class="left indexMainSeven_HandpickMain_Book">
+									<img src="static/picture/26024_8b018_5574_m.jpg" alt="" style="width:100%; height:100%;" />
+								</div>
+								<div class="left indexMainSeven_HandpickMain_BookRight">
+									<div class="clearfix indexMainSeven_HandpickMain_BookName">
+										<div class="left indexMainSeven_HandpickMain_BookName_Text">拍砖打鬼进行中</div>
+										<div class="right indexMainSeven_HandpickMain_BookName_State">连载中</div>
+									</div>
+									<div class="clearfix indexMainSeven_HandpickMain_Author">
+										<div class="left indexMainSeven_HandpickMain_AuthorHead"><img src="static/picture/author_head.png" style="width: 100%; height: 100%;" /></div>
+										<div class="left indexMainSeven_HandpickMain_AuthorName">作者：拍砖姑娘</div>
+									</div>
+									<div class="indexMainSeven_HandpickMain_Synopsis">
+										<div class="indexMainSeven_HandpickMain_SynopsisIn">简介：身为一名宅女，花宝宝一觉睡醒，竟然被人打晕了。 再次醒来，竟然有着一只胖胖的狐狸盯着自己，胡扯八扯些什么没的。 自此，她一手板砖，身后一堆灵鬼尾随，王者霸气侧漏，从此走上人生的“巅峰”？ Oh my god!?</div>
+									</div>
+									<a href="/book/26024" class="indexMainSeven_HandpickMain_Btn" target="_blank">点击阅读</a>
+								</div>
+							</div>
+						</div>
+						<div class="indexMainSeven_HandpickIn">
+							<div class="indexMainSeven_HandpickIn_Top indexMainSeven_HandpickIn_Top2">轻幻想</div>
+							<div class="clearfix indexMainSeven_HandpickMain">
+								<div class="left indexMainSeven_HandpickMain_Book">
+									<img src="static/picture/27184_07205_5769_m.jpg" alt="" style="width:100%; height:100%;" />
+								</div>
+								<div class="left indexMainSeven_HandpickMain_BookRight">
+									<div class="clearfix indexMainSeven_HandpickMain_BookName">
+										<div class="left indexMainSeven_HandpickMain_BookName_Text">猎毒行动</div>
+										<div class="right indexMainSeven_HandpickMain_BookName_State">连载中</div>
+									</div>
+									<div class="clearfix indexMainSeven_HandpickMain_Author">
+										<div class="left indexMainSeven_HandpickMain_AuthorHead"><img src="static/picture/author_head.png" style="width: 100%; height: 100%;" /></div>
+										<div class="left indexMainSeven_HandpickMain_AuthorName">作者：冷飞鱼</div>
+									</div>
+									<div class="indexMainSeven_HandpickMain_Synopsis">
+										<div class="indexMainSeven_HandpickMain_SynopsisIn">简介：你所经历的风花雪月，不过是有人为你负重前行。 卧底，毒贩，警察，上演了一出生死大戏。在这舞台上，每个人都是生活的主角，或奸猾，或悲壮，或凶残，或英勇…… 有些人，为了信仰壮烈牺牲。 有些人，为了权势屠戮苍生。 有些人，为了自由与世无争。 人生这场戏台上，谁能亘古不朽？ 唯信仰尔！
+										</div>
+									</div>
+									<a href="/book/27184" class="indexMainSeven_HandpickMain_Btn" target="_blank">点击阅读</a>
+								</div>
+							</div>
+						</div>
+						<div class="indexMainSeven_HandpickIn">
+							<div class="indexMainSeven_HandpickIn_Top indexMainSeven_HandpickIn_Top1">烧脑</div>
+							<div class="clearfix indexMainSeven_HandpickMain">
+								<div class="left indexMainSeven_HandpickMain_Book">
+									<img src="static/picture/26877_d66da_194_l.jpg" alt="" style="width:100%; height:100%;" />
+								</div>
+								<div class="left indexMainSeven_HandpickMain_BookRight">
+									<div class="clearfix indexMainSeven_HandpickMain_BookName">
+										<div class="left indexMainSeven_HandpickMain_BookName_Text">大三杀人游戏</div>
+										<div class="right indexMainSeven_HandpickMain_BookName_State">连载中</div>
+									</div>
+									<div class="clearfix indexMainSeven_HandpickMain_Author">
+										<div class="left indexMainSeven_HandpickMain_AuthorHead"><img src="static/picture/author_head.png" style="width: 100%; height: 100%;" /></div>
+										<div class="left indexMainSeven_HandpickMain_AuthorName">作者：禅洗礼</div>
+									</div>
+									<div class="indexMainSeven_HandpickMain_Synopsis">
+										<div class="indexMainSeven_HandpickMain_SynopsisIn">简介：老实人其实说谎成性，骗子也换上了受害者的嘴脸，假哭的时间——到了！
+										</div>
+									</div>
+									<a href="/book/26877" class="indexMainSeven_HandpickMain_Btn" target="_blank">点击阅读</a>
+								</div>
+							</div>
+						</div>
+						<div class="indexMainSeven_HandpickIn">
+							<div class="indexMainSeven_HandpickIn_Top indexMainSeven_HandpickIn_Top1">神州</div>
+							<div class="clearfix indexMainSeven_HandpickMain">
+								<div class="left indexMainSeven_HandpickMain_Book">
+									<img src="static/picture/24079_4ac47_5279_m.jpg" alt="" style="width:100%; height:100%;" />
+								</div>
+								<div class="left indexMainSeven_HandpickMain_BookRight">
+									<div class="clearfix indexMainSeven_HandpickMain_BookName">
+										<div class="left indexMainSeven_HandpickMain_BookName_Text">一品名师</div>
+										<div class="right indexMainSeven_HandpickMain_BookName_State">连载中</div>
+									</div>
+									<div class="clearfix indexMainSeven_HandpickMain_Author">
+										<div class="left indexMainSeven_HandpickMain_AuthorHead"><img src="static/picture/author_head.png" style="width: 100%; height: 100%;" /></div>
+										<div class="left indexMainSeven_HandpickMain_AuthorName">作者：金衣</div>
+									</div>
+									<div class="indexMainSeven_HandpickMain_Synopsis">
+										<div class="indexMainSeven_HandpickMain_SynopsisIn">简介：大唐贞观，李世民意气风发，锋芒毕露。最磅礴最秀丽的年代，程咬金之子程怀亮弃武从文兴办谦逊书院，在校训上写下行知合一；在学生守则上写下荣耻相依、自强不息……</div>
+									</div>
+									<a href="/book/24079" class="indexMainSeven_HandpickMain_Btn" target="_blank">点击阅读</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix index_main indexMainThree" id="Floor3">
+				<div class="left indexMain_Left">
+					<div class="indexMain_EndBook">
+						<div class="indexMain_Title indexMain_Title5"></div>
+						<div class="indexMain_Box">
+							<div class="clearfix indexMain_BookBox">
+								<a href="/book/24022.html" target="_blank" class="left indexMainThree_In">
+									<div class="indexMainThree_InCover">
+										<img src="static/picture/24022_a3f9a_5324_m.jpg" style="width:100%; height:100%;" />
+										<div class="indexMain_CoverIcon indexMain_CoverIcon3"></div>
+										<div class="CoverIcon_1"></div>
+									</div>
+									<div class="indexMainThree_InBookName">我家大佬又疯了</div>
+									<div class="indexMainThree_InAuthorName">我家大佬又疯了 著</div>
+									<div class="indexMainThree_InClass">
+										<div class="indexMainThree_InClassBox">
+											<div class="indexMainThree_InClassBox_In">轻小说</div>
+										</div>
+									</div>
+									<div class="indexMainThree_InSynopsis">我家大佬爱分裂，你看，又不是他了。 这个大佬不简单，是个多面高手。 新书------------《焦灼的侍卫生涯》------------ 感谢封面画师大佬，你是最棒的^_^
+
+									</div>
+									<div class="indexMainThree_InBtn">点击阅读</div>
+								</a>
+								<a href="/book/14286.html" target="_blank" class="left indexMainThree_In">
+									<div class="indexMainThree_InCover">
+										<img src="static/picture/201812211414253.jpg" style="width:100%; height:100%;" />
+										<div class="indexMain_CoverIcon indexMain_CoverIcon3"></div>
+										<div class="CoverIcon_1"></div>
+									</div>
+									<div class="indexMainThree_InBookName">马文才，你欠抽</div>
+									<div class="indexMainThree_InAuthorName">马文才，你欠抽 著</div>
+									<div class="indexMainThree_InClass">
+										<div class="indexMainThree_InClassBox">
+											<div class="indexMainThree_InClassBox_In">轻小说</div>
+										</div>
+									</div>
+									<div class="indexMainThree_InSynopsis"> 作者其它文：《对不起，我是人类》《我只是个炮灰而已》《慕容复改造指南》《黑执事·海贼王同人合集》《【猎人】变态》 东晋年间，狗血大戏，小女子误入梁祝。 女扮男装进书院，但求混得三年平安。 只是谁能告诉我，为什么与我同房同塌的，竟然会是马文才？ 几年前的文了，有不好的地方不要拍作者，随便看看吧…… </div>
+									<div class="indexMainThree_InBtn">点击阅读</div>
+								</a>
+								<a href="/book/22327.html" target="_blank" class="left indexMainThree_In">
+									<div class="indexMainThree_InCover">
+										<img src="static/picture/201812211413495.jpg" style="width:100%; height:100%;" />
+										<div class="indexMain_CoverIcon indexMain_CoverIcon3"></div>
+										<div class="CoverIcon_1"></div>
+									</div>
+									<div class="indexMainThree_InBookName">姻差缘错</div>
+									<div class="indexMainThree_InAuthorName">姻差缘错 著</div>
+									<div class="indexMainThree_InClass">
+										<div class="indexMainThree_InClassBox">
+											<div class="indexMainThree_InClassBox_In">轻幻想</div>
+										</div>
+									</div>
+									<div class="indexMainThree_InSynopsis"> 男主人公李斌的父母是身价过亿的珠宝商，李斌并没有商二代的一点迹象，长相阳光帅气，为人低调内敛。在大学里结识相恋三年的女友潘婷婷竟然为了留在大城市搭上了官二代的奔驰车。伤心欲绝的李斌万念俱灰，拒绝了父母为他在自己公司留下的职位，报名参加了支边任务，成为了南方边陲一个小山村的老师。 在贫穷的小山村，李斌受伤的心得到疗伤。在这五年里，李斌通过自己的努力，把一个落后封闭的集小学，初中和高中在一起不足三
+									</div>
+									<div class="indexMainThree_InBtn">点击阅读</div>
+								</a>
+								<a href="/book/16697.html" target="_blank" class="left indexMainThree_In">
+									<div class="indexMainThree_InCover">
+										<img src="static/picture/201812211415003.jpg" style="width:100%; height:100%;" />
+										<div class="indexMain_CoverIcon indexMain_CoverIcon3"></div>
+										<div class="CoverIcon_0"></div>
+									</div>
+									<div class="indexMainThree_InBookName">老娘的红绳你站住</div>
+									<div class="indexMainThree_InAuthorName">老娘的红绳你站住 著</div>
+									<div class="indexMainThree_InClass">
+										<div class="indexMainThree_InClassBox">
+											<div class="indexMainThree_InClassBox_In">轻小说</div>
+										</div>
+									</div>
+									<div class="indexMainThree_InSynopsis"> 24岁的逗逼女青年。在某次相亲的路上被阎王所伪装王凯骗去从而签下阴间的工作合同，从此踏上与大鬼小鬼们斗争的并帮助其解决执念的不归路。但是令单一一没有想到的是，英姿煞爽的花木兰将军竟然是个爱哭鼻子的妹子；大名鼎鼎的西施竟整日被迫相亲，被拒绝的原因居然是有狐臭；白娘子被困雷峰塔，不是因为法海不懂爱，而是许仕林是隔壁家老王的；唐伯虎成了要饭的乞丐，因为妻妾成群，画被偷，秋香还背靠华府不还钱...... </div>
+									<div class="indexMainThree_InBtn">点击阅读</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right indexMain_Right">
+					<div class="indexMain_Title indexMain_Title6"></div>
+					<div class="indexMain_RightNav">
+						<div class="indexMain_RightNavIn indexMain_RightNavInHot indexMain_RightNavIn2 indexMain_RightNav_Border1">
+							<img src="static/picture/indexrightnav2.png">
+						</div>
+					</div>
+					<div class="rankingList_R1_main1 importantRankingList">
+						<div class="classPage_b Hot_li_Box">
+							<div class="classPage_b_main" id="classPage_b_img" rel="1">
+								<a href="/book/19319.html" class="clearfix indexMain_RightListIn importantRankingList_Hot" target="_blank" style="margin-bottom: 11px;">
+									<div class="clearfix importantRankingList1">
+										<div class="left importantRankingList_Cover">
+											<img src="static/picture/19319_51d7b_4539_l.jpg" style="width: 100%; height: 100%;">
+											<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon1">
+												<i>1</i>
+											</div>
+											<div class="CoverIcon_1"></div>
+										</div>
+										<div class="left importantRankingList_Info">
+											<div class="clearfix importantRankingList_BookName">
+												<div class="left importantRankingList_BookName_Text">御西游</div>
+												<div class="right importantRankingList_BookName_Right">热度126.26万</div>
+											</div>
+											<div class="importantRankingList_BookClass">神州</div>
+											<div class="importantRankingList_BookSynopsis"> 故事发生在唐僧师徒取经回到长安之后，唐僧在建好的讲台上讲公开课，一位布衣少年竟然就关于《天玄经》的问题，发表看法，作为大唐第一皇家讲师，唐僧对此不以为然，命人将少年乱棍打出道场，然而少年却被一道从天而降的紫色轰雷打中，然后陡起一阵狂风，换了人间。 什么，你说我长得像女装大佬？ 那我把头发剪短了，还不行吗？ 什么，你说我头发剪短了，还像是女装大佬？ 那我还能说什么？长得太帅，也怪我了 </div>
+											<div class="importantRankingList_BookUpdate">更新至：805章</div>
+										</div>
+									</div>
+									<div class="clearfix importantRankingList2">
+										<i class="left indexMain_RightList_Num rankingList_one">1</i>
+										<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 145px;">【神州】御西游</div>
+										<div class="left importantRankingList_BookUpdate">更新至：805章</div>
+									</div>
+								</a>
+								<a href="/book/21265.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+									<div class="clearfix importantRankingList1">
+										<div class="left importantRankingList_Cover">
+											<img src="static/picture/21265_d0d30_4791_l.jpg" style="width: 100%; height: 100%;">
+											<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon2">
+												<i>2</i>
+											</div>
+											<div class="CoverIcon_1"></div>
+										</div>
+										<div class="left importantRankingList_Info">
+											<div class="clearfix importantRankingList_BookName">
+												<div class="left importantRankingList_BookName_Text">长风起</div>
+												<div class="right importantRankingList_BookName_Right">热度66.04万</div>
+											</div>
+											<div class="importantRankingList_BookClass">神州</div>
+											<div class="importantRankingList_BookSynopsis"> 青阳大会，武林正道，分崩离析。 到得如今，青阳已过，红阳已尽；今三期白阳来到，恶劫齐降。 中原朝廷，昏庸无道，耽于享乐，腐朽不堪。肉食者鄙，何人谏之？ 我是谁，谁是我？少年灵渊踏上迷茫征途，却不知“去此灵渊，舍彼枯园。” 北方镔铁之国，万丈楼船杀机涌现；正邪不分，魔道难辨之时，谁人执剑相守？ 到头来，空余老妪枯坐朝堂，低低切切：“灵山落世几人知，度尽万教来归一；儿女及早把船上，意守灵山好归西！” </div>
+											<div class="importantRankingList_BookUpdate">更新至：330章</div>
+										</div>
+									</div>
+									<div class="clearfix importantRankingList2">
+										<i class="left indexMain_RightList_Num rankingList_two">2</i>
+										<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【神州】长风起</div>
+										<div class="right importantRankingList_BookUpdate">更新至：330章</div>
+									</div>
+								</a>
+								<a href="/book/25686.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+									<div class="clearfix importantRankingList1">
+										<div class="left importantRankingList_Cover">
+											<img src="static/picture/25686_fdeab_5522_l.jpg" style="width: 100%; height: 100%;">
+											<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon3">
+												<i>3</i>
+											</div>
+											<div class="CoverIcon_0"></div>
+										</div>
+										<div class="left importantRankingList_Info">
+											<div class="clearfix importantRankingList_BookName">
+												<div class="left importantRankingList_BookName_Text">空想未来与人工岛</div>
+												<div class="right importantRankingList_BookName_Right">热度50.91万</div>
+											</div>
+											<div class="importantRankingList_BookClass">轻小说</div>
+											<div class="importantRankingList_BookSynopsis">——你说的那个幽灵，她漂亮吗？ ——她不是漂不漂亮的问题！她真的是那种，很少见的那种……她的眼睛大大的，像宝石；头发短短的，粉色，很好看。瓜子脸，生起气来脸鼓鼓的，很可爱。遗憾的是那天我受到了惊吓，没能看清她的胸…… ——噗嗤。 ——你笑什么？ ——我想起高兴的事情。 ——噗呲。 ——你又笑什么？ ——我也想起高兴的事情。 ——什么高兴的事情？ ——这其实是一本沙雕文。
+											</div>
+											<div class="importantRankingList_BookUpdate">更新至：155章</div>
+										</div>
+									</div>
+									<div class="clearfix importantRankingList2">
+										<i class="left indexMain_RightList_Num rankingList_three">3</i>
+										<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【轻小说】空想未来与人工岛</div>
+										<div class="right importantRankingList_BookUpdate">更新至：155章</div>
+									</div>
+								</a>
+								<a href="/book/22964.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+									<div class="clearfix importantRankingList1">
+										<div class="left importantRankingList_Cover">
+											<img src="static/picture/22964_c3ccc_5144_l.jpg" style="width: 100%; height: 100%;">
+											<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+												<i>4</i>
+											</div>
+											<div class="CoverIcon_2"></div>
+										</div>
+										<div class="left importantRankingList_Info">
+											<div class="clearfix importantRankingList_BookName">
+												<div class="left importantRankingList_BookName_Text">我，魔尊，修仙</div>
+												<div class="right importantRankingList_BookName_Right">热度1070.49万</div>
+											</div>
+											<div class="importantRankingList_BookClass">重幻想</div>
+											<div class="importantRankingList_BookSynopsis">菩提城外，先代佛祖拈花而笑，持道论佛，他说女色皆红粉骷髅 青年微怔，男色呢？ 那一日，先代佛祖沉默许久，险些断了菩提树，砸了明镜台 …… 太白宗里，前代仙君执宗门大阵，将一闯宗青年围困，苦口婆心，言语好似天花乱坠 青年持剑沉默，听着前代仙君的道义公理，天纲伦常，然后提剑而起 你说的都有道理，但劳资特么的就是不服 …… 只是，故事主角即非佛祖无名，亦非仙君白帝，而是王小凡，他是魔尊，比那两人更贱些。
+											</div>
+											<div class="importantRankingList_BookUpdate">更新至：429章</div>
+										</div>
+									</div>
+									<div class="clearfix importantRankingList2">
+										<i class="left indexMain_RightList_Num ">4</i>
+										<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【重幻想】我，魔尊，修仙</div>
+										<div class="right importantRankingList_BookUpdate">更新至：429章</div>
+									</div>
+								</a>
+								<a href="/book/20944.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+									<div class="clearfix importantRankingList1">
+										<div class="left importantRankingList_Cover">
+											<img src="static/picture/20944_b95bc_5383_l.jpg" style="width: 100%; height: 100%;">
+											<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+												<i>5</i>
+											</div>
+											<div class="CoverIcon_1"></div>
+										</div>
+										<div class="left importantRankingList_Info">
+											<div class="clearfix importantRankingList_BookName">
+												<div class="left importantRankingList_BookName_Text">天降神兵</div>
+												<div class="right importantRankingList_BookName_Right">热度118.19万</div>
+											</div>
+											<div class="importantRankingList_BookClass">神州</div>
+											<div class="importantRankingList_BookSynopsis">天门，武林最至高的存在，一场剑阁之变，为魔门入侵。十年后，林云机缘巧合之下得到天书的秘密，练就神功。他以振兴天门为己任开始了江湖之路。神兵现世，天下纷乱，群雄并起。而此时北宋赵赢渐渐开始了伐蜀之战，面对乱局，他该何处何从？战事不断，前路凶险，佳人如梦，一个新的江湖就此展开。</div>
+											<div class="importantRankingList_BookUpdate">更新至：884章</div>
+										</div>
+									</div>
+									<div class="clearfix importantRankingList2">
+										<i class="left indexMain_RightList_Num ">5</i>
+										<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【神州】天降神兵</div>
+										<div class="right importantRankingList_BookUpdate">更新至：884章</div>
+									</div>
+								</a>
+								<a href="/book/12931.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+									<div class="clearfix importantRankingList1">
+										<div class="left importantRankingList_Cover">
+											<img src="static/picture/12931_d681b_1982_l.jpg" style="width: 100%; height: 100%;">
+											<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+												<i>6</i>
+											</div>
+											<div class="CoverIcon_0"></div>
+										</div>
+										<div class="left importantRankingList_Info">
+											<div class="clearfix importantRankingList_BookName">
+												<div class="left importantRankingList_BookName_Text">杀手信仰</div>
+												<div class="right importantRankingList_BookName_Right">热度194.06万</div>
+											</div>
+											<div class="importantRankingList_BookClass">轻幻想</div>
+											<div class="importantRankingList_BookSynopsis"> 正常人终究是干不了这个行当的。 </div>
+											<div class="importantRankingList_BookUpdate">更新至：238章</div>
+										</div>
+									</div>
+									<div class="clearfix importantRankingList2">
+										<i class="left indexMain_RightList_Num ">6</i>
+										<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【轻幻想】杀手信仰</div>
+										<div class="right importantRankingList_BookUpdate">更新至：238章</div>
+									</div>
+								</a>
+								<a href="/book/14088.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+									<div class="clearfix importantRankingList1">
+										<div class="left importantRankingList_Cover">
+											<img src="static/picture/14088_0502c_4968_l.jpeg" style="width: 100%; height: 100%;">
+											<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+												<i>7</i>
+											</div>
+											<div class="CoverIcon_1"></div>
+										</div>
+										<div class="left importantRankingList_Info">
+											<div class="clearfix importantRankingList_BookName">
+												<div class="left importantRankingList_BookName_Text">我的初恋大有问题</div>
+												<div class="right importantRankingList_BookName_Right">热度271.84万</div>
+											</div>
+											<div class="importantRankingList_BookClass">轻幻想</div>
+											<div class="importantRankingList_BookSynopsis"> 这是一本女主文，而且是悲催的第一人称文。怪我咯~ 大概讲述懵懂羞涩逗逼的校园恋爱故事，好像有点搞笑、腹黑，还有点治愈，没有了。 本文不涉黄不涉黄不涉黄！重要的事情说三遍！ 群号：565234492 同名漫画已经在网易漫画上线，改编方为游色文化，希望大家支持！
+											</div>
+											<div class="importantRankingList_BookUpdate">更新至：243章</div>
+										</div>
+									</div>
+									<div class="clearfix importantRankingList2">
+										<i class="left indexMain_RightList_Num ">7</i>
+										<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【轻幻想】我的初恋大有问题</div>
+										<div class="right importantRankingList_BookUpdate">更新至：243章</div>
+									</div>
+								</a>
+								<a href="/book/25339.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+									<div class="clearfix importantRankingList1">
+										<div class="left importantRankingList_Cover">
+											<img src="static/picture/25339_85c40_5463_l.jpg" style="width: 100%; height: 100%;">
+											<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+												<i>8</i>
+											</div>
+											<div class="CoverIcon_0"></div>
+										</div>
+										<div class="left importantRankingList_Info">
+											<div class="clearfix importantRankingList_BookName">
+												<div class="left importantRankingList_BookName_Text">蜗牛与葡萄树</div>
+												<div class="right importantRankingList_BookName_Right">热度1.24万</div>
+											</div>
+											<div class="importantRankingList_BookClass">浪漫现实</div>
+											<div class="importantRankingList_BookSynopsis">陈漫漫人如其名，人称小蜗牛，从小就慢吞吞的，哪知在一次被同学欺负时，看见了和葡萄树一样高的林晏清，心突然飞快跳动，第一次对一个人一见钟情。 她怀揣着对他的喜欢，悄悄地注视着他，慢慢地靠近他，却不敢说出对他的喜欢。 歌里的蜗牛可以爬上葡萄树。她这只小蜗牛，也能有一天爬上属于她的葡萄树吗？
+											</div>
+											<div class="importantRankingList_BookUpdate">更新至：104章</div>
+										</div>
+									</div>
+									<div class="clearfix importantRankingList2">
+										<i class="left indexMain_RightList_Num ">8</i>
+										<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【浪漫现实】蜗牛与葡萄树</div>
+										<div class="right importantRankingList_BookUpdate">更新至：104章</div>
+									</div>
+								</a>
+								<a href="/book/20407.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+									<div class="clearfix importantRankingList1">
+										<div class="left importantRankingList_Cover">
+											<img src="static/picture/20407_5e269_4639_l.jpg" style="width: 100%; height: 100%;">
+											<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+												<i>9</i>
+											</div>
+											<div class="CoverIcon_0"></div>
+										</div>
+										<div class="left importantRankingList_Info">
+											<div class="clearfix importantRankingList_BookName">
+												<div class="left importantRankingList_BookName_Text">夭寿拍卖行</div>
+												<div class="right importantRankingList_BookName_Right">热度375.78万</div>
+											</div>
+											<div class="importantRankingList_BookClass">重幻想</div>
+											<div class="importantRankingList_BookSynopsis">夭寿啦！修仙世界的天道流拍后发脾气把天劫难度调高啦！！！ 夭寿啦！魔法世界的大贤者偷走了隔壁世界寄拍的贤者石！！！ 好吧，好像也不是什么大事……
+											</div>
+											<div class="importantRankingList_BookUpdate">更新至：592章</div>
+										</div>
+									</div>
+									<div class="clearfix importantRankingList2">
+										<i class="left indexMain_RightList_Num ">9</i>
+										<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【重幻想】夭寿拍卖行</div>
+										<div class="right importantRankingList_BookUpdate">更新至：592章</div>
+									</div>
+								</a>
+								<a href="/book/19371.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+									<div class="clearfix importantRankingList1">
+										<div class="left importantRankingList_Cover">
+											<img src="static/picture/19371_18d08_4766_l.jpg" style="width: 100%; height: 100%;">
+											<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+												<i>10</i>
+											</div>
+											<div class="CoverIcon_1"></div>
+										</div>
+										<div class="left importantRankingList_Info">
+											<div class="clearfix importantRankingList_BookName">
+												<div class="left importantRankingList_BookName_Text">浮世杀手录</div>
+												<div class="right importantRankingList_BookName_Right">热度65.61万</div>
+											</div>
+											<div class="importantRankingList_BookClass">古风历史</div>
+											<div class="importantRankingList_BookSynopsis">感谢画师呦呦小姐姐的封面(✪▽✪) 他是个质子。 知道浮华只是过眼的烟，却不想一步走错，竟坠入江湖。刀光剑影，风花雪月，都是他所不知的。 她是个杀手。 知道生死之道，快意恩仇，却不曾了解过，这世间也是有如戏文般的温文儒雅，翩翩少年。日贯长虹，天地苍云，都会为她而沉沦。 那场繁华落幕，也许， 总会有人记得的吧。 （其实就是一个关于贱萌小帅哥的故事（*/∇＼*））
+											</div>
+											<div class="importantRankingList_BookUpdate">更新至：117章</div>
+										</div>
+									</div>
+									<div class="clearfix importantRankingList2">
+										<i class="left indexMain_RightList_Num ">10</i>
+										<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【古风历史】浮世杀手录</div>
+										<div class="right importantRankingList_BookUpdate">更新至：117章</div>
+									</div>
+								</a>
+							</div>
+							<a href="/www/rank" class="rankingList_More">更多榜单</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix index_main indexMainTwo" id="Floor4">
+				<div class="clearfix indexMain_TitleBox">
+					<div class="left indexMain_Title indexMain_Title7" style="width: 150px;"></div>
+					<div class="right indexMainTwo_TitleRight">
+						<div class="left indexMainTwo_TitleRight_In indexMainTwo_TitleRight_InHot" IsChoice="1">精选区</div>
+						<div class="left indexMainTwo_TitleRight_In" IsChoice="0">渡劫区</div>
+					</div>
+				</div>
+				<div class="indexMainTwo_Main">
+					<div class="indexMainTwo_Main1">
+						<div class="clearfix left indexMainTwo_TitleNav">
+							<div class="left indexMainTwo_TitleNav_In " onclick="changeWeekday(1571932800)">周五</div>
+							<div class="left indexMainTwo_TitleNav_In " onclick="changeWeekday(1572019200)">周六</div>
+							<div class="left indexMainTwo_TitleNav_In " onclick="changeWeekday(1572105600)">周日</div>
+							<div class="left indexMainTwo_TitleNav_In " onclick="changeWeekday(1572192000)">周一</div>
+							<div class="left indexMainTwo_TitleNav_In " onclick="changeWeekday(1572278400)">周二</div>
+							<div class="left indexMainTwo_TitleNav_In " onclick="changeWeekday(1572364800)">昨天</div>
+							<div class="left indexMainTwo_TitleNav_In indexMainTwo_TitleNav_InHot" onclick="changeWeekday(1572451200)">今天</div>
+						</div>
+
+						<div class="clearfix indexMainTwo_MainInfo" id="weekday_books">
+							<a href="/book/26877.html" target="_blank" class="indexMainTwo_MainIn">
+								<div class="indexMainTwo_MainCover">
+									<img src="static/picture/26877_d66da_194_l.jpg" alt="" style="width:100%; height:100%;" />
+									<div class="indexMainTwo_MainBlock">更新至: 第51章</div>
+									<div class="CoverIcon_0"></div>
+								</div>
+								<div class="indexMainTwo_MainAuthorName">大三杀人游戏</div>
+								<div class="indexMainTwo_MainClass">10.32万热度 | 烧脑</div>
+							</a>
+							<a href="/book/24079.html" target="_blank" class="indexMainTwo_MainIn">
+								<div class="indexMainTwo_MainCover">
+									<img src="static/picture/24079_4ac47_5279_m.jpg" alt="" style="width:100%; height:100%;" />
+									<div class="indexMainTwo_MainBlock">更新至: 第694章</div>
+									<div class="CoverIcon_0"></div>
+								</div>
+								<div class="indexMainTwo_MainAuthorName">一品名师</div>
+								<div class="indexMainTwo_MainClass">224.76万热度 | 神州</div>
+							</a>
+							<a href="/book/13562.html" target="_blank" class="indexMainTwo_MainIn">
+								<div class="indexMainTwo_MainCover">
+									<img src="static/picture/13562_e2c3d_2619_m.jpg" alt="" style="width:100%; height:100%;" />
+									<div class="indexMainTwo_MainBlock">更新至: 第45章</div>
+									<div class="CoverIcon_0"></div>
+								</div>
+								<div class="indexMainTwo_MainAuthorName">啸剑魂天</div>
+								<div class="indexMainTwo_MainClass">1.88万热度 | 重幻想</div>
+							</a>
+							<a href="/book/27227.html" target="_blank" class="indexMainTwo_MainIn">
+								<div class="indexMainTwo_MainCover">
+									<img src="static/picture/27227_335da_5783_m.jpg" alt="" style="width:100%; height:100%;" />
+									<div class="indexMainTwo_MainBlock">更新至: 第40章</div>
+									<div class="CoverIcon_0"></div>
+								</div>
+								<div class="indexMainTwo_MainAuthorName">我那跃动而明亮的人生</div>
+								<div class="indexMainTwo_MainClass">441.4万热度 | 浪漫现实</div>
+							</a>
+							<a href="/book/26179.html" target="_blank" class="indexMainTwo_MainIn">
+								<div class="indexMainTwo_MainCover">
+									<img src="static/picture/26179_1df4e_996_m.jpg" alt="" style="width:100%; height:100%;" />
+									<div class="indexMainTwo_MainBlock">更新至: 第114章</div>
+									<div class="CoverIcon_0"></div>
+								</div>
+								<div class="indexMainTwo_MainAuthorName">影照玄朝开疆记</div>
+								<div class="indexMainTwo_MainClass">138.83万热度 | 神州</div>
+							</a>
+							<a href="/book/26579.html" target="_blank" class="indexMainTwo_MainIn">
+								<div class="indexMainTwo_MainCover">
+									<img src="static/picture/26579_541a9_5664_m.jpg" alt="" style="width:100%; height:100%;" />
+									<div class="indexMainTwo_MainBlock">更新至: 第82章</div>
+									<div class="CoverIcon_0"></div>
+								</div>
+								<div class="indexMainTwo_MainAuthorName">问道战天</div>
+								<div class="indexMainTwo_MainClass">10.77万热度 | 神州</div>
+							</a>
+							<a href="/book/22427.html" target="_blank" class="indexMainTwo_MainIn">
+								<div class="indexMainTwo_MainCover">
+									<img src="static/picture/22427_e4669_5045_m.jpg" alt="" style="width:100%; height:100%;" />
+									<div class="indexMainTwo_MainBlock">更新至: 第240章</div>
+									<div class="CoverIcon_0"></div>
+								</div>
+								<div class="indexMainTwo_MainAuthorName">桥柳盛世</div>
+								<div class="indexMainTwo_MainClass">5.94万热度 | 轻幻想</div>
+							</a>
+							<a href="/book/22964.html" target="_blank" class="indexMainTwo_MainIn">
+								<div class="indexMainTwo_MainCover">
+									<img src="static/picture/22964_c3ccc_5144_m.jpg" alt="" style="width:100%; height:100%;" />
+									<div class="indexMainTwo_MainBlock">更新至: 第429章</div>
+									<div class="CoverIcon_2"></div>
+								</div>
+								<div class="indexMainTwo_MainAuthorName">我，魔尊，修仙</div>
+								<div class="indexMainTwo_MainClass">1070.49万热度 | 重幻想</div>
+							</a>
+							<a href="/book/22038.html" target="_blank" class="indexMainTwo_MainIn">
+								<div class="indexMainTwo_MainCover">
+									<img src="static/picture/22038_28656_4953_m.jpg" alt="" style="width:100%; height:100%;" />
+									<div class="indexMainTwo_MainBlock">更新至: 第131章</div>
+									<div class="CoverIcon_0"></div>
+								</div>
+								<div class="indexMainTwo_MainAuthorName">灵界小萝莉</div>
+								<div class="indexMainTwo_MainClass">12.09万热度 | 轻小说</div>
+							</a>
+							<a href="/book/24521.html" target="_blank" class="indexMainTwo_MainIn">
+								<div class="indexMainTwo_MainCover">
+									<img src="static/picture/24521_45d1e_5317_m.jpg" alt="" style="width:100%; height:100%;" />
+									<div class="indexMainTwo_MainBlock">更新至: 第422章</div>
+									<div class="CoverIcon_0"></div>
+								</div>
+								<div class="indexMainTwo_MainAuthorName">主人太凶萌</div>
+								<div class="indexMainTwo_MainClass">114.31万热度 | 轻幻想</div>
+							</a>
+							<a href="/book/26944.html" target="_blank" class="indexMainTwo_MainIn">
+								<div class="indexMainTwo_MainCover">
+									<img src="static/picture/26944_d6832_5729_m.jpg" alt="" style="width:100%; height:100%;" />
+									<div class="indexMainTwo_MainBlock">更新至: 第42章</div>
+									<div class="CoverIcon_0"></div>
+								</div>
+								<div class="indexMainTwo_MainAuthorName">吉吉的奇妙冒险</div>
+								<div class="indexMainTwo_MainClass">16.2万热度 | 重幻想</div>
+							</a>
+							<a href="/book/23809.html" target="_blank" class="indexMainTwo_MainIn">
+								<div class="indexMainTwo_MainCover">
+									<img src="static/picture/23809_ff1e2_5230_m.jpg" alt="" style="width:100%; height:100%;" />
+									<div class="indexMainTwo_MainBlock">更新至: 第491章</div>
+									<div class="CoverIcon_0"></div>
+								</div>
+								<div class="indexMainTwo_MainAuthorName">进化密码</div>
+								<div class="indexMainTwo_MainClass">160.42万热度 | 烧脑</div>
+							</a>
+						</div>
+						<div class="indexMainTwo_MainMore">
+							<div class="indexMainTwo_MainMore_Border"></div>
+							<div class="indexMainTwo_MainMore_Btn" onclick="pagination()">查看更多</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<script>
+				var type = 1; //精选类型
+				var curPage = 1;
+				var weekdayTime = 1572451200;
+
+				if($(".indexMainTwo_MainInfo").find(".indexMainTwo_MainIn").length < 12) {
+					$("#weekday_books").siblings(".indexMainTwo_MainMore").css("display", "none");
+				}
+
+				//切换精选类型
+				$(".indexMainTwo_TitleRight_In").click(function() {
+					$(this).addClass("indexMainTwo_TitleRight_InHot");
+					$(this).siblings(".indexMainTwo_TitleRight_In").removeClass("indexMainTwo_TitleRight_InHot");
+					type = $(this).attr("IsChoice");
+					curPage = 1;
+					$("#weekday_books").empty();
+					getWeekdayBooks();
+				});
+
+				function changeWeekday(newWeekdayTime) {
+					weekdayTime = newWeekdayTime;
+					curPage = 1;
+					$("#weekday_books").empty();
+					getWeekdayBooks();
+				}
+
+				function pagination() {
+					curPage++;
+					getWeekdayBooks();
+				}
+
+				function getWeekdayBooks() {
+					var postData = {
+						Type: type,
+						Page: curPage,
+						WeekdayTime: weekdayTime
+					};
+
+					$.post("/www/index/ajaxGetWeekdayBooks", postData, function(response) {
+						if(response.books.length < 12) {
+							$("#weekday_books").siblings(".indexMainTwo_MainMore").hide();
+						} else {
+							$("#weekday_books").siblings(".indexMainTwo_MainMore").show();
+						}
+
+						var strHtml = '';
+						for(var i in response.books) {
+							var curBook = response.books[i];
+							strHtml += '<a  href="/book/' + curBook.BookId + '.html" target="_blank" class="indexMainTwo_MainIn"><div class="indexMainTwo_MainCover">';
+							strHtml += '<img src="' + curBook.Cover + '" alt="" style="width:100%; height:100%;"/>';
+							strHtml += '<div class="indexMainTwo_MainBlock">更新至:  第' + curBook.ChapterCnt + '章</div><div class="CoverIcon_' + curBook.VipType + '"></div></div>';
+							strHtml += '<div class="indexMainTwo_MainAuthorName">' + curBook.BookName + '</div>';
+							strHtml += '<div class="indexMainTwo_MainClass">' + curBook.TotalPV + '热度 | ' + curBook.ClassName + '</div></a>';
+						}
+
+						$("#weekday_books").append(strHtml);
+					}, 'json');
+				}
+			</script>
+
+			<div class="clearfix index_main indexMainThree" id="Floor5">
+				<div class="clearfix indexMain_TitleBox">
+					<div class="left indexMain_Title indexMain_Title8" style="width: 140px;"></div>
+					<div class="clearfix left indexMain_TitleTime" id="countdown_0">
+						<div class="left indexMain_TitleTime_In"></div>
+						<span class="left">:</span>
+						<div class="left indexMain_TitleTime_In"></div>
+						<span class="left">:</span>
+						<div class="left indexMain_TitleTime_In"></div>
+					</div>
+				</div>
+				<div class="indexMain_Box">
+					<!-- 会员限免 -->
+					<div class="left indexMain_Left">
+						<div class="left clearfix indexMain_BookBox">
+							<a href="/book/10006.html" target="_blank" class="clearfix left indexMain_Restriction" value="57190">
+								<div class="left indexMain_Restriction_Cover">
+									<img src="static/picture/10006_874ac_42_m.jpg" style="width:100%; height:100%;" />
+									<div class="indexMain_Restriction_endIcon"></div>
+									<div class="CoverIcon_1"></div>
+								</div>
+								<div class="left indexMain_Restriction_Right">
+									<div class="indexMain_Restriction_Class">轻幻想</div>
+									<div class="indexMain_Restriction_BookName">必死后宫逃脱计划！</div>
+									<div class="indexMain_Restriction_AuthorName">七夕八幡</div>
+									<div class="indexMain_Restriction_Synopsis"> 轻松日常，却怪异无比，深入下去，齐桓天才发现，自己的任务，可不是让一本烂书得到救赎这种无聊的事情—— 错综复杂的世界线，作者怨灵的秘密，真正的女主和现实的联系，走错一步，全盘皆输。 必死后宫，你以为真能逃脱？ 必死后宫沏茶社（Q群）：198778806 必死第二弹http://www.8kana.com/book/14008.html《必死异界逃脱计划》同求支持啦~！ </div>
+									<div class="indexMain_Restriction_Btn">开始阅读</div>
+								</div>
+							</a>
+							<a href="/book/15189.html" target="_blank" class="clearfix left indexMain_Restriction" value="57190">
+								<div class="left indexMain_Restriction_Cover">
+									<img src="static/picture/15189_d3697_5070_m.jpg" style="width:100%; height:100%;" />
+									<div class="indexMain_Restriction_endIcon"></div>
+									<div class="CoverIcon_1"></div>
+								</div>
+								<div class="left indexMain_Restriction_Right">
+									<div class="indexMain_Restriction_Class">神州</div>
+									<div class="indexMain_Restriction_BookName">野狐禅</div>
+									<div class="indexMain_Restriction_AuthorName">山鬼</div>
+									<div class="indexMain_Restriction_Synopsis">写一个时来天地皆同力，运去英雄不自由的故事。 写风雨飘摇的故国，写北州冠冕的臣子，写权奸纵横的朝堂之中，各种利益交换，各种博弈，各种举步维艰。 写一个有匪君子，如切如磋，如琢如磨。 写白骨如山鸟惊飞，跨骑提剑挥鬼雨。 写立志要做乱臣贼子的和尚，和几个不怎么冷酷残忍的杀手，写古时候的江湖是一个笑话，大侠都是土匪。 写命运钳制万万人，万万人钳制世界，求存是逆旅。 写圣明陨落、精神荒芜的年代里，你为什么要战斗
+									</div>
+									<div class="indexMain_Restriction_Btn">开始阅读</div>
+								</div>
+							</a>
+							<a href="/book/16302.html" target="_blank" class="clearfix left indexMain_Restriction" value="57190">
+								<div class="left indexMain_Restriction_Cover">
+									<img src="static/picture/16302_5fcfa_711_l.jpg" style="width:100%; height:100%;" />
+									<div class="indexMain_Restriction_endIcon"></div>
+									<div class="CoverIcon_1"></div>
+								</div>
+								<div class="left indexMain_Restriction_Right">
+									<div class="indexMain_Restriction_Class">轻小说</div>
+									<div class="indexMain_Restriction_BookName">E45班炼金导师</div>
+									<div class="indexMain_Restriction_AuthorName">夜城主</div>
+									<div class="indexMain_Restriction_Synopsis">新书《忘川河挂名河神》已经发布了呦~ 真弓身为一个优秀的懒人，年纪轻轻就希望过退休生活，故意在任务中受了伤，本以为自己能过上无所事事的日子，可是却莫名其妙被调到了记都学院当炼金术导师！ 拜托我自己对炼金术也只是懂得一个皮毛好不好！ 不过还好，我有梦紫，对吧！ “嗯......别闹，人家再睡会......” 梦紫把银色的头发往脸上一盖，挡住了惺忪的淡紫色眸子。 其实这货比真弓还懒！ </div>
+									<div class="indexMain_Restriction_Btn">开始阅读</div>
+								</div>
+							</a>
+							<a href="/book/15860.html" target="_blank" class="clearfix left indexMain_Restriction" value="57190">
+								<div class="left indexMain_Restriction_Cover">
+									<img src="static/picture/15860_3257b_4967_m.jpg" style="width:100%; height:100%;" />
+									<div class="indexMain_Restriction_endIcon"></div>
+									<div class="CoverIcon_1"></div>
+								</div>
+								<div class="left indexMain_Restriction_Right">
+									<div class="indexMain_Restriction_Class">神州</div>
+									<div class="indexMain_Restriction_BookName">荒芜剑歌</div>
+									<div class="indexMain_Restriction_AuthorName">风起陇上</div>
+									<div class="indexMain_Restriction_Synopsis">征文新书《扶摇同风九万里》，谢谢支持！ 年轻人站在帝都云翔雄伟巍峨的城墙下，仰望苍穹。 “可你还是来了。” “我必须来，对于每一个云中剑来说，这都是至高无上的战场。” 游侠，刺客，锦衣卫，江湖。 青离年间，阉党乱政。江湖游侠组织“荒芜”临危拔剑，欲以一己之力救天下苍生。
+									</div>
+									<div class="indexMain_Restriction_Btn">开始阅读</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- 上升榜 -->
+					<div class="right indexMain_Right" style="margin-top: -12px;">
+						<div class="indexMain_RightNav">
+							<div class="indexMain_RightNavIn indexMain_RightNavInHot indexMain_RightNavIn6 indexMain_RightNav_Border1">
+								<img src="static/picture/indexrightnav6.png">
+							</div>
+						</div>
+						<div class="rankingList_R1_main1 importantRankingList">
+							<div class="classPage_b Hot_li_Box">
+								<div class="classPage_b_main" id="classPage_b_img" rel="1">
+									<a href="/book/26684.html" class="clearfix indexMain_RightListIn importantRankingList_Hot" target="_blank" style="margin-bottom: 11px;">
+										<div class="clearfix importantRankingList1">
+											<div class="left importantRankingList_Cover">
+												<img src="static/picture/26684_04b53_5670_s.jpg" style="width: 100%; height: 100%;">
+												<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon1">
+													<i>1</i>
+												</div>
+												<div class="CoverIcon_2"></div>
+											</div>
+											<div class="left importantRankingList_Info">
+												<div class="clearfix importantRankingList_BookName">
+													<div class="left importantRankingList_BookName_Text">废土就业指南</div>
+													<div class="right importantRankingList_BookName_Right">热度241.02万</div>
+												</div>
+												<div class="importantRankingList_BookClass">重幻想</div>
+												<div class="importantRankingList_BookSynopsis">僵尸是什么垃圾？干垃圾。因为猪都不吃！——某位不愿透露姓名的废品焚烧站站长。 读者群：495621002，欢迎前来玩耍！
+												</div>
+												<div class="importantRankingList_BookUpdate">更新至：102章</div>
+											</div>
+										</div>
+										<div class="clearfix importantRankingList2">
+											<i class="left indexMain_RightList_Num rankingList_one">1</i>
+											<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 145px;">【重幻想】废土就业指南</div>
+											<div class="left importantRankingList_BookUpdate">更新至：102章</div>
+										</div>
+									</a>
+									<a href="/book/11438.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+										<div class="clearfix importantRankingList1">
+											<div class="left importantRankingList_Cover">
+												<img src="static/picture/11438_6da31_1150_s.jpg" style="width: 100%; height: 100%;">
+												<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon2">
+													<i>2</i>
+												</div>
+												<div class="CoverIcon_2"></div>
+											</div>
+											<div class="left importantRankingList_Info">
+												<div class="clearfix importantRankingList_BookName">
+													<div class="left importantRankingList_BookName_Text">刀不语</div>
+													<div class="right importantRankingList_BookName_Right">热度4289.36万</div>
+												</div>
+												<div class="importantRankingList_BookClass">神州</div>
+												<div class="importantRankingList_BookSynopsis"> 有人问我，什么是江湖？ 我想了想，想到的是桌前的一壶浊酒，是残阳下远去的身影，是月下的一座坟茔，是此时此刻手中燃烧殆尽的香烟。 那人又问，江湖在哪？ 我笑了笑，抬头看向窗外，那里有着无数个江湖。 一个人就是一个故事，两个人便是一个江湖。 微博：靠颜值吸引读者的Lazy （新书《谎言与伪装》，请看官老爷们支持。）
+												</div>
+												<div class="importantRankingList_BookUpdate">更新至：832章</div>
+											</div>
+										</div>
+										<div class="clearfix importantRankingList2">
+											<i class="left indexMain_RightList_Num rankingList_two">2</i>
+											<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【神州】刀不语</div>
+											<div class="right importantRankingList_BookUpdate">更新至：832章</div>
+										</div>
+									</a>
+									<a href="/book/22655.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+										<div class="clearfix importantRankingList1">
+											<div class="left importantRankingList_Cover">
+												<img src="static/picture/22655_a1e03_5038_s.jpg" style="width: 100%; height: 100%;">
+												<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon3">
+													<i>3</i>
+												</div>
+												<div class="CoverIcon_2"></div>
+											</div>
+											<div class="left importantRankingList_Info">
+												<div class="clearfix importantRankingList_BookName">
+													<div class="left importantRankingList_BookName_Text">书灵记</div>
+													<div class="right importantRankingList_BookName_Right">热度1429.8万</div>
+												</div>
+												<div class="importantRankingList_BookClass">神州</div>
+												<div class="importantRankingList_BookSynopsis"> 三万年前，名为南城图书馆的神物从天而降，瀛洲界从茹毛饮血走向诗书礼乐； 五千年前，每本书籍都诞生了书灵，《论语》、《唐诗》、《宋词》、《山海经》，也许还有《五年高考三年模拟》； 半个月前，顾七绝从《唐诗三百首》中醒来，骑着《山海经》，决定去找《聊斋》小姐姐，谈谈如何征（zheng）服（jiu）世界—— 嗯，各位大佬好，我叫顾七绝，我情商低，我脑子有坑，还喜欢瞎说扎心大实话…… 但是没事，你们打不过我啊！ </div>
+												<div class="importantRankingList_BookUpdate">更新至：344章</div>
+											</div>
+										</div>
+										<div class="clearfix importantRankingList2">
+											<i class="left indexMain_RightList_Num rankingList_three">3</i>
+											<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【神州】书灵记</div>
+											<div class="right importantRankingList_BookUpdate">更新至：344章</div>
+										</div>
+									</a>
+									<a href="/book/22964.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+										<div class="clearfix importantRankingList1">
+											<div class="left importantRankingList_Cover">
+												<img src="static/picture/22964_c3ccc_5144_s.jpg" style="width: 100%; height: 100%;">
+												<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+													<i>4</i>
+												</div>
+												<div class="CoverIcon_2"></div>
+											</div>
+											<div class="left importantRankingList_Info">
+												<div class="clearfix importantRankingList_BookName">
+													<div class="left importantRankingList_BookName_Text">我，魔尊，修仙</div>
+													<div class="right importantRankingList_BookName_Right">热度1070.49万</div>
+												</div>
+												<div class="importantRankingList_BookClass">重幻想</div>
+												<div class="importantRankingList_BookSynopsis">菩提城外，先代佛祖拈花而笑，持道论佛，他说女色皆红粉骷髅 青年微怔，男色呢？ 那一日，先代佛祖沉默许久，险些断了菩提树，砸了明镜台 …… 太白宗里，前代仙君执宗门大阵，将一闯宗青年围困，苦口婆心，言语好似天花乱坠 青年持剑沉默，听着前代仙君的道义公理，天纲伦常，然后提剑而起 你说的都有道理，但劳资特么的就是不服 …… 只是，故事主角即非佛祖无名，亦非仙君白帝，而是王小凡，他是魔尊，比那两人更贱些。
+												</div>
+												<div class="importantRankingList_BookUpdate">更新至：429章</div>
+											</div>
+										</div>
+										<div class="clearfix importantRankingList2">
+											<i class="left indexMain_RightList_Num ">4</i>
+											<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【重幻想】我，魔尊，修仙</div>
+											<div class="right importantRankingList_BookUpdate">更新至：429章</div>
+										</div>
+									</a>
+									<a href="/book/24955.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+										<div class="clearfix importantRankingList1">
+											<div class="left importantRankingList_Cover">
+												<img src="static/picture/24955_9a4e6_5420_s.jpg" style="width: 100%; height: 100%;">
+												<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+													<i>5</i>
+												</div>
+												<div class="CoverIcon_2"></div>
+											</div>
+											<div class="left importantRankingList_Info">
+												<div class="clearfix importantRankingList_BookName">
+													<div class="left importantRankingList_BookName_Text">放开那位保安小哥</div>
+													<div class="right importantRankingList_BookName_Right">热度283.66万</div>
+												</div>
+												<div class="importantRankingList_BookClass">轻幻想</div>
+												<div class="importantRankingList_BookSynopsis">“在下自幼苦修少林外门七十二绝技已神功大成，各位江湖同道若是信得过在下就从楼上跳下来，我会用少林真传袈裟伏魔功接住各位！” “他们相信了？” “没有，所以我只能回来继续做保安啊……” 这是一个国外务工归来的高顺小哥在学校做保安赚钱娶师妹的青春励志故事 本书读者群215793627欢迎吐槽~
+												</div>
+												<div class="importantRankingList_BookUpdate">更新至：210章</div>
+											</div>
+										</div>
+										<div class="clearfix importantRankingList2">
+											<i class="left indexMain_RightList_Num ">5</i>
+											<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【轻幻想】放开那位保安小哥</div>
+											<div class="right importantRankingList_BookUpdate">更新至：210章</div>
+										</div>
+									</a>
+									<a href="/book/19365.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+										<div class="clearfix importantRankingList1">
+											<div class="left importantRankingList_Cover">
+												<img src="static/picture/19365_94e38_4745_s.jpg" style="width: 100%; height: 100%;">
+												<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+													<i>6</i>
+												</div>
+												<div class="CoverIcon_2"></div>
+											</div>
+											<div class="left importantRankingList_Info">
+												<div class="clearfix importantRankingList_BookName">
+													<div class="left importantRankingList_BookName_Text">少年白马醉春风</div>
+													<div class="right importantRankingList_BookName_Right">热度6369.22万</div>
+												</div>
+												<div class="importantRankingList_BookClass">神州</div>
+												<div class="importantRankingList_BookSynopsis"> 长街有煞，喧闹嘈杂。 手持砍刀的屠夫手起刀落，骨上挑花，卖花鞋的老太针挑烛火，百尺无活，还有一个卖油郎，袖里藏着十八剑，总望着对面的包子铺，那手一撕能换九张脸的小西施。长街尽头还有一座东归酒肆，里面有个酿酒的小少年，那少年……就真的只是一个酿酒的。 他有酒十二盏，却无人来喝，店里永远只坐着一个醉醺醺的白衣男，抱着长枪晃悠悠，他说想要买匹马提上酒，纵马扬鞭，一醉春风。 </div>
+												<div class="importantRankingList_BookUpdate">更新至：376章</div>
+											</div>
+										</div>
+										<div class="clearfix importantRankingList2">
+											<i class="left indexMain_RightList_Num ">6</i>
+											<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【神州】少年白马醉春风</div>
+											<div class="right importantRankingList_BookUpdate">更新至：376章</div>
+										</div>
+									</a>
+									<a href="/book/25375.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+										<div class="clearfix importantRankingList1">
+											<div class="left importantRankingList_Cover">
+												<img src="static/picture/25375_5b2a9_5488_s.jpg" style="width: 100%; height: 100%;">
+												<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+													<i>7</i>
+												</div>
+												<div class="CoverIcon_2"></div>
+											</div>
+											<div class="left importantRankingList_Info">
+												<div class="clearfix importantRankingList_BookName">
+													<div class="left importantRankingList_BookName_Text">二胡少女</div>
+													<div class="right importantRankingList_BookName_Right">热度49.36万</div>
+												</div>
+												<div class="importantRankingList_BookClass">浪漫现实</div>
+												<div class="importantRankingList_BookSynopsis">你这年纪，风月都好看，爱恨都浪漫。</div>
+												<div class="importantRankingList_BookUpdate">更新至：184章</div>
+											</div>
+										</div>
+										<div class="clearfix importantRankingList2">
+											<i class="left indexMain_RightList_Num ">7</i>
+											<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【浪漫现实】二胡少女</div>
+											<div class="right importantRankingList_BookUpdate">更新至：184章</div>
+										</div>
+									</a>
+									<a href="/book/24982.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+										<div class="clearfix importantRankingList1">
+											<div class="left importantRankingList_Cover">
+												<img src="static/picture/24982_1062c_5416_s.jpg" style="width: 100%; height: 100%;">
+												<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+													<i>8</i>
+												</div>
+												<div class="CoverIcon_2"></div>
+											</div>
+											<div class="left importantRankingList_Info">
+												<div class="clearfix importantRankingList_BookName">
+													<div class="left importantRankingList_BookName_Text">王妃不挂科</div>
+													<div class="right importantRankingList_BookName_Right">热度466.51万</div>
+												</div>
+												<div class="importantRankingList_BookClass">古风历史</div>
+												<div class="importantRankingList_BookSynopsis">鬼马精灵美少女桃小夭逃婚未遂，被未婚夫摄政王楚笙歌一脚踢进皇家书院“天子门”重新做妃，与蠢萌太子楚德纯、二货将种陈渥丹、花痴美眉白清浅组成为“学渣四人组”，怼公主、打国舅、戏夫子、救皇上、闹球场、捉内奸、造机器熊猫、乱点鸳鸯谱，还抽空与腹黑王爷楚笙歌、闷骚首相白清野谈了场三角恋，鸡飞狗跳，好戏连台。</div>
+												<div class="importantRankingList_BookUpdate">更新至：227章</div>
+											</div>
+										</div>
+										<div class="clearfix importantRankingList2">
+											<i class="left indexMain_RightList_Num ">8</i>
+											<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【古风历史】王妃不挂科</div>
+											<div class="right importantRankingList_BookUpdate">更新至：227章</div>
+										</div>
+									</a>
+									<a href="/book/26012.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+										<div class="clearfix importantRankingList1">
+											<div class="left importantRankingList_Cover">
+												<img src="static/picture/26012_1d588_5563_s.jpg" style="width: 100%; height: 100%;">
+												<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+													<i>9</i>
+												</div>
+												<div class="CoverIcon_2"></div>
+											</div>
+											<div class="left importantRankingList_Info">
+												<div class="clearfix importantRankingList_BookName">
+													<div class="left importantRankingList_BookName_Text">你好，沙雕网友</div>
+													<div class="right importantRankingList_BookName_Right">热度51.7万</div>
+												</div>
+												<div class="importantRankingList_BookClass">浪漫现实</div>
+												<div class="importantRankingList_BookSynopsis">水世是一位标准的现代社会颓废死宅大学生，网络上则是一位郁郁不得志的小说作者，在接连遭遇作品扑街和网络暴力后，心灰意冷的他决心退出网文圈。然而，那天深夜，空无一人的读者群聊收到了一位美少女的入群申请…… PS:虽然封面是粉红色，但是是男主视角哦~ 再PS:日！全文好强的代入感啊，写哭了！ 再再PS:正文分为虚拟和现实两条线，虚拟为水世的网文（沙雕群友）经历，现实为围绕着水晶文学社的大学青春。
+												</div>
+												<div class="importantRankingList_BookUpdate">更新至：130章</div>
+											</div>
+										</div>
+										<div class="clearfix importantRankingList2">
+											<i class="left indexMain_RightList_Num ">9</i>
+											<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【浪漫现实】你好，沙雕网友</div>
+											<div class="right importantRankingList_BookUpdate">更新至：130章</div>
+										</div>
+									</a>
+									<a href="/book/10080.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 11px;">
+
+										<div class="clearfix importantRankingList1">
+											<div class="left importantRankingList_Cover">
+												<img src="static/picture/10080_76b17_1045_s.jpg" style="width: 100%; height: 100%;">
+												<div class="indexMain_RightList_NumIcon indexMain_RightList_NumIcon4">
+													<i>10</i>
+												</div>
+												<div class="CoverIcon_2"></div>
+											</div>
+											<div class="left importantRankingList_Info">
+												<div class="clearfix importantRankingList_BookName">
+													<div class="left importantRankingList_BookName_Text">恐怖手机游戏</div>
+													<div class="right importantRankingList_BookName_Right">热度6986.05万</div>
+												</div>
+												<div class="importantRankingList_BookClass">烧脑</div>
+												<div class="importantRankingList_BookSynopsis"> 当死神决定做一款世上最好玩的手游……本书QQ群：20427675（已满），二群：220158842，新浪微博：@一个悲伤的网管 </div>
+												<div class="importantRankingList_BookUpdate">更新至：508章</div>
+											</div>
+										</div>
+										<div class="clearfix importantRankingList2">
+											<i class="left indexMain_RightList_Num ">10</i>
+											<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 130px;">【烧脑】恐怖手机游戏</div>
+											<div class="right importantRankingList_BookUpdate">更新至：508章</div>
+										</div>
+									</a>
+								</div>
+								<a href="/www/rank" class="rankingList_More">更多榜单</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--<div class="indexMain_Box">
+        <div class="clearfix indexMain_BookBox">
+            
+                        <a href="/book/10006.html" target="_blank" class="left indexMain_Restriction" value="57190">
+                <div class="left indexMain_Restriction_Cover">
+                    <img src="static/picture/10006_874ac_42_m.jpg" style="width:100%; height:100%;"/>
+                    <div class="clearfix indexMain_Restriction_Block">
+                        <div class="left indexMain_Restriction_BlockIn">轻幻想</div>
+                        <div class="left indexMain_Restriction_BlockIn">超能</div>
+                    </div>
+                </div>
+                <div class="indexMain_Restriction_BookName">必死后宫逃脱计划！</div>
+                <div class="clearfix indexMain_Restriction_Class">
+                    <div class="left indexMain_Restriction_AuthorName">七夕八幡</div>
+                    <div class="right indexMain_Restriction_Hot">
+                        <i class="left"></i>
+                        <span class="left">386.5万</span>
+                    </div>
+                </div>
+            </a>
+                        <a href="/book/15189.html" target="_blank" class="left indexMain_Restriction" value="57190">
+                <div class="left indexMain_Restriction_Cover">
+                    <img src="static/picture/15189_d3697_5070_m.jpg" style="width:100%; height:100%;"/>
+                    <div class="clearfix indexMain_Restriction_Block">
+                        <div class="left indexMain_Restriction_BlockIn">神州</div>
+                        <div class="left indexMain_Restriction_BlockIn">幻想神州</div>
+                    </div>
+                </div>
+                <div class="indexMain_Restriction_BookName">野狐禅</div>
+                <div class="clearfix indexMain_Restriction_Class">
+                    <div class="left indexMain_Restriction_AuthorName">山鬼</div>
+                    <div class="right indexMain_Restriction_Hot">
+                        <i class="left"></i>
+                        <span class="left">195.16万</span>
+                    </div>
+                </div>
+            </a>
+                        <a href="/book/16302.html" target="_blank" class="left indexMain_Restriction" value="57190">
+                <div class="left indexMain_Restriction_Cover">
+                    <img src="static/picture/16302_5fcfa_711_l.jpg" style="width:100%; height:100%;"/>
+                    <div class="clearfix indexMain_Restriction_Block">
+                        <div class="left indexMain_Restriction_BlockIn">轻小说</div>
+                        <div class="left indexMain_Restriction_BlockIn">轻小说</div>
+                    </div>
+                </div>
+                <div class="indexMain_Restriction_BookName">E45班炼金导师</div>
+                <div class="clearfix indexMain_Restriction_Class">
+                    <div class="left indexMain_Restriction_AuthorName">夜城主</div>
+                    <div class="right indexMain_Restriction_Hot">
+                        <i class="left"></i>
+                        <span class="left">117.13万</span>
+                    </div>
+                </div>
+            </a>
+                        <a href="/book/15860.html" target="_blank" class="left indexMain_Restriction" value="57190">
+                <div class="left indexMain_Restriction_Cover">
+                    <img src="static/picture/15860_3257b_4967_m.jpg" style="width:100%; height:100%;"/>
+                    <div class="clearfix indexMain_Restriction_Block">
+                        <div class="left indexMain_Restriction_BlockIn">神州</div>
+                        <div class="left indexMain_Restriction_BlockIn">幻想神州</div>
+                    </div>
+                </div>
+                <div class="indexMain_Restriction_BookName">荒芜剑歌</div>
+                <div class="clearfix indexMain_Restriction_Class">
+                    <div class="left indexMain_Restriction_AuthorName">风起陇上</div>
+                    <div class="right indexMain_Restriction_Hot">
+                        <i class="left"></i>
+                        <span class="left">55.19万</span>
+                    </div>
+                </div>
+            </a>
+                        
+        </div>
+    </div>-->
+			</div>
+
+			<div class="clearfix index_main indexMainFour" id="Floor6">
+				<div class="left indexMain_Left">
+					<div class="indexMain_Title indexMain_Title9">
+						<div class="right index_bookReview_all_look">
+							<a href="/www/bookclass/dppd" class="right" target="_blank">查看更多></a>
+						</div>
+					</div>
+					<div class="clearfix indexMain_ShortBook">
+						<div class="indexMain_ShortBook_Main">
+							<div class="clearfix left indexMain_ShortBook_Box">
+								<a href="/short/book/10784.html" class="indexMain_ShortBookIn">
+									<div class="clearfix indexMain_ShortBookMain">
+										<div class="left indexMain_ShortBookMain_Cover">
+											<img src="static/picture/shortimg1.png" alt="" style="width:100%; height:100%;" />
+											<div class="clearfix indexMain_ShortBookMain_CoverBlock">
+												<div class="left indexMain_ShortBookMain_CoverBlock_Text">葬礼上的战歌</div>
+												<div class="right indexMain_ShortBookMain_CoverBlock_Text">作者：空渺余音</div>
+											</div>
+										</div>
+										<div class="left indexMain_ShortBookMain_Right">
+											<div class="indexMain_ShortBookMain_Title">试读</div>
+											<div class="indexMain_ShortBookMain_Synopsis">
+												<p id="1">
+													葬礼上的战歌
+												</p>
+												<p id="2">
+													——我是死神。我知道我讲故事也许会有点生硬，也会有些无聊，也许你会不相信。但确实是我在世界上的游历。我不知道这个故事会不会被发现，也许这只是我多虑了吧。那是一个遥远的故事了。
+												</p>
+												<p id="3">
+													序章 克莱西与安德烈
+												</p>
+												<p id="4">
+													黑云很厚，好像快下雨了。
+												</p>
+												<p id="5">
+													没有人喜欢死神吧，其实我们不恐怖，我们只是使一个生命停泊在彼岸的摆渡人。在一个叫苏联的寒冷国度的夏天，我遇到了一个人。
+												</p>
+											</div>
+											<div class="clearfix indexMain_ShortBookMain_Bottom">
+												<div class="right indexMain_ShortBookMain_BottomBtn">GO</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="/short/book/10704.html" class="indexMain_ShortBookIn">
+									<div class="clearfix indexMain_ShortBookMain">
+										<div class="left indexMain_ShortBookMain_Cover">
+											<img src="static/picture/shortimg2.png" alt="" style="width:100%; height:100%;" />
+											<div class="clearfix indexMain_ShortBookMain_CoverBlock">
+												<div class="left indexMain_ShortBookMain_CoverBlock_Text">听说，小萝莉</div>
+												<div class="right indexMain_ShortBookMain_CoverBlock_Text">作者：我是蛋蛋后</div>
+											</div>
+										</div>
+										<div class="left indexMain_ShortBookMain_Right">
+											<div class="indexMain_ShortBookMain_Title">试读</div>
+											<div class="indexMain_ShortBookMain_Synopsis">
+												<p id="1">
+													那天，主任很生气，差一点操起他右手边的那本《牛津词典》把它摔向我。再给你一个月的时间去寻找新闻，如果一个月后依旧写不出这个版面，你就可以不用来了。请你出去。主任甚至都不在乎我是一个女孩儿，损我的同时又用了敬语。
+												</p>
+												<p id="2">
+													街道上车水马龙，我顺着路的左面跑了起来。凉风在我的耳边呼呼吹过，耳坠随着身体的摆动摇晃，晃得我耳朵生疼。后来，我停留在一座篮球场旁喘气，之后吸着香烟，一面看着那些年轻的男孩儿们打篮球，一面时刻注意随时会被风吹起令我面临走光尴尬的裙子。天色逐渐暗了下来，篮球场在路两旁昏黄灯光的照耀下别有一番风味。
+												</p>
+												<p id="3">
+													姐姐，姐姐。女孩子抽烟可不好哦。
+												</p>
+												<p id="4">
+													哦？我转过身，莫名其妙的看了身旁那孩子一眼。她是在什么时候来到我的身边我也不清楚。
+												</p>
+												<p id="5">
+													我不知道应该怎么样形容那个小女孩儿。小薇向我描述我曾经向她描述的那般：那个女孩儿娇小玲珑，留着过耳短发，一顶蓝色的英式女仆帽扣在头顶，披着红黑色的风衣，身上着一件百叶裙，活脱脱一位可爱的小萝莉。这种描述对我的记忆并没有起到显著效果，因为后来在某种机缘下我丧失了那部分记忆。唯独对萝莉这个词语记得很深，对方的模样却很模糊，大概全世界的萝莉都是一个模样吧。
+												</p>
+											</div>
+											<div class="clearfix indexMain_ShortBookMain_Bottom">
+												<div class="right indexMain_ShortBookMain_BottomBtn">GO</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="/short/book/10681.html" class="indexMain_ShortBookIn">
+									<div class="clearfix indexMain_ShortBookMain">
+										<div class="left indexMain_ShortBookMain_Cover">
+											<img src="static/picture/shortimg3.png" alt="" style="width:100%; height:100%;" />
+											<div class="clearfix indexMain_ShortBookMain_CoverBlock">
+												<div class="left indexMain_ShortBookMain_CoverBlock_Text">恋爱剧本</div>
+												<div class="right indexMain_ShortBookMain_CoverBlock_Text">作者：迟宏宇</div>
+											</div>
+										</div>
+										<div class="left indexMain_ShortBookMain_Right">
+											<div class="indexMain_ShortBookMain_Title">试读</div>
+											<div class="indexMain_ShortBookMain_Synopsis">
+												<p id="1214">
+													大四快开学了，我是一个从小县城走出来的孩子，由于路途较远，所以必须提前了一天来到学校，我一直坚信早起的鸟儿有虫吃吃，开学第一天都是很重要的，俗话说，磨刀不误砍柴工；我再距离开学前三天就到了寝室，把遮床的单子撤下挂起来，将卷起的被褥打开，把床铺好，随后将三台电脑桌精心擦了又擦，寝室打扫一边。
+												</p>
+												<p id="1215">
+													寝室里只有我会做这种打扫的事情，寝室有三个人，因为当初我三个来报道的晚，很不幸得到了指导员的谆谆教导，很荣幸得到一个只能住三个人的寝室，寝室三个人分别为我一个，中风一个，还有就是贱人博。除了我是一般懒的以外，其余两个人都是奇懒无比的。
+												</p>
+												<p id="1216">
+													中风是我们寝室长，值日表上礼拜一到礼拜天，全都是写中风的名字。为什么我不当，因为我知道寝室长很累，当初为了让他当我是主动跑到导员办公室，推荐的他。
+												</p>
+												<p id="1217">
+													贱人博嘛也是有职务，那就是外交部副室长，他负责一切外交事务活动，从事寝室联谊、组织打牌，到借几T的硬盘等等。
+												</p>
+												<p id="1218">
+													难道就我没有职务吗？错了我也是有职务地，那就是后勤组织部副室长，负责后勤工作，比如打扫卫生，替二人答道，理论讲解小抄等。
+												</p>
+											</div>
+											<div class="clearfix indexMain_ShortBookMain_Bottom">
+												<div class="right indexMain_ShortBookMain_BottomBtn">GO</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="/short/book/10141.html" class="indexMain_ShortBookIn">
+									<div class="clearfix indexMain_ShortBookMain">
+										<div class="left indexMain_ShortBookMain_Cover">
+											<img src="static/picture/shortimg4.png" alt="" style="width:100%; height:100%;" />
+											<div class="clearfix indexMain_ShortBookMain_CoverBlock">
+												<div class="left indexMain_ShortBookMain_CoverBlock_Text">植物逸事</div>
+												<div class="right indexMain_ShortBookMain_CoverBlock_Text">作者：春江水暖</div>
+											</div>
+										</div>
+										<div class="left indexMain_ShortBookMain_Right">
+											<div class="indexMain_ShortBookMain_Title">试读</div>
+											<div class="indexMain_ShortBookMain_Synopsis">
+												<p id="1">
+													一大早我就被窗外婉转的鸟鸣声叫醒了，揉了揉眼睛，窗外十分的明亮，透过打开的窗户还能够看到窗台上几盆植物。绿色的叶片上露水在滑动，一朵美丽的茉莉正在悄悄的绽放。我缓缓的吸了一口气，真是香气怡人，“哇，真是一个美丽的早晨。”呼吸着清爽的空气，我起身走出了屋子。
+												</p>
+												<p id="2">
+													“哎呀！我真是太美丽，我就是最美丽的茉莉王后！”茉莉花突然道，它的花朵在微风中轻轻的颤抖着，枝条动了动，十分的得意。
+												</p>
+												<p id="3">
+													“你说什么呢？”旁边的玫瑰花摇了摇身上的花苞，“你是王后？当我不在呀？不就是比我早开几天吗？看你那个嘚瑟劲吧！”
+												</p>
+												<p id="4">
+													“哼！晚几天都是晚，你现在还只是一个玫 瑰 苞。”茉莉花一字一顿的道。
+												</p>
+												<p id="5">
+													“什么？我开的时候人们还会看到你？”玫瑰花生气道，气的玫瑰苞都有一丝的松动，露出了一点红色。
+												</p>
+											</div>
+											<div class="clearfix indexMain_ShortBookMain_Bottom">
+												<div class="right indexMain_ShortBookMain_BottomBtn">GO</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="clearfix left indexMain_ShortBook_Box">
+								<a href="/short/book/10437.html" class="indexMain_ShortBookIn">
+									<div class="clearfix indexMain_ShortBookMain">
+										<div class="left indexMain_ShortBookMain_Cover">
+											<img src="static/picture/shortimg5.png" alt="" style="width:100%; height:100%;" />
+											<div class="clearfix indexMain_ShortBookMain_CoverBlock">
+												<div class="left indexMain_ShortBookMain_CoverBlock_Text">我在做梦？</div>
+												<div class="right indexMain_ShortBookMain_CoverBlock_Text">作者：呼噜呼噜</div>
+											</div>
+										</div>
+										<div class="left indexMain_ShortBookMain_Right">
+											<div class="indexMain_ShortBookMain_Title">试读</div>
+											<div class="indexMain_ShortBookMain_Synopsis">
+												<p id="1">
+													很清楚的记得那天是阴历七月十四，因为要升高三了，所以学校要求所有学生暑假来学校补课。晚自习上完感觉特别累。回到寝室，脸都没洗，倒头便睡。
+												</p>
+												<p id="2">
+													这大夏天的，半夜里我竟然被冻醒了。我说呢，原来是被子掉在地上了，我捞起被子，严严实实地盖在身上。奇怪，怎么还是感觉这么冷？索性把头也埋了进去。
+												</p>
+												<p id="3">
+													恍惚之间听见窗外刮起了大风，夏夜的风，说来就来，吹过树梢，一片哗啦哗啦的声响。一阵又一阵，仿佛是风在夜里哭泣，听得心里发毛。而且宿舍的旁边是一个半封闭的走廊，声音特别大，顿时感觉睡意全无。睡不着，于是便想找个人聊聊天儿。我送被窝里探出个脑袋，朝上铺望了望，看有没有人醒着。
+												</p>
+												<p id="4">
+													嘿！还真有人醒着。只见一号床老张也从床上坐了起来，准备下扶梯。估计是要去上厕所。
+												</p>
+												<p id="5">
+													“老张！上厕所呀？”我问他。
+												</p>
+											</div>
+											<div class="clearfix indexMain_ShortBookMain_Bottom">
+												<div class="right indexMain_ShortBookMain_BottomBtn">GO</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="/short/book/10390.html" class="indexMain_ShortBookIn">
+									<div class="clearfix indexMain_ShortBookMain">
+										<div class="left indexMain_ShortBookMain_Cover">
+											<img src="static/picture/shortimg6.png" alt="" style="width:100%; height:100%;" />
+											<div class="clearfix indexMain_ShortBookMain_CoverBlock">
+												<div class="left indexMain_ShortBookMain_CoverBlock_Text">模仿游戏</div>
+												<div class="right indexMain_ShortBookMain_CoverBlock_Text">作者：子喻</div>
+											</div>
+										</div>
+										<div class="left indexMain_ShortBookMain_Right">
+											<div class="indexMain_ShortBookMain_Title">试读</div>
+											<div class="indexMain_ShortBookMain_Synopsis">
+												<p id="51">
+													屏幕上出现了几个字样——请输入试验编号，确认试验对象。
+												</p>
+												<p id="52">
+													ZS01521；确认。
+												</p>
+												<p id="53">
+													——确认完毕，正在启动程序……
+												</p>
+												<p id="54">
+													——屏幕初始化完毕，虚拟机下载完毕，正在创建虚拟环境……
+												</p>
+												<p id="55">
+													——开始分配试验员，请耐心等候……
+												</p>
+											</div>
+											<div class="clearfix indexMain_ShortBookMain_Bottom">
+												<div class="right indexMain_ShortBookMain_BottomBtn">GO</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="/short/book/10763.html" class="indexMain_ShortBookIn">
+									<div class="clearfix indexMain_ShortBookMain">
+										<div class="left indexMain_ShortBookMain_Cover">
+											<img src="static/picture/shortimg7.png" alt="" style="width:100%; height:100%;" />
+											<div class="clearfix indexMain_ShortBookMain_CoverBlock">
+												<div class="left indexMain_ShortBookMain_CoverBlock_Text">异闻</div>
+												<div class="right indexMain_ShortBookMain_CoverBlock_Text">作者：上上人</div>
+											</div>
+										</div>
+										<div class="left indexMain_ShortBookMain_Right">
+											<div class="indexMain_ShortBookMain_Title">试读</div>
+											<div class="indexMain_ShortBookMain_Synopsis">
+												<p id="241">
+													我时常会感慨某些事物
+												</p>
+												<p id="242">
+													我站在高楼上，俯视着这片土地，脑子会突然浮现一些想法
+												</p>
+												<p id="243">
+													尽管我长这么大
+												</p>
+												<p id="244">
+													我经常会想，要是我是地下行走的一个人，我会不会看见的景象就会不同，感触也不同
+												</p>
+												<p id="245">
+													可是我在上面，可以看见地下任何人的样子，包括他们永远无法瞧见的自己的后背，除了借用道具
+												</p>
+											</div>
+											<div class="clearfix indexMain_ShortBookMain_Bottom">
+												<div class="right indexMain_ShortBookMain_BottomBtn">GO</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="/short/book/10536.html" class="indexMain_ShortBookIn">
+									<div class="clearfix indexMain_ShortBookMain">
+										<div class="left indexMain_ShortBookMain_Cover">
+											<img src="static/picture/shortimg8.png" alt="" style="width:100%; height:100%;" />
+											<div class="clearfix indexMain_ShortBookMain_CoverBlock">
+												<div class="left indexMain_ShortBookMain_CoverBlock_Text">梦不可能这么荒诞</div>
+												<div class="right indexMain_ShortBookMain_CoverBlock_Text">作者：学生物的老虎</div>
+											</div>
+										</div>
+										<div class="left indexMain_ShortBookMain_Right">
+											<div class="indexMain_ShortBookMain_Title">试读</div>
+											<div class="indexMain_ShortBookMain_Synopsis">
+												<p id="874">
+													“你相信这个世界上有真实的梦吗？”
+												</p>
+												<p id="875">
+													看到第一句话，陆羽就啜笑着扔开这本书。捂了捂额头，自己是多么犯二才在会地摊上把这本书捡回来，还真实的梦，如果梦都是真实的，那还叫做梦吗？算了，也不值几个钱。
+												</p>
+												<p id="876">
+													陆羽躺在床上，劳累了一天，浑身说不出的酸痛，都怪杨奇，非要带我去参加什么大学生志愿劳动，说白了就是不给钱的苦劳，还干得这么起劲，真是糟糕的一天，消耗的能量完全没有相应的价值补回来嘛。
+												</p>
+												<p id="877">
+													眼皮有些开始打架，躺在床上就是容易犯困，想睡觉了。
+												</p>
+												<p id="878">
+													想到睡觉，陆羽又想到从地摊上淘的小黄书，破破旧旧，连个名字都没有，看上去有些年头，也不知道当时是一种什么感觉驱使着陆羽把它买了回来。
+												</p>
+											</div>
+											<div class="clearfix indexMain_ShortBookMain_Bottom">
+												<div class="right indexMain_ShortBookMain_BottomBtn">GO</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="indexMain_ShortBook_Btn indexMain_ShortBook_Btn1">
+							<i></i>
+						</div>
+						<div class="indexMain_ShortBook_Btn indexMain_ShortBook_Btn2">
+							<i></i>
+						</div>
+					</div>
+				</div>
+				<div class="right indexMain_Right">
+					<div class="clearfix index_main_R_TOP10_In" onclick="click_num(73,71)">
+						<div class="indexMain_RightNav">
+							<div class="indexMain_RightNavIn indexMain_RightNavInHot indexMain_RightNavIn3 indexMain_RightNav_Border1 phb_li" rel="rd">
+								<img src="static/picture/indexrightnav3.png">
+							</div>
+						</div>
+						<div class="rankingList_R1_main1 newIndex_R1">
+							<div class="classPage_b rd phb_li_Box" id="classPage_b_img">
+								<a href="/short/book/10681.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 18px;">
+									<i class="left indexMain_RightList_Num rankingList_one">1</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 138px;">恋爱剧本</div>
+									<span class="left rankingList_size_one">热度：</span>
+									<i class="left rankingList_size rankingList_size_one" style="margin-right: 0;">96.6万</i>
+								</a>
+								<a href="/short/book/10227.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 18px;">
+									<i class="left indexMain_RightList_Num rankingList_two">2</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 138px;">喂！铲屎的！</div>
+									<span class="left rankingList_size_two">热度：</span>
+									<i class="left rankingList_size rankingList_size_two" style="margin-right: 0;">94.15万</i>
+								</a>
+								<a href="/short/book/10704.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 18px;">
+									<i class="left indexMain_RightList_Num rankingList_three">3</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 138px;">听说，小萝莉</div>
+									<span class="left rankingList_size_three">热度：</span>
+									<i class="left rankingList_size rankingList_size_three" style="margin-right: 0;">84.04万</i>
+								</a>
+								<a href="/short/book/10437.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 18px;">
+									<i class="left indexMain_RightList_Num">4</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 138px;">我在做梦？</div>
+									<span class="left" style="color:#b2b2b2;">热度：</span>
+									<i class="left rankingList_size" style="margin-right: 0;">84.02万</i>
+								</a>
+								<a href="/short/book/10390.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 18px;">
+									<i class="left indexMain_RightList_Num">5</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 138px;">模仿游戏</div>
+									<span class="left" style="color:#b2b2b2;">热度：</span>
+									<i class="left rankingList_size" style="margin-right: 0;">83.55万</i>
+								</a>
+								<a href="/short/book/10141.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 18px;">
+									<i class="left indexMain_RightList_Num">6</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 138px;">植物逸事</div>
+									<span class="left" style="color:#b2b2b2;">热度：</span>
+									<i class="left rankingList_size" style="margin-right: 0;">83.42万</i>
+								</a>
+								<a href="/short/book/10784.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 18px;">
+									<i class="left indexMain_RightList_Num">7</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 138px;">葬礼上的战歌</div>
+									<span class="left" style="color:#b2b2b2;">热度：</span>
+									<i class="left rankingList_size" style="margin-right: 0;">80.04万</i>
+								</a>
+								<a href="/short/book/10220.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 18px;">
+									<i class="left indexMain_RightList_Num">8</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 138px;">东尼的世界</div>
+									<span class="left" style="color:#b2b2b2;">热度：</span>
+									<i class="left rankingList_size" style="margin-right: 0;">70.36万</i>
+								</a>
+								<a href="/short/book/10156.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 18px;">
+									<i class="left indexMain_RightList_Num">9</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 138px;">人体蛔虫</div>
+									<span class="left" style="color:#b2b2b2;">热度：</span>
+									<i class="left rankingList_size" style="margin-right: 0;">66.47万</i>
+								</a>
+								<a href="/short/book/10001.html" class="clearfix indexMain_RightListIn" target="_blank" style="margin-bottom: 18px;">
+									<i class="left indexMain_RightList_Num">10</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" style="width: 138px;">鬼剃头</div>
+									<span class="left" style="color:#b2b2b2;">热度：</span>
+									<i class="left rankingList_size" style="margin-right: 0;">63.88万</i>
+								</a>
+							</div>
+
+							<div class="classPage_b xfb_li_Box xs" id="classPage_b_img" style="display:none ">
+								<a href="/short/book/11295.html" class="clearfix indexMain_RightListIn" target="_blank">
+									<i class="left indexMain_RightList_Num rankingList_one">1</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1">幻史：亡国的骑士</div>
+									<i class="right rankingList_size rankingList_size_one">0</i>
+								</a>
+								<a href="/short/book/11294.html" class="clearfix indexMain_RightListIn" target="_blank">
+									<i class="left indexMain_RightList_Num rankingList_two">2</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1">无魔</div>
+									<i class="right rankingList_size rankingList_size_two">0</i>
+								</a>
+								<a href="/short/book/11292.html" class="clearfix indexMain_RightListIn" target="_blank">
+									<i class="left indexMain_RightList_Num rankingList_three">3</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" target="_blank">我是他的幽灵</div>
+									<i class="right rankingList_size rankingList_size_three">0</i>
+								</a>
+								<a href="/short/book/11291.html" class="clearfix indexMain_RightListIn" target="_blank">
+									<i class="left indexMain_RightList_Num">4</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" target="_blank">一生所爱</div>
+									<i class="right rankingList_size">0</i>
+								</a>
+								<a href="/short/book/11290.html" class="clearfix indexMain_RightListIn" target="_blank">
+									<i class="left indexMain_RightList_Num">5</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" target="_blank">上船的女人</div>
+									<i class="right rankingList_size">0</i>
+								</a>
+								<a href="/short/book/11289.html" class="clearfix indexMain_RightListIn" target="_blank">
+									<i class="left indexMain_RightList_Num">6</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" target="_blank">再起风云</div>
+									<i class="right rankingList_size">0</i>
+								</a>
+								<a href="/short/book/11288.html" class="clearfix indexMain_RightListIn" target="_blank">
+									<i class="left indexMain_RightList_Num">7</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" target="_blank">未来的地球</div>
+									<i class="right rankingList_size">0</i>
+								</a>
+								<a href="/short/book/11287.html" class="clearfix indexMain_RightListIn" target="_blank">
+									<i class="left indexMain_RightList_Num">8</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" target="_blank">​楼顶人</div>
+									<i class="right rankingList_size">74</i>
+								</a>
+								<a href="/short/book/11286.html" class="clearfix indexMain_RightListIn" target="_blank">
+									<i class="left indexMain_RightList_Num">9</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" target="_blank">不对称的感情线</div>
+									<i class="right rankingList_size">91</i>
+								</a>
+								<a href="/short/book/11284.html" class="clearfix indexMain_RightListIn" target="_blank">
+									<i class="left indexMain_RightList_Num">10</i>
+									<div class="left indexMain_RightList_Html indexMain_RightList_Html1" target="_blank">暗恋，是这样的</div>
+									<i class="right rankingList_size">86</i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix index_main indexMainFive" id="Floor7">
+				<div class="left indexMain_Left">
+					<div class="indexMain_BookReview">
+						<div class="clearfix indexMain_Title indexMain_Title10">
+							<div class="right index_bookReview_all_look">
+								<a href="/community/xzindex/index" class="right" target="_blank">查看更多></a>
+							</div>
+						</div>
+						<div class="clearfix indexMain_Box">
+							<div class="clearfix index_bookReview_In lazyload" onclick="click_num(66,65)">
+								<div class="left index_bookReview_Left">
+									<div class="index_bookReview_Bok">
+										<div class="left bookReview_cover">
+											<a href="/book/27056.html" target="_blank">
+												<img original="static/picture/27056_f7e4a_5801_m.jpg" src="https://c.8kana.com/201910/270/56/27056_f7e4a_5801_m.jpg" alt="江湖神捕叱小瑜" title="江湖神捕叱小瑜" style="width: 100%;height: 100%;" />
+												<div class="CoverIcon_0"></div>
+											</a>
+										</div>
+										<div class="left index_bookReview_Info">
+											<div class="clearfix index_bookReview_BookTop">
+												<div class="left bookReview_head">
+													<a href="/member/personal/index/22669" target="_blank" class="bookReview_headCover">
+														<img original="https://a.8kana.com/201910/lbf/ysu/22669qo3ybw_d3b75_l.jpg" src="static/picture/trphjz.jpg" alt="头像丢失" style="width: 100%;height: 100%;" />
+													</a>
+													<div class="bookReview_head_Lv LvIcon_D"></div>
+												</div>
+												<div class="clearfix left index_bookReview_name">
+													<a href="/member/personal/index/22669" class="left manColor" target="_blank"><span>Seven零</span></a>
+													<span class="left index_bookReview_name_span">评</span>
+													<a href="/book/27056.html" target="_blank" class="left">江湖神捕叱小瑜</a>
+												</div>
+												<div class="clearfix left bookReview_Comment">
+													<div class="left bookReview_CommentIcon"></div>
+													<div class="left bookReview_CommentBox">
+														<div class="bookReview_CommentBox_Top bookReview_CommentBox_Top5"></div>
+														<div class="bookReview_CommentBox_Bottom"></div>
+													</div>
+												</div>
+											</div>
+											<div class="clearfix bookReview_Title">
+												<div class="left bookReview_inform_Icon bookReview_inform_Icon_blue">推荐</div>
+												<div class="left bookReview_TitleText">
+													<a href="/community/xzindex/detail/351250" target="_blank" title="叱小瑜，带你走入人世间！">叱小瑜，带你走入人世间！</a>
+												</div>
+											</div>
+											<div class="bookReview_inform_In">
+												<p>
+													<span class="bookReview_inform_In_Quotes1"></span>
+													<a href="/community/xzindex/detail/351250" target="_blank"><span class="bookReview_inform_In_p">前言：接评贴开出来到现在有2个月了，中间各种事情耽误，真正开始敲键盘是半个多月前。这周感觉自己体力充沛，大概... </span></a>
+													<span class="bookReview_inform_In_Quotes2"></span>
+												</p>
+											</div>
+											<div class="clearfix bookReview_inform_B">
+												<div class="left bookReview_inform_B1">
+													<i class="left bookReview_tlakIcon"></i>
+													<span class="left">18</span>
+												</div>
+												<div class="left bookReview_inform_B1">
+													<i class="left bookReview_seeIcon"></i>
+													<span class="left">120</span>
+												</div>
+												<div class="left bookReview_inform_B1">
+													<i class="left bookReview_zambiaIcon"></i>
+													<span class="left">9</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="index_bookReview_Bok">
+										<div class="left bookReview_cover">
+											<a href="/book/25025.html" target="_blank">
+												<img original="static/picture/25025_9c2b0_5422_m.jpg" src="https://c.8kana.com/201904/250/25/25025_9c2b0_5422_m.jpg" alt="灵皇劫" title="灵皇劫" style="width: 100%;height: 100%;" />
+												<div class="CoverIcon_0"></div>
+											</a>
+										</div>
+										<div class="left index_bookReview_Info">
+											<div class="clearfix index_bookReview_BookTop">
+												<div class="left bookReview_head">
+													<a href="/member/personal/index/22669" target="_blank" class="bookReview_headCover">
+														<img original="https://a.8kana.com/201910/lbf/ysu/22669qo3ybw_d3b75_l.jpg" src="static/picture/trphjz.jpg" alt="头像丢失" style="width: 100%;height: 100%;" />
+													</a>
+													<div class="bookReview_head_Lv LvIcon_D"></div>
+												</div>
+												<div class="clearfix left index_bookReview_name">
+													<a href="/member/personal/index/22669" class="left manColor" target="_blank"><span>Seven零</span></a>
+													<span class="left index_bookReview_name_span">评</span>
+													<a href="/book/25025.html" target="_blank" class="left">灵皇劫</a>
+												</div>
+												<div class="clearfix left bookReview_Comment">
+													<div class="left bookReview_CommentIcon"></div>
+													<div class="left bookReview_CommentBox">
+														<div class="bookReview_CommentBox_Top bookReview_CommentBox_Top5"></div>
+														<div class="bookReview_CommentBox_Bottom"></div>
+													</div>
+												</div>
+											</div>
+											<div class="clearfix bookReview_Title">
+												<div class="left bookReview_inform_Icon bookReview_inform_Icon_blue">推荐</div>
+												<div class="left bookReview_TitleText">
+													<a href="/community/xzindex/detail/349503" target="_blank" title="讲好故事的教科书！！！">讲好故事的教科书！！！</a>
+												</div>
+											</div>
+											<div class="bookReview_inform_In">
+												<p>
+													<span class="bookReview_inform_In_Quotes1"></span>
+													<a href="/community/xzindex/detail/349503" target="_blank"><span class="bookReview_inform_In_p">前言：写这篇书评之前我纠结过，这本书已经有十篇书评了，而且全是五星好评，和我原本写评的初衷不符。到底要不要... </span></a>
+													<span class="bookReview_inform_In_Quotes2"></span>
+												</p>
+											</div>
+											<div class="clearfix bookReview_inform_B">
+												<div class="left bookReview_inform_B1">
+													<i class="left bookReview_tlakIcon"></i>
+													<span class="left">33</span>
+												</div>
+												<div class="left bookReview_inform_B1">
+													<i class="left bookReview_seeIcon"></i>
+													<span class="left">316</span>
+												</div>
+												<div class="left bookReview_inform_B1">
+													<i class="left bookReview_zambiaIcon"></i>
+													<span class="left">24</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="index_bookReview_Bok">
+										<div class="left bookReview_cover">
+											<a href="/book/26968.html" target="_blank">
+												<img original="static/picture/26968_7cd5d_5747_m.jpg" src="https://c.8kana.com/201910/269/68/26968_7cd5d_5747_m.jpg" alt="那年的cp" title="那年的cp" style="width: 100%;height: 100%;" />
+												<div class="CoverIcon_0"></div>
+											</a>
+										</div>
+										<div class="left index_bookReview_Info">
+											<div class="clearfix index_bookReview_BookTop">
+												<div class="left bookReview_head">
+													<a href="/member/personal/index/885769" target="_blank" class="bookReview_headCover">
+														<img original="https://a.8kana.com/201710/nnv/bah/885769_877b5_m.jpg" src="static/picture/trphjz.jpg" alt="头像丢失" style="width: 100%;height: 100%;" />
+													</a>
+													<div class="bookReview_head_Lv LvIcon_"></div>
+												</div>
+												<div class="clearfix left index_bookReview_name">
+													<a href="/member/personal/index/885769" class="left manColor" target="_blank"><span>安西都指挥使</span></a>
+													<span class="left index_bookReview_name_span">评</span>
+													<a href="/book/26968.html" target="_blank" class="left">那年的cp</a>
+												</div>
+												<div class="clearfix left bookReview_Comment">
+													<div class="left bookReview_CommentIcon"></div>
+													<div class="left bookReview_CommentBox">
+														<div class="bookReview_CommentBox_Top bookReview_CommentBox_Top1"></div>
+														<div class="bookReview_CommentBox_Bottom"></div>
+													</div>
+												</div>
+											</div>
+											<div class="clearfix bookReview_Title">
+												<div class="left bookReview_TitleText">
+													<a href="/community/xzindex/detail/342212" target="_blank" title="【重拳出击】朋友，不是把字一股脑粘贴在一起就叫小说的">【重拳出击】朋友，不是把字一股脑粘贴在一起就叫小说的</a>
+												</div>
+											</div>
+											<div class="bookReview_inform_In">
+												<p>
+													<span class="bookReview_inform_In_Quotes1"></span>
+													<a href="/community/xzindex/detail/342212" target="_blank"><span class="bookReview_inform_In_p">说起来在征文列表中扫书已经成了我每天的快乐源泉之一，因为最近一段时间各种看起来很傻萌新的作者井喷式出现。当... </span></a>
+													<span class="bookReview_inform_In_Quotes2"></span>
+												</p>
+											</div>
+											<div class="clearfix bookReview_inform_B">
+												<div class="left bookReview_inform_B1">
+													<i class="left bookReview_tlakIcon"></i>
+													<span class="left">12</span>
+												</div>
+												<div class="left bookReview_inform_B1">
+													<i class="left bookReview_seeIcon"></i>
+													<span class="left">378</span>
+												</div>
+												<div class="left bookReview_inform_B1">
+													<i class="left bookReview_zambiaIcon"></i>
+													<span class="left">16</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="index_bookReview_Bok">
+										<div class="left bookReview_cover">
+											<a href="/book/10027.html" target="_blank">
+												<img original="static/picture/10027_916b5_37_m.jpg" src="https://c.8kana.com/201509/100/27/10027_916b5_37_m.jpg" alt="心兵" title="心兵" style="width: 100%;height: 100%;" />
+												<div class="CoverIcon_1"></div>
+											</a>
+										</div>
+										<div class="left index_bookReview_Info">
+											<div class="clearfix index_bookReview_BookTop">
+												<div class="left bookReview_head">
+													<a href="/member/personal/index/11093" target="_blank" class="bookReview_headCover">
+														<img original="https://a.8kana.com/201903/izv/nur/11093_7f462_m.jpg" src="static/picture/trphjz.jpg" alt="头像丢失" style="width: 100%;height: 100%;" />
+													</a>
+													<div class="bookReview_head_Lv LvIcon_C"></div>
+												</div>
+												<div class="clearfix left index_bookReview_name">
+													<a href="/member/personal/index/11093" class="left manColor" target="_blank"><span>漠暗风</span></a>
+													<span class="left index_bookReview_name_span">评</span>
+													<a href="/book/10027.html" target="_blank" class="left">心兵</a>
+												</div>
+												<div class="clearfix left bookReview_Comment">
+													<div class="left bookReview_CommentIcon"></div>
+													<div class="left bookReview_CommentBox">
+														<div class="bookReview_CommentBox_Top bookReview_CommentBox_Top5"></div>
+														<div class="bookReview_CommentBox_Bottom"></div>
+													</div>
+												</div>
+											</div>
+											<div class="clearfix bookReview_Title">
+												<div class="left bookReview_inform_Icon bookReview_inform_Icon_red">精华</div>
+												<div class="left bookReview_TitleText">
+													<a href="/community/xzindex/detail/5894" target="_blank" title="【漠暗风】【心兵大百科】——不可能的世界第一篇万字书评">【漠暗风】【心兵大百科】——不可能的世界第一篇万字书评</a>
+												</div>
+											</div>
+											<div class="bookReview_inform_In">
+												<p>
+													<span class="bookReview_inform_In_Quotes1"></span>
+													<a href="/community/xzindex/detail/5894" target="_blank"><span class="bookReview_inform_In_p">书评：心兵大百科作品：心兵作者：兰帝魅晨章节：57/57（已读章节/章节总数）目录壹、前言贰、导语叁、人物肆、剧... </span></a>
+													<span class="bookReview_inform_In_Quotes2"></span>
+												</p>
+											</div>
+											<div class="clearfix bookReview_inform_B">
+												<div class="left bookReview_inform_B1">
+													<i class="left bookReview_tlakIcon"></i>
+													<span class="left">473</span>
+												</div>
+												<div class="left bookReview_inform_B1">
+													<i class="left bookReview_seeIcon"></i>
+													<span class="left">6815</span>
+												</div>
+												<div class="left bookReview_inform_B1">
+													<i class="left bookReview_zambiaIcon"></i>
+													<span class="left">98</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="clearfix left index_bookReview_Right">
+									<div class="left index_bookReview_List">
+										<img original="static/picture/27056_f7e4a_5801_m.jpg" src="https://c.8kana.com/201910/270/56/27056_f7e4a_5801_m.jpg" alt="江湖神捕叱小瑜" title="江湖神捕叱小瑜" style="width: 100%;height: 100%;" />
+										<div class="CoverIcon_0"></div>
+									</div>
+									<div class="left index_bookReview_List">
+										<img original="static/picture/25025_9c2b0_5422_m.jpg" src="https://c.8kana.com/201904/250/25/25025_9c2b0_5422_m.jpg" alt="灵皇劫" title="灵皇劫" style="width: 100%;height: 100%;" />
+										<div class="CoverIcon_0"></div>
+									</div>
+									<div class="left index_bookReview_List">
+										<img original="static/picture/26968_7cd5d_5747_m.jpg" src="https://c.8kana.com/201910/269/68/26968_7cd5d_5747_m.jpg" alt="那年的cp" title="那年的cp" style="width: 100%;height: 100%;" />
+										<div class="CoverIcon_0"></div>
+									</div>
+									<div class="left index_bookReview_List">
+										<img original="static/picture/10027_916b5_37_m.jpg" src="https://c.8kana.com/201509/100/27/10027_916b5_37_m.jpg" alt="心兵" title="心兵" style="width: 100%;height: 100%;" />
+										<div class="CoverIcon_1"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--三天热门书评-->
+				<div class="right indexMain_Right">
+					<div class="clearfix index_main_R_TOP10_In">
+						<div class="indexMain_RightNav">
+							<div class="indexMain_RightNavIn indexMain_RightNavInHot indexMain_RightNavIn4 indexMain_RightNav_Border1">
+								<img src="static/picture/indexrightnav4.png">
+							</div>
+						</div>
+						<div class="rankingList_R1_main1 newIndex_R3" onclick="click_num(67,65)">
+							<div class="threeHotBook_main hotComment">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix index_main indexMainSix" id="Floor8">
+				<div class="left indexMain_Left">
+					<div class="indexMain_Science">
+						<div class="clearfix indexMain_Title indexMain_Title11">
+							<div class="right index_bookReview_all_look">
+								<a href="/community/ysindex/index" class="right" target="_blank">查看更多></a>
+							</div>
+						</div>
+						<div class="clearfix indexMain_Box">
+							<div class="clearfix index_science_In lazyload" onclick="click_num(69,68)">
+								<ul>
+									<li>
+										<div class="clearfix index_science_In_li1">
+											<span class="left sciCtCfont_sd">设定</span>
+											<a href="/community/ysworks/detail/345946.html" class="left" title="《PASS-黎明计划》PASS系列专属原创LOGO" target="_blank">《PASS-黎明计划》PASS系列专属原创LOGO</a>
+										</div>
+										<div class="clearfix index_main4_In_li1 index_main4_In_li3">
+											<a href="/book/26978.html" class="left index_main4_In_li3_size" target="_blank"><span>献给：</span>PASS-黎明计划</a>
+										</div>
+										<a href="/community/ysworks/detail/345946.html" class="index_science_In_T" target="_blank">
+											<img original="https://comm.8kana.com/works/sd/2019/10/09/20191009013909_JAbtdO_m.jpg" src="static/picture/trjz.jpg" alt="" width="100%" height="100%" />
+										</a>
+										<div class="clearfix indexMain_ScienceInfo">
+											<div class="left indexMain_ScienceInfo_Head">
+												<img src="static/picture/984057pbzdad_ffb48_l.jpg" alt="" style="width:100%; height:100%;" />
+											</div>
+											<div class="left indexMain_ScienceInfo_Name">小雪糕啊</div>
+											<div class="right Black_science_B">
+												<div class="Black_science_B_Icon">
+													<i class="left Black_zambiaIcon"></i>
+													<span class="left">1</span>
+												</div>
+												<div class="Black_science_B_Icon">
+													<i class="left Black_informIcon"></i>
+													<span class="left">--</span>
+												</div>
+											</div>
+										</div>
+
+									</li>
+									<li>
+										<div class="clearfix index_science_In_li1">
+											<span class="left sciCtCfont_ch">插画</span>
+											<a href="/community/ysworks/detail/344688.html" class="left" title="《天子剑下》系列插图一   白权笙" target="_blank">《天子剑下》系列插图一 白权笙</a>
+										</div>
+										<div class="clearfix index_main4_In_li1 index_main4_In_li3">
+											<a href="/book/26833.html" class="left index_main4_In_li3_size" target="_blank"><span>献给：</span>天子剑下之白泽</a>
+										</div>
+										<a href="/community/ysworks/detail/344688.html" class="index_science_In_T" target="_blank">
+											<img original="https://comm.8kana.com/works/ct/2019/10/02/20191002025743_ZZTaay_m.jpg" src="static/picture/trjz.jpg" alt="" width="100%" height="100%" />
+										</a>
+										<div class="clearfix indexMain_ScienceInfo">
+											<div class="left indexMain_ScienceInfo_Head">
+												<img src="static/picture/21369ootm0f_06f8c_l.jpg" alt="" style="width:100%; height:100%;" />
+											</div>
+											<div class="left indexMain_ScienceInfo_Name">鹿眠</div>
+											<div class="right Black_science_B">
+												<div class="Black_science_B_Icon">
+													<i class="left Black_zambiaIcon"></i>
+													<span class="left">1</span>
+												</div>
+												<div class="Black_science_B_Icon">
+													<i class="left Black_informIcon"></i>
+													<span class="left">--</span>
+												</div>
+											</div>
+										</div>
+
+									</li>
+									<li style="margin-right:0;">
+										<div class="clearfix index_science_In_li1">
+											<span class="left sciCtCfont_sd">设定</span>
+											<a href="/community/ysworks/detail/351562.html" class="left" title="武禅老师的签名" target="_blank">武禅老师的签名</a>
+										</div>
+										<div class="clearfix index_main4_In_li1 index_main4_In_li3">
+											<a href="/book/26684.html" class="left index_main4_In_li3_size" target="_blank"><span>献给：</span>废土就业指南</a>
+										</div>
+										<a href="/community/ysworks/detail/351562.html" class="index_science_In_T" target="_blank">
+											<img original="https://comm.8kana.com/works/sd/2019/09/24/20190924015956_QB7jhY_m.jpg" src="static/picture/trjz.jpg" alt="" width="100%" height="100%" />
+										</a>
+										<div class="clearfix indexMain_ScienceInfo">
+											<div class="left indexMain_ScienceInfo_Head">
+												<img src="static/picture/151518_02879_s.jpg" alt="" style="width:100%; height:100%;" />
+											</div>
+											<div class="left indexMain_ScienceInfo_Name">did0</div>
+											<div class="right Black_science_B">
+												<div class="Black_science_B_Icon">
+													<i class="left Black_zambiaIcon"></i>
+													<span class="left">3</span>
+												</div>
+												<div class="Black_science_B_Icon">
+													<i class="left Black_informIcon"></i>
+													<span class="left">2</span>
+												</div>
+											</div>
+										</div>
+
+									</li>
+									<li>
+										<div class="clearfix index_science_In_li1">
+											<span class="left sciCtCfont_ch">插画</span>
+											<a href="/community/ysworks/detail/342195.html" class="left" title="小伙伴献上滴" target="_blank">小伙伴献上滴</a>
+										</div>
+										<div class="clearfix index_main4_In_li1 index_main4_In_li3">
+											<a href="/book/26946.html" class="left index_main4_In_li3_size" target="_blank"><span>献给：</span>永夜1001</a>
+										</div>
+										<a href="/community/ysworks/detail/342195.html" class="index_science_In_T" target="_blank">
+											<img original="https://comm.8kana.com/works/ct/2019/09/21/20190921120413_Sp2sfZ_m.jpg" src="static/picture/trjz.jpg" alt="" width="100%" height="100%" />
+										</a>
+										<div class="clearfix indexMain_ScienceInfo">
+											<div class="left indexMain_ScienceInfo_Head">
+												<img src="static/picture/1007016_689c4_s.jpg" alt="" style="width:100%; height:100%;" />
+											</div>
+											<div class="left indexMain_ScienceInfo_Name">初夏深冬</div>
+											<div class="right Black_science_B">
+												<div class="Black_science_B_Icon">
+													<i class="left Black_zambiaIcon"></i>
+													<span class="left">2</span>
+												</div>
+												<div class="Black_science_B_Icon">
+													<i class="left Black_informIcon"></i>
+													<span class="left">1</span>
+												</div>
+											</div>
+										</div>
+
+									</li>
+									<li>
+										<div class="clearfix index_science_In_li1">
+											<span class="left sciCtCfont_ch">插画</span>
+											<a href="/community/ysworks/detail/349208.html" class="left" title="插图" target="_blank">插图</a>
+										</div>
+										<div class="clearfix index_main4_In_li1 index_main4_In_li3">
+											<a href="/book/26583.html" class="left index_main4_In_li3_size" target="_blank"><span>献给：</span>亡者之路1代号摩萨利尔</a>
+										</div>
+										<a href="/community/ysworks/detail/349208.html" class="index_science_In_T" target="_blank">
+											<img original="https://comm.8kana.com/works/ct/2019/09/09/20190909043824_CgxpVV_m.jpg" src="static/picture/trjz.jpg" alt="" width="100%" height="100%" />
+										</a>
+										<div class="clearfix indexMain_ScienceInfo">
+											<div class="left indexMain_ScienceInfo_Head">
+												<img src="static/picture/1006206_7823a_s.jpg" alt="" style="width:100%; height:100%;" />
+											</div>
+											<div class="left indexMain_ScienceInfo_Name">爆炎虎斩无双</div>
+											<div class="right Black_science_B">
+												<div class="Black_science_B_Icon">
+													<i class="left Black_zambiaIcon"></i>
+													<span class="left">3</span>
+												</div>
+												<div class="Black_science_B_Icon">
+													<i class="left Black_informIcon"></i>
+													<span class="left">--</span>
+												</div>
+											</div>
+										</div>
+
+									</li>
+									<li style="margin-right:0;">
+										<div class="clearfix index_science_In_li1">
+											<span class="left sciCtCfont_ch">插画</span>
+											<a href="/community/ysworks/detail/335872.html" class="left" title="十岁的小红叶【代发】" target="_blank">十岁的小红叶【代发】</a>
+										</div>
+										<div class="clearfix index_main4_In_li1 index_main4_In_li3">
+											<a href="/book/26532.html" class="left index_main4_In_li3_size" target="_blank"><span>献给：</span>江湖夜雨</a>
+										</div>
+										<a href="/community/ysworks/detail/335872.html" class="index_science_In_T" target="_blank">
+											<img original="https://comm.8kana.com/works/ct/2019/09/02/20190902122339_kpmcvU_m.jpg" src="static/picture/trjz.jpg" alt="" width="100%" height="100%" />
+										</a>
+										<div class="clearfix indexMain_ScienceInfo">
+											<div class="left indexMain_ScienceInfo_Head">
+												<img src="static/picture/1005803_948a4_s.jpeg" alt="" style="width:100%; height:100%;" />
+											</div>
+											<div class="left indexMain_ScienceInfo_Name">风扇</div>
+											<div class="right Black_science_B">
+												<div class="Black_science_B_Icon">
+													<i class="left Black_zambiaIcon"></i>
+													<span class="left">5</span>
+												</div>
+												<div class="Black_science_B_Icon">
+													<i class="left Black_informIcon"></i>
+													<span class="left">2</span>
+												</div>
+											</div>
+										</div>
+
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right indexMain_Right">
+					<div class="clearfix index_main_R_TOP10_In">
+						<div class="indexMain_RightNav">
+							<div class="indexMain_RightNavIn indexMain_RightNavInHot indexMain_RightNavIn5 indexMain_RightNav_Border1">
+								<img src="static/picture/indexrightnav5.png">
+							</div>
+						</div>
+						<div class="rankingList_R1_main1 newIndex_R4">
+							<div class="clearfix threeHotPeople_main" id="ysWorks" onclick="click_num(70,68)"></div>
+							<div class="classPage_b_img threeHotBook_img">
+								<a href="https://www.8kana.com/book/12962.html" target="_blank">
+									<img src="static/picture/5db667ff1096b.jpg" alt="" style="width: 100%; height: auto;" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script>
+			$(document).ready(function() {
+
+				function run_time(id, time) {
+					var int = self.setInterval(function() {
+						time--;
+						var d = parseInt(time / 3600 / 24);
+						var h = parseInt(time / 3600 % 24);
+						if(d == 0) {
+							var t = h
+						} else {
+							var t = d * h
+						}
+						var m = parseInt(time / 60 % 60);
+						var s = time % 60;
+
+						//				$('#'+id).html('限时 '+flag(d*24+h) + ":" + flag(m) + ":" + flag(s));
+						$(".indexMain_TitleTime_In").eq(0).html(flag(d * 24 + h));
+						$(".indexMain_TitleTime_In").eq(1).html(flag(m));
+						$(".indexMain_TitleTime_In").eq(2).html(flag(s));
+						if(time == 0) {
+							window.clearInterval(int);
+						}
+					}, 1000);
+				}
+
+				function flag(cd) {
+					return cd = cd < 10 ? "0" + cd : cd;
+				}
+
+				var windowWidth = $(window).width();
+
+				// 红蓝PK赛定位
+				$(".radBlue_IndexBtn").css("left", (windowWidth - 1200) / 2 - 143);
+
+				var h1 = $('.indexMain_Restriction').attr('value');
+				run_time('countdown_0', h1);
+
+				$('.fixedNav_searchBtn').click(function() {
+					$('#search').submit();
+				});
+				$(".fixedNav ul li").click(function() {
+					$(this).addClass("fixedNav_Hot");
+					$(this).siblings().removeClass("fixedNav_Hot");
+				})
+
+				$(window).scroll(function() {
+					if($(window).scrollTop() > 500) {
+						$(".fixedNav").stop().animate({
+							"top": 0
+						}, 50);
+					} else {
+						$(".fixedNav").stop().animate({
+							"top": -70
+						}, 50);
+					}
+				})
+
+				$('.setUv').click(function() {
+					var id = $(this).attr('data');
+					var href = $(this).attr('href');
+					var url = '/active/ad/recommedCount';
+					var param = "id=" + id + '&href=' + href;
+					GPT.sendAjax(url, param);
+				});
+
+				setTimeout(function() {
+					var url = '/www/bookclass/hotYsWorks/0/0';
+					$("#ysWorks").load(url);
+				}, 1000);
+				setTimeout(function() {
+					var url = '/www/bookclass/hotComment/0/0';
+					$(".hotComment").load(url);
+				}, 2000);
+
+				var UserId = GPT.getCookieValue('UserId');
+				if(UserId < 1) {
+					$('#LoginInfo1').hide();
+					$('#LoginUrl1').show();
+				} else {
+					$('#LoginInfo1').show();
+					$('#LoginUrl1').hide();
+					$("#username1").text(GPT.getCookieValue('NickName'));
+					$("#username1").attr('href', kana.getDomain('www') + '/member/index/index/' + GPT.getCookieValue("UserId"));
+					if(GPT.getCookieValue('Avatar') == '') {
+						if(GPT.getCookieValue('Sex') == 1) {
+							$("#UserAvatar1").attr('src', kana.getDomain('s') + '/img/common/head/big_headman_default.png');
+							$("#UserAvatar1").parent().attr('href', kana.getDomain('www') + '/member/index/index/' + GPT.getCookieValue("UserId"));
+						} else {
+							$("#UserAvatar1").attr('src', kana.getDomain('s') + '/img/common/head/big_headwoman_default.png');
+							$("#UserAvatar1").parent().attr('href', kana.getDomain('www') + '/member/index/index/' + GPT.getCookieValue("UserId"));
+						}
+					} else {
+						var strFile = kana.getDomain('a') + '/' + getFileUrlByStyle(GPT.getCookieValue('Avatar'), 's');
+
+						$("#UserAvatar1").attr('src', strFile);
+
+						$("#UserAvatar1").parent().attr('href', kana.getDomain('www') + '/member/index/index/' + GPT.getCookieValue("UserId"));
+					}
+
+					setTimeout(function() {
+						var bookshelf = $('#bookshelf').attr('class');
+						var bookshelfnum = $('#bookshelf').html();
+						$('#bookshelf1').attr('class', bookshelf);
+						$('#bookshelf1').html(bookshelfnum);
+					}, 1000);
+
+				}
+
+				// 推荐作品鼠标经过效果
+				$(".indexMainOne_Img").hover(function() {
+					$(this).find(".indexMainOne_ImgBox").show();
+				}, function() {
+					$(this).find(".indexMainOne_ImgBox").hide();
+				})
+
+				// 短篇排行榜切换
+				$(".dpphb a").click(function() {
+					var rel = $(this).attr('rel');
+					$("." + rel).css('display', 'block');
+					$("." + rel).siblings().css('display', 'none');
+				})
+
+				// 短篇小说鼠标经过效果
+				$(".indexMain_ShortBookCover").hover(function() {
+					$(this).find(".indexMain_ShortBlack").show();
+				}, function() {
+					$(this).find(".indexMain_ShortBlack").hide();
+				})
+
+				// 神作推荐
+				$(".indexMain_BookCover").hover(function() {
+					$(this).find('.Black_update').show();
+				}, function() {
+					$(this).find('.Black_update').hide();
+				});
+
+				$(".fixedNav_Main ul li:eq(0)").hover(function() {
+					$(this).find(".fixedNav_list").slideDown();
+				}, function() {
+					$(this).find(".fixedNav_list").slideUp(0);
+				});
+
+				/*9.12上 首页活动5秒后消失*/
+
+				var windowHeight = $(window).height();
+
+				/*9.12上 首页活动5秒后消失*/
+
+				$(".indexMainSeven_NewWork_SynopsisIn").each(function() {
+					var indexMainSeven_NewWork_SynopsisIn_height = $(this).height();
+					var indexMainSeven_NewWork_SynopsisIn_Html = $(this).html();
+					if(indexMainSeven_NewWork_SynopsisIn_height > 75) {
+						var CommentNum = indexMainSeven_NewWork_SynopsisIn_Html.substr(0, 65);
+						$(this).html(CommentNum + '...');
+					}
+				})
+				$(".indexMainSeven_HandpickMain_SynopsisIn").each(function() {
+					var indexMainSeven_HandpickMain_SynopsisIn_height = $(this).height();
+					var indexMainSeven_HandpickMain_SynopsisIn_Html = $(this).html();
+					if(indexMainSeven_HandpickMain_SynopsisIn_height > 60) {
+						var CommentNum1 = indexMainSeven_HandpickMain_SynopsisIn_Html.substr(0, 35);
+						$(this).html(CommentNum1 + '...');
+					}
+				})
+				$(".indexMainThree_InSynopsis").each(function() {
+					var indexMainThree_InSynopsis_height = $(this).height();
+					var indexMainThree_InSynopsis_Html = $(this).html();
+					if(indexMainThree_InSynopsis_height > 54) {
+						var CommentNum2 = indexMainThree_InSynopsis_Html.substr(0, 40);
+						$(this).html(CommentNum2 + '...');
+					}
+				})
+				$(".indexMain_Restriction_Synopsis").each(function() {
+					var indexMain_Restriction_Synopsis_height = $(this).height();
+					var indexMain_Restriction_Synopsis_Html = $(this).html();
+					if(indexMain_Restriction_Synopsis_height > 60) {
+						var CommentNum2 = indexMain_Restriction_Synopsis_Html.substr(0, 54);
+						$(this).html(CommentNum2 + '...');
+					}
+				})
+
+				$(".indexMainTwo_TitleNav_In").click(function() {
+					$(this).addClass("indexMainTwo_TitleNav_InHot");
+					$(this).siblings(".indexMainTwo_TitleNav_In").removeClass("indexMainTwo_TitleNav_InHot");
+				})
+
+				$(".indexMain_ShortBookMain_Synopsis").each(function() {
+					var indexMain_ShortBookMain_Synopsis_height = $(this).height();
+					var indexMain_ShortBookMain_Synopsis_Html = $(this).html();
+					if(indexMain_ShortBookMain_Synopsis_height > 100) {
+						var CommentNum3 = indexMain_ShortBookMain_Synopsis_Html.substr(0, 86);
+						$(this).html(CommentNum3 + '...');
+					}
+				})
+				var shortKey = 0;
+				$(".indexMain_ShortBook_Btn2").click(function() {
+					if(shortKey == 0) {
+						$(".indexMain_ShortBook_Main").animate({
+							"left": "-920"
+						}, 500);
+						shortKey = 1;
+						$(".indexMain_ShortBook_Btn2").hide();
+						$(".indexMain_ShortBook_Btn1").show();
+					}
+				})
+				$(".indexMain_ShortBook_Btn1").click(function() {
+					if(shortKey == 1) {
+						$(".indexMain_ShortBook_Main").animate({
+							"left": "0"
+						}, 500);
+						shortKey = 0;
+						$(".indexMain_ShortBook_Btn1").hide();
+						$(".indexMain_ShortBook_Btn2").show();
+					}
+				})
+				$(".index_bookReview_List").click(function() {
+					var index_bookReview_List_Index = $(this).index();
+					$(".index_bookReview_Left").find(".index_bookReview_Bok").hide();
+					$(".index_bookReview_Left").find(".index_bookReview_Bok").eq(index_bookReview_List_Index).show();
+				})
+				$(".importantRankingList .indexMain_RightListIn").hover(function() {
+					$(this).addClass("importantRankingList_Hot");
+					$(this).siblings(".indexMain_RightListIn").removeClass("importantRankingList_Hot");
+					$(".importantRankingList_BookSynopsis").each(function() {
+						var importantRankingList_BookSynopsis_height = $(this).height();
+						var importantRankingList_BookSynopsis_Html = $(this).html();
+						if(importantRankingList_BookSynopsis_height > 34) {
+							var CommentNum4 = importantRankingList_BookSynopsis_Html.substr(0, 20);
+							$(this).html(CommentNum4 + '...');
+						}
+					})
+				})
+				$(".importantRankingList_BookSynopsis").each(function() {
+					var importantRankingList_BookSynopsis_height = $(this).height();
+					var importantRankingList_BookSynopsis_Html = $(this).html();
+					if(importantRankingList_BookSynopsis_height > 34) {
+						var CommentNum4 = importantRankingList_BookSynopsis_Html.substr(0, 20);
+						$(this).html(CommentNum4 + '...');
+					}
+				})
+			});
+
+			function jxdj() {
+				$('.Preselection').html('');
+				$('.Preselectionbk').css('display', 'block');
+			}
+
+			// 内容展示区最小高度设置
+			var headHeight = ($('.topBar').height()) + ($('.top').height()) + ($('.nav').height()) + 3;
+			var height = document.documentElement.clientHeight - (headHeight) - 351;
+			$('.main').css('min-height', height);
+			$('.searchboxsearchbox').click(function() {
+				$('.search_text').css('display', 'none');
+				$("#searchbox").focus();
+			});
+			$('.searchbox').blur(function() {
+				var v = $(this).val();
+				if(v == '') {
+					$('.search_text').css('display', 'block');
+				}
+
+			});
+
+			/*首页点击计数log*/
+			function click_num(Id, Parent) {
+				var url = window.location.href;
+				if(url != 'http://www.8kana.test/www/index/index2' && url != 'http://www.8kana.top/www/index/index2' && url != 'http://www.8kana.com/') {
+					return;
+				}
+				var ClickNum = $.cookie('clicklog');
+				if(ClickNum) {
+					var CNum = ClickNum.split('|');
+					if(CNum.toString().indexOf(Id) > -1 || ClickNum == Id) {
+						var N = 2;
+					} else {
+						$.cookie('clicklog', ClickNum + '|' + Id, {
+							path: '/'
+						});
+						var N = 1;
+					}
+				} else {
+					$.cookie('clicklog', Id, {
+						path: '/'
+					});
+					var N = 1;
+				}
+
+				var curl = "/www/ajax/ajaxClickNum";
+				$.ajax({
+					type: "post",
+					url: curl,
+					data: "Id=" + Id + "&N=" + N,
+					dataType: "json",
+					success: function(result) {}
+				});
+
+				if(Parent > 0) {
+					var pClickNum = $.cookie('clicklog');
+					if(pClickNum) {
+						var pCNum = pClickNum.split('|');
+						if(pCNum.toString().indexOf(Parent) > -1 || pClickNum == Parent) {
+							var NN = 2;
+						} else {
+							$.cookie('clicklog', pClickNum + '|' + Parent, {
+								path: '/'
+							});
+							var NN = 1;
+						}
+					} else {
+						$.cookie('clicklog', Parent, {
+							path: '/'
+						});
+						var NN = 1;
+					}
+
+					var curl = "/www/ajax/ajaxClickNum";
+					$.ajax({
+						type: "post",
+						url: curl,
+						data: "Id=" + Parent + "&N=" + NN,
+						dataType: "json",
+						success: function(result) {}
+					});
+				}
+			}
+
+			function href(u, i, p) {
+				click_num(i, p);
+				window.location.href = u;
+			}
+
+			function user_href(u, i, p) {
+				click_num(i, p);
+				window.location.href = u + window.location.href;
+			}
+
+			function open_href(u, i, p) {
+				click_num(i, p);
+				window.open(u);
+			}
+
+			function bookshelf_click() {
+				var n = $('#bookshelf').html();
+				if(n > 0) {
+					click_num(17, 0);
+				} else {
+					click_num(18, 0);
+				}
+			}
+
+			var box = document.querySelector('#bannerImg');
+			var lis = document.querySelectorAll('.indexMainSeven_NewWork_BannerIn');
+			var json = [ //  包含了5张图片里面所有的样式
+				{ //  1
+					width: 156,
+					height: 219,
+					top: 29,
+					left: 0,
+					opacity: 80,
+					z: 1,
+					id: 1
+				},
+				{ // 2
+					width: 218,
+					height: 275,
+					top: 0,
+					left: 92,
+					opacity: 100,
+					z: 2,
+					id: 2
+				},
+				{ // 3
+					width: 156,
+					height: 219,
+					top: 32,
+					left: 246,
+					opacity: 80,
+					z: 1,
+					id: 3
+				}
+			];
+			$(".indexMainSeven_NewWork_BannerIn").click(function() {
+				var lis_ID = parseInt($(this).css("min-height"));
+				clearInterval(timer);
+				var lis_Num = lis_ID - 5;
+				if(lis_Num == -1) {
+					move(false);
+				}
+				if(lis_Num == -2) {
+					move(false);
+				}
+				if(lis_Num == -3) {
+					move(false);
+				}
+				if(lis_Num == -4) {
+					move(true);
+				}
+				if($(this).attr("n") == 0) {
+					$(".indexMainSeven_NewWork_Info").find(".indexMainSeven_NewWork_InfoIn").hide();
+					$(".indexMainSeven_NewWork_Info").find(".indexMainSeven_NewWork_InfoIn").eq(0).show();
+				}
+				if($(this).attr("n") == 1) {
+					$(".indexMainSeven_NewWork_Info").find(".indexMainSeven_NewWork_InfoIn").hide();
+					$(".indexMainSeven_NewWork_Info").find(".indexMainSeven_NewWork_InfoIn").eq(1).show();
+				}
+				if($(this).attr("n") == 2) {
+					$(".indexMainSeven_NewWork_Info").find(".indexMainSeven_NewWork_InfoIn").hide();
+					$(".indexMainSeven_NewWork_Info").find(".indexMainSeven_NewWork_InfoIn").eq(2).show();
+				}
+				$(".indexMainSeven_NewWork_SynopsisIn").each(function() {
+					var indexMainSeven_NewWork_SynopsisIn_height = $(this).height();
+					var indexMainSeven_NewWork_SynopsisIn_Html = $(this).html();
+					if(indexMainSeven_NewWork_SynopsisIn_height > 75) {
+						var CommentNum = indexMainSeven_NewWork_SynopsisIn_Html.substr(0, 65);
+						$(this).html(CommentNum + '...');
+					}
+				})
+			})
+			box.addEventListener('mouseout', function() {
+				clearInterval(timer);
+			});
+			var timer = null;
+			var flag = true;
+			move(true);
+
+			function move(x) {
+				if(x != undefined) {
+					if(x) {
+						json.push(json.shift());
+					} else {
+						json.unshift(json.pop());
+					};
+				};
+
+				for(var i = 0; i < json.length; i++) {
+					animate(lis[i], {
+						width: json[i].width,
+						height: json[i].height,
+						top: json[i].top,
+						left: json[i].left,
+						opacity: json[i].opacity,
+						zIndex: json[i].z,
+						minHeight: json[i].id
+					}, function() {
+						flag = true;
+					})
+				};
+			}
+
+			function animate(obj, json, callback) {
+				// 先停止定时器
+				clearInterval(obj.timers);
+				obj.timers = setInterval(function() {
+					var stoped = true;
+					for(var k in json) {
+						var leader = 0;
+						if(k == 'opacity') {
+							leader = Math.round(getStyle(obj, k) * 100) || 100;
+						} else {
+							leader = parseInt(getStyle(obj, k)) || 0;
+						};
+						var step = (json[k] - leader) / 10;
+						step = step > 0 ? Math.ceil(step) : Math.floor(step);
+						leader = leader + step;
+						if(k == 'opacity') {
+							obj.style[k] = leader / 100;
+							obj.style['filter'] = 'alpha(opacity=' + leader + ')';
+						} else if(k == 'zIndex') {
+							obj.style['zIndex'] = json[k];
+						} else {
+							obj.style[k] = leader + "px";
+						}
+						if(leader != json[k]) {
+							stoped = false;
+						}
+					};
+					if(stoped) {
+						clearInterval(obj.timers);
+						callback && callback();
+					};
+				}, 50);
+			};
+			//获取属性值
+			function getStyle(obj, attr) {
+				if(obj.currentStyle) {
+					return obj.currentStyle[attr];
+				} else {
+					return window.getComputedStyle(obj, null)[attr];
+				};
+			};
+		</script>
+
+		</div>
+
+		<!-- index main -->
+
+		<!--footer start-->
+
+		<div class="footer">
+			<div class="footerSplit"></div>
+			<div class="clearfix footerBox">
+				<div class="left footerLogin"></div>
+				<div class="left footerIn footerIn1">
+					<div class="footerText">北京晨星盛世网络文化有限公司</div>
+					<div class="footerText">Tel:010-69945206 E-mail:tougao@8kana.com</div>
+					<div class="footerText">网文[2015]0613-243号 京ICP备15011361号-1</div>
+					<div class="footerText">京公网安备：11010102000514号</div>
+				</div>
+				<div class="clearfix left footerIn footerIn2">
+					<div class="clearfix footerLink">
+						<a href="https://www.8kana.com/www/help/contact" target="_blank" class="footerLinkIn">联系我们</a>
+						<a href="https://www.8kana.com/active/index/download" target="_blank" class="footerLinkIn">下载客户端</a>
+					</div>
+					<div class="clearfix footerLink">
+						<a href="https://www.8kana.com/www/help/link" target="_blank" class="footerLinkIn">友情链接</a>
+						<a href="https://weibo.com/bukenengdeshijie" target="_blank" class="footerLinkIn">官方微博</a>
+					</div>
+					<div class="clearfix footerLink">
+						<a href="https://www.8kana.com/bbs/index/index" target="_blank" class="footerLinkIn">8站指南</a>
+					</div>
+				</div>
+				<div class="clearfix right footerIn footerIn3">
+					<div class="footerText" style="text-align: center;">微信公众号</div>
+					<div class="footerMa"></div>
+				</div>
+			</div>
+		</div>
+
+		<div style="text-align:center">
+			<a target="cyxyv" href="https://v.yunaq.com/certificate?domain=www.8kana.com&from=label&code=90030"><img src="static/picture/label_lg_90030.png"></a>
+		</div>
+
+		<!--footer end-->
+
+		<div class="MusicPopUp_bg"></div>
+
+	</body>
+
+</html>

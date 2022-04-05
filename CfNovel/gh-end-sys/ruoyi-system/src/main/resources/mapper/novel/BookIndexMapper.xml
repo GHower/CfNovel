@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.novel.mapper.BookIndexMapper">
+    
+    <resultMap type="BookIndex" id="BookIndexResult">
+        <result property="id"    column="id"    />
+        <result property="bookId"    column="book_id"    />
+        <result property="indexNum"    column="index_num"    />
+        <result property="indexName"    column="index_name"    />
+        <result property="wordCount"    column="word_count"    />
+        <result property="isVip"    column="is_vip"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectBookIndexVo">
+        select id, book_id, index_num, index_name, word_count, is_vip, create_time, update_time from book_index
+    </sql>
+
+    <select id="selectBookIndexList" parameterType="BookIndex" resultMap="BookIndexResult">
+        <include refid="selectBookIndexVo"/>
+        <where>  
+            <if test="bookId != null "> and book_id = #{bookId}</if>
+            <if test="indexNum != null "> and index_num = #{indexNum}</if>
+            <if test="indexName != null  and indexName != ''"> and index_name like concat('%', #{indexName}, '%')</if>
+            <if test="wordCount != null "> and word_count = #{wordCount}</if>
+            <if test="isVip != null "> and is_vip = #{isVip}</if>
+        </where>
+    </select>
+    
+    <select id="selectBookIndexById" parameterType="Long" resultMap="BookIndexResult">
+        <include refid="selectBookIndexVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertBookIndex" parameterType="BookIndex" useGeneratedKeys="true" keyProperty="id">
+        insert into book_index
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="bookId != null">book_id,</if>
+            <if test="indexNum != null">index_num,</if>
+            <if test="indexName != null">index_name,</if>
+            <if test="wordCount != null">word_count,</if>
+            <if test="isVip != null">is_vip,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="bookId != null">#{bookId},</if>
+            <if test="indexNum != null">#{indexNum},</if>
+            <if test="indexName != null">#{indexName},</if>
+            <if test="wordCount != null">#{wordCount},</if>
+            <if test="isVip != null">#{isVip},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateBookIndex" parameterType="BookIndex">
+        update book_index
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="bookId != null">book_id = #{bookId},</if>
+            <if test="indexNum != null">index_num = #{indexNum},</if>
+            <if test="indexName != null">index_name = #{indexName},</if>
+            <if test="wordCount != null">word_count = #{wordCount},</if>
+            <if test="isVip != null">is_vip = #{isVip},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteBookIndexById" parameterType="Long">
+        delete from book_index where id = #{id}
+    </delete>
+
+    <delete id="deleteBookIndexByIds" parameterType="String">
+        delete from book_index where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

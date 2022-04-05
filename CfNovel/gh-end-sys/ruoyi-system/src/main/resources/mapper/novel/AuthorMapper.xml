@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.novel.mapper.AuthorMapper">
+    
+    <resultMap type="Author" id="AuthorResult">
+        <result property="id"    column="id"    />
+        <result property="userId"    column="user_id"    />
+        <result property="inviteCode"    column="invite_code"    />
+        <result property="penName"    column="pen_name"    />
+        <result property="telPhone"    column="tel_phone"    />
+        <result property="chatAccount"    column="chat_account"    />
+        <result property="email"    column="email"    />
+        <result property="workDirection"    column="work_direction"    />
+        <result property="status"    column="status"    />
+        <result property="createTime"    column="create_time"    />
+    </resultMap>
+
+    <sql id="selectAuthorVo">
+        select id, user_id, invite_code, pen_name, tel_phone, chat_account, email, work_direction, status, create_time from author
+    </sql>
+
+    <select id="selectAuthorList" parameterType="Author" resultMap="AuthorResult">
+        <include refid="selectAuthorVo"/>
+        <where>  
+            <if test="userId != null "> and user_id = #{userId}</if>
+            <if test="inviteCode != null  and inviteCode != ''"> and invite_code = #{inviteCode}</if>
+            <if test="penName != null  and penName != ''"> and pen_name like concat('%', #{penName}, '%')</if>
+            <if test="telPhone != null  and telPhone != ''"> and tel_phone = #{telPhone}</if>
+            <if test="chatAccount != null  and chatAccount != ''"> and chat_account = #{chatAccount}</if>
+            <if test="email != null  and email != ''"> and email = #{email}</if>
+            <if test="workDirection != null "> and work_direction = #{workDirection}</if>
+            <if test="status != null "> and status = #{status}</if>
+        </where>
+    </select>
+    
+    <select id="selectAuthorById" parameterType="Long" resultMap="AuthorResult">
+        <include refid="selectAuthorVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertAuthor" parameterType="Author" useGeneratedKeys="true" keyProperty="id">
+        insert into author
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">user_id,</if>
+            <if test="inviteCode != null">invite_code,</if>
+            <if test="penName != null">pen_name,</if>
+            <if test="telPhone != null">tel_phone,</if>
+            <if test="chatAccount != null">chat_account,</if>
+            <if test="email != null">email,</if>
+            <if test="workDirection != null">work_direction,</if>
+            <if test="status != null">status,</if>
+            <if test="createTime != null">create_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">#{userId},</if>
+            <if test="inviteCode != null">#{inviteCode},</if>
+            <if test="penName != null">#{penName},</if>
+            <if test="telPhone != null">#{telPhone},</if>
+            <if test="chatAccount != null">#{chatAccount},</if>
+            <if test="email != null">#{email},</if>
+            <if test="workDirection != null">#{workDirection},</if>
+            <if test="status != null">#{status},</if>
+            <if test="createTime != null">#{createTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateAuthor" parameterType="Author">
+        update author
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="inviteCode != null">invite_code = #{inviteCode},</if>
+            <if test="penName != null">pen_name = #{penName},</if>
+            <if test="telPhone != null">tel_phone = #{telPhone},</if>
+            <if test="chatAccount != null">chat_account = #{chatAccount},</if>
+            <if test="email != null">email = #{email},</if>
+            <if test="workDirection != null">work_direction = #{workDirection},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteAuthorById" parameterType="Long">
+        delete from author where id = #{id}
+    </delete>
+
+    <delete id="deleteAuthorByIds" parameterType="String">
+        delete from author where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

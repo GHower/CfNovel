@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.novel.mapper.HomeBookMapper">
+    
+    <resultMap type="HomeBook" id="HomeBookResult">
+        <result property="id"    column="id"    />
+        <result property="bookId"    column="book_id"    />
+        <result property="sort"    column="sort"    />
+        <result property="type"    column="type"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="createUserId"    column="create_user_id"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="updateUserId"    column="update_user_id"    />
+    </resultMap>
+
+    <sql id="selectHomeBookVo">
+        select id, book_id, sort, type, create_time, create_user_id, update_time, update_user_id from home_book
+    </sql>
+
+    <select id="selectHomeBookList" parameterType="HomeBook" resultMap="HomeBookResult">
+        <include refid="selectHomeBookVo"/>
+        <where>  
+            <if test="bookId != null "> and book_id = #{bookId}</if>
+            <if test="sort != null "> and sort = #{sort}</if>
+            <if test="type != null "> and type = #{type}</if>
+            <if test="createUserId != null "> and create_user_id = #{createUserId}</if>
+            <if test="updateUserId != null "> and update_user_id = #{updateUserId}</if>
+        </where>
+    </select>
+    
+    <select id="selectHomeBookById" parameterType="Long" resultMap="HomeBookResult">
+        <include refid="selectHomeBookVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertHomeBook" parameterType="HomeBook" useGeneratedKeys="true" keyProperty="id">
+        insert into home_book
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="bookId != null">book_id,</if>
+            <if test="sort != null">sort,</if>
+            <if test="type != null">type,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="createUserId != null">create_user_id,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="updateUserId != null">update_user_id,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="bookId != null">#{bookId},</if>
+            <if test="sort != null">#{sort},</if>
+            <if test="type != null">#{type},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="createUserId != null">#{createUserId},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="updateUserId != null">#{updateUserId},</if>
+         </trim>
+    </insert>
+
+    <update id="updateHomeBook" parameterType="HomeBook">
+        update home_book
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="bookId != null">book_id = #{bookId},</if>
+            <if test="sort != null">sort = #{sort},</if>
+            <if test="type != null">type = #{type},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="createUserId != null">create_user_id = #{createUserId},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="updateUserId != null">update_user_id = #{updateUserId},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteHomeBookById" parameterType="Long">
+        delete from home_book where id = #{id}
+    </delete>
+
+    <delete id="deleteHomeBookByIds" parameterType="String">
+        delete from home_book where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

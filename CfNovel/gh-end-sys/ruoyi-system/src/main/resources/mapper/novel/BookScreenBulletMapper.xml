@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.novel.mapper.BookScreenBulletMapper">
+    
+    <resultMap type="BookScreenBullet" id="BookScreenBulletResult">
+        <result property="id"    column="id"    />
+        <result property="contentId"    column="content_id"    />
+        <result property="screenBullet"    column="screen_bullet"    />
+        <result property="createTime"    column="create_time"    />
+    </resultMap>
+
+    <sql id="selectBookScreenBulletVo">
+        select id, content_id, screen_bullet, create_time from book_screen_bullet
+    </sql>
+
+    <select id="selectBookScreenBulletList" parameterType="BookScreenBullet" resultMap="BookScreenBulletResult">
+        <include refid="selectBookScreenBulletVo"/>
+        <where>  
+            <if test="contentId != null "> and content_id = #{contentId}</if>
+            <if test="screenBullet != null  and screenBullet != ''"> and screen_bullet = #{screenBullet}</if>
+        </where>
+    </select>
+    
+    <select id="selectBookScreenBulletById" parameterType="Long" resultMap="BookScreenBulletResult">
+        <include refid="selectBookScreenBulletVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertBookScreenBullet" parameterType="BookScreenBullet" useGeneratedKeys="true" keyProperty="id">
+        insert into book_screen_bullet
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="contentId != null">content_id,</if>
+            <if test="screenBullet != null and screenBullet != ''">screen_bullet,</if>
+            <if test="createTime != null">create_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="contentId != null">#{contentId},</if>
+            <if test="screenBullet != null and screenBullet != ''">#{screenBullet},</if>
+            <if test="createTime != null">#{createTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateBookScreenBullet" parameterType="BookScreenBullet">
+        update book_screen_bullet
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="contentId != null">content_id = #{contentId},</if>
+            <if test="screenBullet != null and screenBullet != ''">screen_bullet = #{screenBullet},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteBookScreenBulletById" parameterType="Long">
+        delete from book_screen_bullet where id = #{id}
+    </delete>
+
+    <delete id="deleteBookScreenBulletByIds" parameterType="String">
+        delete from book_screen_bullet where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

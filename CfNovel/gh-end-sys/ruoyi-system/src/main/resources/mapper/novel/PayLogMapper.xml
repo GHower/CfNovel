@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.novel.mapper.PayLogMapper">
+    
+    <resultMap type="PayLog" id="PayLogResult">
+        <result property="id"    column="id"    />
+        <result property="outTradeNo"    column="out_trade_no"    />
+        <result property="tradeType"    column="trade_type"    />
+        <result property="tradeNo"    column="trade_no"    />
+        <result property="payChannel"    column="pay_channel"    />
+        <result property="totalAmount"    column="total_amount"    />
+        <result property="userId"    column="user_id"    />
+        <result property="payStatus"    column="pay_status"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectPayLogVo">
+        select id, out_trade_no, trade_type, trade_no, pay_channel, total_amount, user_id, pay_status, create_time, update_time from pay_log
+    </sql>
+
+    <select id="selectPayLogList" parameterType="PayLog" resultMap="PayLogResult">
+        <include refid="selectPayLogVo"/>
+        <where>  
+            <if test="outTradeNo != null "> and out_trade_no = #{outTradeNo}</if>
+            <if test="tradeType != null "> and trade_type = #{tradeType}</if>
+            <if test="tradeNo != null  and tradeNo != ''"> and trade_no = #{tradeNo}</if>
+            <if test="payChannel != null "> and pay_channel = #{payChannel}</if>
+            <if test="totalAmount != null "> and total_amount = #{totalAmount}</if>
+            <if test="userId != null "> and user_id = #{userId}</if>
+            <if test="payStatus != null  and payStatus != ''"> and pay_status = #{payStatus}</if>
+        </where>
+    </select>
+    
+    <select id="selectPayLogById" parameterType="Long" resultMap="PayLogResult">
+        <include refid="selectPayLogVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertPayLog" parameterType="PayLog" useGeneratedKeys="true" keyProperty="id">
+        insert into pay_log
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="outTradeNo != null">out_trade_no,</if>
+            <if test="tradeType != null">trade_type,</if>
+            <if test="tradeNo != null">trade_no,</if>
+            <if test="payChannel != null">pay_channel,</if>
+            <if test="totalAmount != null">total_amount,</if>
+            <if test="userId != null">user_id,</if>
+            <if test="payStatus != null">pay_status,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="outTradeNo != null">#{outTradeNo},</if>
+            <if test="tradeType != null">#{tradeType},</if>
+            <if test="tradeNo != null">#{tradeNo},</if>
+            <if test="payChannel != null">#{payChannel},</if>
+            <if test="totalAmount != null">#{totalAmount},</if>
+            <if test="userId != null">#{userId},</if>
+            <if test="payStatus != null">#{payStatus},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updatePayLog" parameterType="PayLog">
+        update pay_log
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="outTradeNo != null">out_trade_no = #{outTradeNo},</if>
+            <if test="tradeType != null">trade_type = #{tradeType},</if>
+            <if test="tradeNo != null">trade_no = #{tradeNo},</if>
+            <if test="payChannel != null">pay_channel = #{payChannel},</if>
+            <if test="totalAmount != null">total_amount = #{totalAmount},</if>
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="payStatus != null">pay_status = #{payStatus},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deletePayLogById" parameterType="Long">
+        delete from pay_log where id = #{id}
+    </delete>
+
+    <delete id="deletePayLogByIds" parameterType="String">
+        delete from pay_log where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

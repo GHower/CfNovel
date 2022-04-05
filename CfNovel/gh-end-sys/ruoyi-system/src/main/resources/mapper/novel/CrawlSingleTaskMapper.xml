@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.novel.mapper.CrawlSingleTaskMapper">
+    
+    <resultMap type="CrawlSingleTask" id="CrawlSingleTaskResult">
+        <result property="id"    column="id"    />
+        <result property="sourceId"    column="source_id"    />
+        <result property="sourceBookId"    column="source_book_id"    />
+        <result property="taskStatus"    column="task_status"    />
+        <result property="excCount"    column="exc_count"    />
+        <result property="createTime"    column="create_time"    />
+    </resultMap>
+
+    <sql id="selectCrawlSingleTaskVo">
+        select id, source_id, source_book_id, task_status, exc_count, create_time from crawl_single_task
+    </sql>
+
+    <select id="selectCrawlSingleTaskList" parameterType="CrawlSingleTask" resultMap="CrawlSingleTaskResult">
+        <include refid="selectCrawlSingleTaskVo"/>
+        <where>  
+            <if test="sourceId != null "> and source_id = #{sourceId}</if>
+            <if test="sourceBookId != null  and sourceBookId != ''"> and source_book_id = #{sourceBookId}</if>
+            <if test="taskStatus != null "> and task_status = #{taskStatus}</if>
+            <if test="excCount != null "> and exc_count = #{excCount}</if>
+        </where>
+    </select>
+    
+    <select id="selectCrawlSingleTaskById" parameterType="Long" resultMap="CrawlSingleTaskResult">
+        <include refid="selectCrawlSingleTaskVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertCrawlSingleTask" parameterType="CrawlSingleTask" useGeneratedKeys="true" keyProperty="id">
+        insert into crawl_single_task
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="sourceId != null">source_id,</if>
+            <if test="sourceBookId != null">source_book_id,</if>
+            <if test="taskStatus != null">task_status,</if>
+            <if test="excCount != null">exc_count,</if>
+            <if test="createTime != null">create_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="sourceId != null">#{sourceId},</if>
+            <if test="sourceBookId != null">#{sourceBookId},</if>
+            <if test="taskStatus != null">#{taskStatus},</if>
+            <if test="excCount != null">#{excCount},</if>
+            <if test="createTime != null">#{createTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateCrawlSingleTask" parameterType="CrawlSingleTask">
+        update crawl_single_task
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="sourceId != null">source_id = #{sourceId},</if>
+            <if test="sourceBookId != null">source_book_id = #{sourceBookId},</if>
+            <if test="taskStatus != null">task_status = #{taskStatus},</if>
+            <if test="excCount != null">exc_count = #{excCount},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteCrawlSingleTaskById" parameterType="Long">
+        delete from crawl_single_task where id = #{id}
+    </delete>
+
+    <delete id="deleteCrawlSingleTaskByIds" parameterType="String">
+        delete from crawl_single_task where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

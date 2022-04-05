@@ -1,0 +1,11 @@
+# 3b0b91ac-abdd-4d3f-83a3-39246353d849
+spring:
+  application:
+    name: gh-home
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        group: ${spring.application.name}
+        server-addr: 172.21.49.187:8848
+        namespace: 3b0b91ac-abdd-4d3f-83a3-39246353d849

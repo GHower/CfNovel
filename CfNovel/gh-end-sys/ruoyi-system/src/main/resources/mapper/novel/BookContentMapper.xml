@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.novel.mapper.BookContentMapper">
+    
+    <resultMap type="BookContent" id="BookContentResult">
+        <result property="id"    column="id"    />
+        <result property="indexId"    column="index_id"    />
+        <result property="content"    column="content"    />
+    </resultMap>
+
+    <sql id="selectBookContentVo">
+        select id, index_id, content from book_content
+    </sql>
+
+    <select id="selectBookContentList" parameterType="BookContent" resultMap="BookContentResult">
+        <include refid="selectBookContentVo"/>
+        <where>  
+            <if test="indexId != null "> and index_id = #{indexId}</if>
+            <if test="content != null  and content != ''"> and content = #{content}</if>
+        </where>
+    </select>
+    
+    <select id="selectBookContentById" parameterType="Long" resultMap="BookContentResult">
+        <include refid="selectBookContentVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertBookContent" parameterType="BookContent" useGeneratedKeys="true" keyProperty="id">
+        insert into book_content
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="indexId != null">index_id,</if>
+            <if test="content != null">content,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="indexId != null">#{indexId},</if>
+            <if test="content != null">#{content},</if>
+         </trim>
+    </insert>
+
+    <update id="updateBookContent" parameterType="BookContent">
+        update book_content
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="indexId != null">index_id = #{indexId},</if>
+            <if test="content != null">content = #{content},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteBookContentById" parameterType="Long">
+        delete from book_content where id = #{id}
+    </delete>
+
+    <delete id="deleteBookContentByIds" parameterType="String">
+        delete from book_content where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

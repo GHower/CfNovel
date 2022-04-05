@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.novel.mapper.CrawlBatchTaskMapper">
+    
+    <resultMap type="CrawlBatchTask" id="CrawlBatchTaskResult">
+        <result property="id"    column="id"    />
+        <result property="sourceId"    column="source_id"    />
+        <result property="crawlCountSuccess"    column="crawl_count_success"    />
+        <result property="crawlCountTarget"    column="crawl_count_target"    />
+        <result property="taskStatus"    column="task_status"    />
+        <result property="startTime"    column="start_time"    />
+        <result property="endTime"    column="end_time"    />
+    </resultMap>
+
+    <sql id="selectCrawlBatchTaskVo">
+        select id, source_id, crawl_count_success, crawl_count_target, task_status, start_time, end_time from crawl_batch_task
+    </sql>
+
+    <select id="selectCrawlBatchTaskList" parameterType="CrawlBatchTask" resultMap="CrawlBatchTaskResult">
+        <include refid="selectCrawlBatchTaskVo"/>
+        <where>  
+            <if test="sourceId != null "> and source_id = #{sourceId}</if>
+            <if test="crawlCountSuccess != null "> and crawl_count_success = #{crawlCountSuccess}</if>
+            <if test="crawlCountTarget != null "> and crawl_count_target = #{crawlCountTarget}</if>
+            <if test="taskStatus != null "> and task_status = #{taskStatus}</if>
+            <if test="startTime != null "> and start_time = #{startTime}</if>
+            <if test="endTime != null "> and end_time = #{endTime}</if>
+        </where>
+    </select>
+    
+    <select id="selectCrawlBatchTaskById" parameterType="Long" resultMap="CrawlBatchTaskResult">
+        <include refid="selectCrawlBatchTaskVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertCrawlBatchTask" parameterType="CrawlBatchTask" useGeneratedKeys="true" keyProperty="id">
+        insert into crawl_batch_task
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="sourceId != null">source_id,</if>
+            <if test="crawlCountSuccess != null">crawl_count_success,</if>
+            <if test="crawlCountTarget != null">crawl_count_target,</if>
+            <if test="taskStatus != null">task_status,</if>
+            <if test="startTime != null">start_time,</if>
+            <if test="endTime != null">end_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="sourceId != null">#{sourceId},</if>
+            <if test="crawlCountSuccess != null">#{crawlCountSuccess},</if>
+            <if test="crawlCountTarget != null">#{crawlCountTarget},</if>
+            <if test="taskStatus != null">#{taskStatus},</if>
+            <if test="startTime != null">#{startTime},</if>
+            <if test="endTime != null">#{endTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateCrawlBatchTask" parameterType="CrawlBatchTask">
+        update crawl_batch_task
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="sourceId != null">source_id = #{sourceId},</if>
+            <if test="crawlCountSuccess != null">crawl_count_success = #{crawlCountSuccess},</if>
+            <if test="crawlCountTarget != null">crawl_count_target = #{crawlCountTarget},</if>
+            <if test="taskStatus != null">task_status = #{taskStatus},</if>
+            <if test="startTime != null">start_time = #{startTime},</if>
+            <if test="endTime != null">end_time = #{endTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteCrawlBatchTaskById" parameterType="Long">
+        delete from crawl_batch_task where id = #{id}
+    </delete>
+
+    <delete id="deleteCrawlBatchTaskByIds" parameterType="String">
+        delete from crawl_batch_task where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

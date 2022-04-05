@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.novel.mapper.AuthorCodeMapper">
+    
+    <resultMap type="AuthorCode" id="AuthorCodeResult">
+        <result property="id"    column="id"    />
+        <result property="inviteCode"    column="invite_code"    />
+        <result property="validityTime"    column="validity_time"    />
+        <result property="isUse"    column="is_use"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="createUserId"    column="create_user_id"    />
+    </resultMap>
+
+    <sql id="selectAuthorCodeVo">
+        select id, invite_code, validity_time, is_use, create_time, create_user_id from author_code
+    </sql>
+
+    <select id="selectAuthorCodeList" parameterType="AuthorCode" resultMap="AuthorCodeResult">
+        <include refid="selectAuthorCodeVo"/>
+        <where>  
+            <if test="inviteCode != null  and inviteCode != ''"> and invite_code = #{inviteCode}</if>
+            <if test="validityTime != null "> and validity_time = #{validityTime}</if>
+            <if test="isUse != null "> and is_use = #{isUse}</if>
+            <if test="createUserId != null "> and create_user_id = #{createUserId}</if>
+        </where>
+    </select>
+    
+    <select id="selectAuthorCodeById" parameterType="Long" resultMap="AuthorCodeResult">
+        <include refid="selectAuthorCodeVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertAuthorCode" parameterType="AuthorCode" useGeneratedKeys="true" keyProperty="id">
+        insert into author_code
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="inviteCode != null">invite_code,</if>
+            <if test="validityTime != null">validity_time,</if>
+            <if test="isUse != null">is_use,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="createUserId != null">create_user_id,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="inviteCode != null">#{inviteCode},</if>
+            <if test="validityTime != null">#{validityTime},</if>
+            <if test="isUse != null">#{isUse},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="createUserId != null">#{createUserId},</if>
+         </trim>
+    </insert>
+
+    <update id="updateAuthorCode" parameterType="AuthorCode">
+        update author_code
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="inviteCode != null">invite_code = #{inviteCode},</if>
+            <if test="validityTime != null">validity_time = #{validityTime},</if>
+            <if test="isUse != null">is_use = #{isUse},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="createUserId != null">create_user_id = #{createUserId},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteAuthorCodeById" parameterType="Long">
+        delete from author_code where id = #{id}
+    </delete>
+
+    <delete id="deleteAuthorCodeByIds" parameterType="String">
+        delete from author_code where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

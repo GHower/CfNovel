@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.novel.mapper.NewsMapper">
+    
+    <resultMap type="News" id="NewsResult">
+        <result property="id"    column="id"    />
+        <result property="catId"    column="cat_id"    />
+        <result property="catName"    column="cat_name"    />
+        <result property="sourceName"    column="source_name"    />
+        <result property="title"    column="title"    />
+        <result property="content"    column="content"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="createUserId"    column="create_user_id"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="updateUserId"    column="update_user_id"    />
+    </resultMap>
+
+    <sql id="selectNewsVo">
+        select id, cat_id, cat_name, source_name, title, content, create_time, create_user_id, update_time, update_user_id from news
+    </sql>
+
+    <select id="selectNewsList" parameterType="News" resultMap="NewsResult">
+        <include refid="selectNewsVo"/>
+        <where>  
+            <if test="catId != null "> and cat_id = #{catId}</if>
+            <if test="catName != null  and catName != ''"> and cat_name like concat('%', #{catName}, '%')</if>
+            <if test="sourceName != null  and sourceName != ''"> and source_name like concat('%', #{sourceName}, '%')</if>
+            <if test="title != null  and title != ''"> and title = #{title}</if>
+            <if test="content != null  and content != ''"> and content = #{content}</if>
+            <if test="createUserId != null "> and create_user_id = #{createUserId}</if>
+            <if test="updateUserId != null "> and update_user_id = #{updateUserId}</if>
+        </where>
+    </select>
+    
+    <select id="selectNewsById" parameterType="Long" resultMap="NewsResult">
+        <include refid="selectNewsVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertNews" parameterType="News" useGeneratedKeys="true" keyProperty="id">
+        insert into news
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="catId != null">cat_id,</if>
+            <if test="catName != null">cat_name,</if>
+            <if test="sourceName != null">source_name,</if>
+            <if test="title != null">title,</if>
+            <if test="content != null">content,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="createUserId != null">create_user_id,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="updateUserId != null">update_user_id,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="catId != null">#{catId},</if>
+            <if test="catName != null">#{catName},</if>
+            <if test="sourceName != null">#{sourceName},</if>
+            <if test="title != null">#{title},</if>
+            <if test="content != null">#{content},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="createUserId != null">#{createUserId},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="updateUserId != null">#{updateUserId},</if>
+         </trim>
+    </insert>
+
+    <update id="updateNews" parameterType="News">
+        update news
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="catId != null">cat_id = #{catId},</if>
+            <if test="catName != null">cat_name = #{catName},</if>
+            <if test="sourceName != null">source_name = #{sourceName},</if>
+            <if test="title != null">title = #{title},</if>
+            <if test="content != null">content = #{content},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="createUserId != null">create_user_id = #{createUserId},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="updateUserId != null">update_user_id = #{updateUserId},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteNewsById" parameterType="Long">
+        delete from news where id = #{id}
+    </delete>
+
+    <delete id="deleteNewsByIds" parameterType="String">
+        delete from news where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

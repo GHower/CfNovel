@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.novel.mapper.UserBuyRecordMapper">
+    
+    <resultMap type="UserBuyRecord" id="UserBuyRecordResult">
+        <result property="id"    column="id"    />
+        <result property="userId"    column="user_id"    />
+        <result property="bookId"    column="book_id"    />
+        <result property="bookName"    column="book_name"    />
+        <result property="bookIndexId"    column="book_index_id"    />
+        <result property="bookIndexName"    column="book_index_name"    />
+        <result property="buyAmount"    column="buy_amount"    />
+        <result property="createTime"    column="create_time"    />
+    </resultMap>
+
+    <sql id="selectUserBuyRecordVo">
+        select id, user_id, book_id, book_name, book_index_id, book_index_name, buy_amount, create_time from user_buy_record
+    </sql>
+
+    <select id="selectUserBuyRecordList" parameterType="UserBuyRecord" resultMap="UserBuyRecordResult">
+        <include refid="selectUserBuyRecordVo"/>
+        <where>  
+            <if test="userId != null "> and user_id = #{userId}</if>
+            <if test="bookId != null "> and book_id = #{bookId}</if>
+            <if test="bookName != null  and bookName != ''"> and book_name like concat('%', #{bookName}, '%')</if>
+            <if test="bookIndexId != null "> and book_index_id = #{bookIndexId}</if>
+            <if test="bookIndexName != null  and bookIndexName != ''"> and book_index_name like concat('%', #{bookIndexName}, '%')</if>
+            <if test="buyAmount != null "> and buy_amount = #{buyAmount}</if>
+        </where>
+    </select>
+    
+    <select id="selectUserBuyRecordById" parameterType="Long" resultMap="UserBuyRecordResult">
+        <include refid="selectUserBuyRecordVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertUserBuyRecord" parameterType="UserBuyRecord" useGeneratedKeys="true" keyProperty="id">
+        insert into user_buy_record
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">user_id,</if>
+            <if test="bookId != null">book_id,</if>
+            <if test="bookName != null">book_name,</if>
+            <if test="bookIndexId != null">book_index_id,</if>
+            <if test="bookIndexName != null">book_index_name,</if>
+            <if test="buyAmount != null">buy_amount,</if>
+            <if test="createTime != null">create_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">#{userId},</if>
+            <if test="bookId != null">#{bookId},</if>
+            <if test="bookName != null">#{bookName},</if>
+            <if test="bookIndexId != null">#{bookIndexId},</if>
+            <if test="bookIndexName != null">#{bookIndexName},</if>
+            <if test="buyAmount != null">#{buyAmount},</if>
+            <if test="createTime != null">#{createTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateUserBuyRecord" parameterType="UserBuyRecord">
+        update user_buy_record
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="bookId != null">book_id = #{bookId},</if>
+            <if test="bookName != null">book_name = #{bookName},</if>
+            <if test="bookIndexId != null">book_index_id = #{bookIndexId},</if>
+            <if test="bookIndexName != null">book_index_name = #{bookIndexName},</if>
+            <if test="buyAmount != null">buy_amount = #{buyAmount},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteUserBuyRecordById" parameterType="Long">
+        delete from user_buy_record where id = #{id}
+    </delete>
+
+    <delete id="deleteUserBuyRecordByIds" parameterType="String">
+        delete from user_buy_record where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>
